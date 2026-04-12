@@ -1,6 +1,6 @@
 services:
   hop:
-    image: apache/hop-web:latest  # <--- MUDANÇA AQUI (adicionado -web)
+    image: apache/hop-web:latest  #
     container_name: hop-web
     ports:
       - "8080:8080"
