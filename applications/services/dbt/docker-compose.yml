@@ -1,0 +1,18 @@
+services:
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-core:latest # Imagem oficial do dbt
+    volumes:
+      - .:/usr/app # Mapeia a pasta local para o contêiner
+    working_dir: /usr/app
+    environment:
+      - DBT_PROFILE_DIR=/usr/app # Onde está o seu profiles.yml
+    command: tail -f /dev/null # Mantém o container vivo
+    networks:
+      - dados_dbt
+
+volumes:
+  pgdata:
+
+networks:
+  dados_dbt:
+    external: true

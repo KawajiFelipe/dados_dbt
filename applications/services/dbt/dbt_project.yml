@@ -1,0 +1,33 @@
+name: 'dados_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'projeto_dbt' # Deve ser igual ao nome no profiles.yml
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  projeto_dbt:
+    # Configura que, por padrão, tudo será criado como VIEW
+    # Você pode mudar para 'table' em pastas específicas
+    silver:
+      +materialized: table
+      +schema: silver
+      +persist_docs:
+        relation: true
+        columns: true
+    
+    gold:
+      +materialized: table
+      +schema: gold
+      +persist_docs:
+        relation: true
+        columns: true
