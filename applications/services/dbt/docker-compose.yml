@@ -1,12 +1,15 @@
 services:
   dbt:
-    image: ghcr.io/dbt-labs/dbt-core:latest # Imagem oficial do dbt
+    image: ghcr.io/dbt-labs/dbt-postgres:latest
+    entrypoint: "" # <--- ADICIONE ESTA LINHA (limpa o comando padrão)
+    command: tail -f /dev/null # Mantém o container vivo
     volumes:
       - .:/usr/app # Mapeia a pasta local para o contêiner
+    tty: true
+    stdin_open: true
     working_dir: /usr/app
     environment:
       - DBT_PROFILE_DIR=/usr/app # Onde está o seu profiles.yml
-    command: tail -f /dev/null # Mantém o container vivo
     networks:
       - dados_dbt
 

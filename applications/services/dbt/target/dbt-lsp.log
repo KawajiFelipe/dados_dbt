@@ -1,0 +1,92 @@
+==================== 2026-04-12T22:44:02.996924Z | 4d8cdaf6-04fe-4c86-9e76-fdbcffc34a98 ====================
+22:44:02.997075 [info ]: Starting dbt LSP server
+22:44:02.997167 [info ]: Connecting to LSP client on port 8000
+22:44:02.999814 [info ]: Successfully connected to LSP client
+22:44:02.999836 [info ]: Creating LSP service...
+22:44:03.074925 [info ]: Creating LSP server...
+22:44:03.074949 [info ]: Starting LSP server...
+22:44:03.145232 [info ]: Started loading project
+22:44:03.145653 [info ]: Finished loading project [  0.00s]
+22:44:36.867385 [info ]: Started loading project
+22:44:36.867645 [info ]: Finished loading project [  0.00s]
+22:44:39.567244 [info ]: Started loading project
+22:44:39.567355 [info ]: Finished loading project [  0.00s]
+22:46:54.115164 [info ]: Started loading project
+22:46:54.115354 [info ]: Finished loading project [  0.00s]
+22:47:01.878705 [info ]: Started loading project
+22:47:01.878938 [info ]: Finished loading project [  0.00s]
+22:52:20.301415 [info ]: Loading profiles.yml
+22:52:20.332614 [info ]: Started loading project
+22:52:20.333354 [info ]: Loading profiles.yml
+22:52:20.333528 [info ]: Finished loading project [  0.00s]
+22:52:20.625386 [info ]: Waiting for lease on 'target' directory
+22:52:20.843648 [info ]: Loading profiles.yml
+22:52:20.870446 [info ]: Started loading project
+22:52:20.871082 [info ]: Loading profiles.yml
+22:52:20.871231 [info ]: Finished loading project [  0.00s]
+22:52:21.230090 [info ]: Loading profiles.yml
+22:52:21.755550 [info ]: Loading profiles.yml
+22:52:33.095910 [info ]: Loading profiles.yml
+22:52:51.970215 [info ]: Loading profiles.yml
+22:55:25.927051 [info ]: Loading profiles.yml
+22:57:19.839620 [info ]: Loading profiles.yml
+22:57:19.876237 [info ]: Started loading project
+22:57:19.876825 [info ]: Loading profiles.yml
+22:57:19.890550 [info ]:    Started resolving packages from packages.yml
+22:57:19.890636 [info ]:   Finished [  0.00s] resolving packages from packages.yml
+22:57:19.890737 [debug]:    Started loading packages
+22:57:19.892743 [debug]:     Loaded [  0.00s] packages
+22:57:19.893577 [info ]: Started parsing
+22:57:19.915377 [info ]: Finished loading project [  0.04s]
+22:57:19.922138 [info ]: Finished parsing [  0.03s]
+22:57:19.922550 [info ]: Cached model count updated: 0 models (estimate)
+22:57:19.922563 [info ]: Cached model count updated: 0 models (accurate)
+22:57:19.922619 [info ]: Started scheduling
+22:57:19.922755 [info ]: Finished scheduling [  0.00s]
+22:57:19.922787 [debug]: Compilation - 0 nodes selected: {}
+22:57:19.922822 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+22:57:19.922834 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+22:57:19.922854 [info ]: Started scheduling
+22:57:19.922868 [info ]: Finished scheduling [  0.00s]
+22:57:20.017848 [info ]: Started building task graph
+22:57:20.017939 [info ]: Finished building task graph [  0.00s]
+22:57:20.021434 [info ]: Started scheduling
+22:57:20.021475 [info ]: Finished scheduling [  0.00s]
+22:57:20.021856 [info ]: Cached model count updated: 0 models (accurate)
+22:57:20.330142 [info ]: Waiting for lease on 'target' directory
+22:57:20.441301 [info ]: Loading profiles.yml
+22:57:20.473107 [info ]: Started loading project
+22:57:20.473731 [info ]: Loading profiles.yml
+22:57:20.479341 [info ]: Started parsing
+22:57:20.495218 [info ]: Finished loading project [  0.02s]
+22:57:20.497870 [info ]: Finished parsing [  0.02s]
+22:57:20.498882 [info ]: Cached model count updated: 0 models (estimate)
+22:57:20.498896 [info ]: Cached model count updated: 0 models (accurate)
+22:57:20.498906 [info ]: Started scheduling
+22:57:20.498925 [info ]: Finished scheduling [  0.00s]
+22:57:20.498934 [debug]: Compilation - 0 nodes selected: {}
+22:57:20.498944 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+22:57:20.498950 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+22:57:20.589207 [info ]: Started building task graph
+22:57:20.589237 [info ]: Finished building task graph [  0.00s]
+22:57:20.592166 [info ]: Started scheduling
+22:57:20.592197 [info ]: Finished scheduling [  0.00s]
+22:57:20.594009 [info ]: Cached model count updated: 0 models (accurate)
+22:57:22.118801 [info ]: Started loading project
+22:57:22.119535 [info ]: Loading profiles.yml
+22:57:22.125220 [info ]: Started parsing
+22:57:22.144466 [info ]: Finished loading project [  0.03s]
+22:57:22.146768 [info ]: Finished parsing [  0.02s]
+22:57:22.147681 [info ]: Cached model count updated: 0 models (estimate)
+22:57:22.147693 [info ]: Cached model count updated: 0 models (accurate)
+22:57:22.147704 [info ]: Started scheduling
+22:57:22.147723 [info ]: Finished scheduling [  0.00s]
+22:57:22.147733 [info ]: Started scheduling
+22:57:22.147737 [info ]: Finished scheduling [  0.00s]
+22:57:22.147741 [debug]: Compilation - 0 nodes selected: {}
+22:57:22.147749 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+22:57:22.243929 [info ]: Started building task graph
+22:57:22.243961 [info ]: Finished building task graph [  0.00s]
+22:57:22.246835 [info ]: Started scheduling
+22:57:22.246861 [info ]: Finished scheduling [  0.00s]
+22:57:22.249078 [info ]: Cached model count updated: 0 models (accurate)
