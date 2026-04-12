@@ -1,0 +1,22 @@
+services:
+  hop:
+    image: apache/hop-web:latest  # <--- MUDANÇA AQUI (adicionado -web)
+    container_name: hop-web
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config:/files/config
+      - ./projects:/files/projects
+      # Recomendado para persistir as configurações da interface e histórico
+      - ./audit:/root/.hop/audit 
+    environment:
+      - HOP_PROJECT_DIRECTORY=/files/projects
+      - HOP_PROJECT_NAME=meu_projeto
+      # O Hop Web não exige login por padrão na interface de desenho
+    networks:
+      - dados_dbt
+    restart: always
+
+networks:
+  dados_dbt:
+    external: true
