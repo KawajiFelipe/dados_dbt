@@ -1,0 +1,4 @@
+# dbt
+applications/services/dbt/target/
+applications/services/dbt/logs/
+applications/services/dbt/dbt_packages/

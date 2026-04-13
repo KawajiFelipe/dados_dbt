@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: bronze_hr
+    schema: bronze # ou o schema onde o Hop salvou
+    tables:
+      - name: stg_employee
+      - name: stg_department
+      - name: stg_shift
+      - name: employee_pay_history
