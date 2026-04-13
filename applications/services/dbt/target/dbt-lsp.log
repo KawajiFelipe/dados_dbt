@@ -90,3 +90,252 @@
 22:57:22.246835 [info ]: Started scheduling
 22:57:22.246861 [info ]: Finished scheduling [  0.00s]
 22:57:22.249078 [info ]: Cached model count updated: 0 models (accurate)
+22:57:36.757152 [info ]: Loading profiles.yml
+22:57:36.786004 [info ]: Started loading project
+22:57:36.786582 [info ]: Loading profiles.yml
+22:57:36.789242 [info ]: Started loading project
+22:57:36.789560 [info ]: Loading profiles.yml
+22:57:36.789595 [info ]: Finished loading project [  0.00s]
+22:57:36.801455 [info ]:    Started resolving packages from packages.yml
+22:57:36.801495 [info ]:   Finished [  0.00s] resolving packages from packages.yml
+22:57:36.801532 [debug]:    Started loading packages
+22:57:36.803712 [debug]:     Loaded [  0.00s] packages
+22:57:36.804266 [info ]: Started parsing
+22:57:36.823095 [info ]: Finished loading project [  0.03s]
+22:57:36.826447 [info ]: Finished parsing [  0.02s]
+22:57:36.826740 [info ]: Cached model count updated: 0 models (estimate)
+22:57:36.826753 [info ]: Cached model count updated: 0 models (accurate)
+22:57:36.826764 [info ]: Started scheduling
+22:57:36.826788 [info ]: Finished scheduling [  0.00s]
+22:57:36.826798 [debug]: Compilation - 0 nodes selected: {}
+22:57:36.826810 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+22:57:36.826817 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+22:57:36.826823 [info ]: Started scheduling
+22:57:36.826850 [info ]: Finished scheduling [  0.00s]
+22:57:36.912383 [info ]: Started building task graph
+22:57:36.912414 [info ]: Finished building task graph [  0.00s]
+22:57:36.915116 [info ]: Started scheduling
+22:57:36.915141 [info ]: Finished scheduling [  0.00s]
+22:57:36.917594 [info ]: Cached model count updated: 0 models (accurate)
+22:57:37.212334 [info ]: Waiting for lease on 'target' directory
+22:57:37.321525 [info ]: Loading profiles.yml
+22:57:37.350863 [info ]: Started loading project
+22:57:37.351498 [info ]: Loading profiles.yml
+22:57:37.355767 [info ]: Started parsing
+22:57:37.371393 [info ]: Finished loading project [  0.02s]
+22:57:37.373872 [info ]: Finished parsing [  0.02s]
+22:57:37.374773 [info ]: Cached model count updated: 0 models (estimate)
+22:57:37.374785 [info ]: Cached model count updated: 0 models (accurate)
+22:57:37.374794 [info ]: Started scheduling
+22:57:37.374813 [info ]: Finished scheduling [  0.00s]
+22:57:37.374822 [debug]: Compilation - 0 nodes selected: {}
+22:57:37.374831 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+22:57:37.374838 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+22:57:37.460032 [info ]: Started building task graph
+22:57:37.460064 [info ]: Finished building task graph [  0.00s]
+22:57:37.463181 [info ]: Started scheduling
+22:57:37.463208 [info ]: Finished scheduling [  0.00s]
+22:57:37.464763 [info ]: Cached model count updated: 0 models (accurate)
+22:57:39.014908 [info ]: Started loading project
+22:57:39.015631 [info ]: Loading profiles.yml
+22:57:39.019679 [info ]: Started parsing
+22:57:39.034629 [info ]: Finished loading project [  0.02s]
+22:57:39.037035 [info ]: Finished parsing [  0.02s]
+22:57:39.038117 [info ]: Cached model count updated: 0 models (estimate)
+22:57:39.038131 [info ]: Cached model count updated: 0 models (accurate)
+22:57:39.038141 [info ]: Started scheduling
+22:57:39.038161 [info ]: Finished scheduling [  0.00s]
+22:57:39.038172 [info ]: Started scheduling
+22:57:39.038176 [info ]: Finished scheduling [  0.00s]
+22:57:39.038180 [debug]: Compilation - 0 nodes selected: {}
+22:57:39.038188 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+22:57:39.131513 [info ]: Started building task graph
+22:57:39.131543 [info ]: Finished building task graph [  0.00s]
+22:57:39.134248 [info ]: Started scheduling
+22:57:39.134273 [info ]: Finished scheduling [  0.00s]
+22:57:39.136712 [info ]: Cached model count updated: 0 models (accurate)
+22:57:40.280529 [info ]: Loading profiles.yml
+22:57:40.295472 [info ]: Started loading project
+22:57:40.295926 [info ]: Loading profiles.yml
+22:57:40.298444 [info ]: Started loading project
+22:57:40.298746 [info ]: Loading profiles.yml
+22:57:40.298786 [info ]: Finished loading project [  0.00s]
+22:57:40.310338 [info ]:    Started resolving packages from packages.yml
+22:57:40.310362 [info ]:   Finished [  0.00s] resolving packages from packages.yml
+22:57:40.310387 [debug]:    Started loading packages
+22:57:40.312137 [debug]:     Loaded [  0.00s] packages
+22:57:40.312641 [info ]: Started parsing
+22:57:40.330908 [info ]: Finished loading project [  0.03s]
+22:57:40.333623 [info ]: Finished parsing [  0.02s]
+22:57:40.333904 [info ]: Cached model count updated: 0 models (estimate)
+22:57:40.333917 [info ]: Cached model count updated: 0 models (accurate)
+22:57:40.333928 [info ]: Started scheduling
+22:57:40.333948 [info ]: Finished scheduling [  0.00s]
+22:57:40.333959 [debug]: Compilation - 0 nodes selected: {}
+22:57:40.333969 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+22:57:40.333975 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+22:57:40.333980 [info ]: Started scheduling
+22:57:40.333985 [info ]: Finished scheduling [  0.00s]
+22:57:40.423044 [info ]: Started building task graph
+22:57:40.423076 [info ]: Finished building task graph [  0.00s]
+22:57:40.426007 [info ]: Started scheduling
+22:57:40.426045 [info ]: Finished scheduling [  0.00s]
+22:57:40.428646 [info ]: Cached model count updated: 0 models (accurate)
+22:57:40.721347 [info ]: Waiting for lease on 'target' directory
+22:57:40.831639 [info ]: Loading profiles.yml
+22:57:40.844281 [info ]: Started loading project
+22:57:40.845087 [info ]: Loading profiles.yml
+22:57:40.852589 [info ]: Started parsing
+22:57:40.877655 [info ]: Finished loading project [  0.03s]
+22:57:40.881366 [info ]: Finished parsing [  0.03s]
+22:57:40.882790 [info ]: Cached model count updated: 0 models (estimate)
+22:57:40.882805 [info ]: Cached model count updated: 0 models (accurate)
+22:57:40.882818 [info ]: Started scheduling
+22:57:40.882843 [info ]: Finished scheduling [  0.00s]
+22:57:40.882856 [debug]: Compilation - 0 nodes selected: {}
+22:57:40.882869 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+22:57:40.882879 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+22:57:40.973283 [info ]: Started building task graph
+22:57:40.973318 [info ]: Finished building task graph [  0.00s]
+22:57:40.976111 [info ]: Started scheduling
+22:57:40.976142 [info ]: Finished scheduling [  0.00s]
+22:57:40.977873 [info ]: Cached model count updated: 0 models (accurate)
+22:57:42.516764 [info ]: Started loading project
+22:57:42.517213 [info ]: Loading profiles.yml
+22:57:42.521753 [info ]: Started parsing
+22:57:42.535786 [info ]: Finished loading project [  0.02s]
+22:57:42.537992 [info ]: Finished parsing [  0.02s]
+22:57:42.538889 [info ]: Cached model count updated: 0 models (estimate)
+22:57:42.538901 [info ]: Cached model count updated: 0 models (accurate)
+22:57:42.538911 [info ]: Started scheduling
+22:57:42.538929 [info ]: Finished scheduling [  0.00s]
+22:57:42.538938 [info ]: Started scheduling
+22:57:42.538942 [info ]: Finished scheduling [  0.00s]
+22:57:42.538946 [debug]: Compilation - 0 nodes selected: {}
+22:57:42.538953 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+22:57:42.628913 [info ]: Started building task graph
+22:57:42.628956 [info ]: Finished building task graph [  0.00s]
+22:57:42.631802 [info ]: Started scheduling
+22:57:42.631830 [info ]: Finished scheduling [  0.00s]
+22:57:42.633967 [info ]: Cached model count updated: 0 models (accurate)
+23:06:54.573632 [info ]: Loading profiles.yml
+23:06:54.610089 [info ]: Started loading project
+23:06:54.610614 [info ]: Loading profiles.yml
+23:06:54.613629 [info ]: Started loading project
+23:06:54.614009 [info ]: Loading profiles.yml
+23:06:54.614049 [info ]: Finished loading project [  0.00s]
+23:06:54.630217 [info ]:    Started resolving packages from packages.yml
+23:06:54.630264 [info ]:   Finished [  0.00s] resolving packages from packages.yml
+23:06:54.630300 [debug]:    Started loading packages
+23:06:54.633154 [debug]:     Loaded [  0.00s] packages
+23:06:54.634156 [info ]: Started parsing
+23:06:54.663948 [info ]: Finished loading project [  0.05s]
+23:06:54.667027 [info ]: Finished parsing [  0.03s]
+23:06:54.667295 [info ]: Cached model count updated: 0 models (estimate)
+23:06:54.667308 [info ]: Cached model count updated: 0 models (accurate)
+23:06:54.667318 [info ]: Started scheduling
+23:06:54.667340 [info ]: Finished scheduling [  0.00s]
+23:06:54.667350 [debug]: Compilation - 0 nodes selected: {}
+23:06:54.667360 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+23:06:54.667366 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:06:54.667371 [info ]: Started scheduling
+23:06:54.667376 [info ]: Finished scheduling [  0.00s]
+23:06:54.753931 [info ]: Started building task graph
+23:06:54.753966 [info ]: Finished building task graph [  0.00s]
+23:06:54.756837 [info ]: Started scheduling
+23:06:54.756861 [info ]: Finished scheduling [  0.00s]
+23:06:54.759475 [info ]: Cached model count updated: 0 models (accurate)
+23:06:55.060065 [info ]: Waiting for lease on 'target' directory
+23:06:55.170076 [info ]: Loading profiles.yml
+23:06:55.198069 [info ]: Started loading project
+23:06:55.198693 [info ]: Loading profiles.yml
+23:06:55.202992 [info ]: Started parsing
+23:06:55.216410 [info ]: Finished loading project [  0.02s]
+23:06:55.218718 [info ]: Finished parsing [  0.02s]
+23:06:55.219532 [info ]: Cached model count updated: 0 models (estimate)
+23:06:55.219545 [info ]: Cached model count updated: 0 models (accurate)
+23:06:55.219555 [info ]: Started scheduling
+23:06:55.219574 [info ]: Finished scheduling [  0.00s]
+23:06:55.219583 [debug]: Compilation - 0 nodes selected: {}
+23:06:55.219591 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+23:06:55.219597 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:06:55.307932 [info ]: Started building task graph
+23:06:55.307963 [info ]: Finished building task graph [  0.00s]
+23:06:55.312683 [info ]: Cached model count updated: 0 models (accurate)
+23:06:55.314305 [info ]: Waiting for lease on 'target' directory
+23:06:55.742360 [info ]: Loading profiles.yml
+23:06:55.750634 [info ]: Cached model count updated: 0 models (accurate)
+23:06:55.751891 [info ]: Waiting for lease on 'target' directory
+23:06:56.303229 [info ]: Loading profiles.yml
+23:06:56.312086 [info ]: Cached model count updated: 0 models (accurate)
+23:06:56.313464 [info ]: Waiting for lease on 'target' directory
+23:06:56.734170 [info ]: Loading profiles.yml
+23:06:56.863018 [info ]: Started loading project
+23:06:56.863549 [info ]: Loading profiles.yml
+23:06:56.866393 [info ]: Started loading project
+23:06:56.866754 [info ]: Loading profiles.yml
+23:06:56.866785 [info ]: Finished loading project [  0.00s]
+23:06:56.880500 [info ]:    Started resolving packages from packages.yml
+23:06:56.880535 [info ]:   Finished [  0.00s] resolving packages from packages.yml
+23:06:56.880582 [debug]:    Started loading packages
+23:06:56.882419 [debug]:     Loaded [  0.00s] packages
+23:06:56.882986 [info ]: Started parsing
+23:06:56.901663 [info ]: Finished loading project [  0.04s]
+23:06:56.905090 [info ]: Finished parsing [  0.02s]
+23:06:56.905403 [info ]: Cached model count updated: 0 models (estimate)
+23:06:56.905417 [info ]: Cached model count updated: 0 models (accurate)
+23:06:56.905427 [info ]: Started scheduling
+23:06:56.905447 [info ]: Finished scheduling [  0.00s]
+23:06:56.905456 [debug]: Compilation - 0 nodes selected: {}
+23:06:56.905466 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+23:06:56.905471 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:06:56.905477 [info ]: Started scheduling
+23:06:56.905482 [info ]: Finished scheduling [  0.00s]
+23:06:56.992899 [info ]: Started building task graph
+23:06:56.992930 [info ]: Finished building task graph [  0.00s]
+23:06:56.999482 [info ]: Waiting for lease on 'target' directory
+23:06:57.434222 [info ]: Loading profiles.yml
+23:06:57.443088 [info ]: Waiting for lease on 'target' directory
+23:06:57.991383 [info ]: Loading profiles.yml
+23:06:57.999477 [info ]: Waiting for lease on 'target' directory
+23:06:58.553389 [info ]: Started loading project
+23:06:58.554052 [info ]: Loading profiles.yml
+23:06:58.566985 [info ]:    Started resolving packages from packages.yml
+23:06:58.567027 [info ]:   Finished [  0.00s] resolving packages from packages.yml
+23:06:58.567062 [debug]:    Started loading packages
+23:06:58.568953 [debug]:     Loaded [  0.00s] packages
+23:06:58.569617 [info ]: Started parsing
+23:06:58.589117 [info ]: Finished loading project [  0.04s]
+23:06:58.591823 [info ]: Finished parsing [  0.02s]
+23:06:58.592106 [info ]: Cached model count updated: 0 models (estimate)
+23:06:58.592121 [info ]: Cached model count updated: 0 models (accurate)
+23:06:58.592151 [info ]: Started scheduling
+23:06:58.592196 [info ]: Finished scheduling [  0.00s]
+23:06:58.592216 [debug]: Compilation - 0 nodes selected: {}
+23:06:58.592231 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+23:06:58.592242 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:06:58.592251 [info ]: Started scheduling
+23:06:58.592263 [info ]: Finished scheduling [  0.00s]
+23:06:58.674452 [info ]: Started building task graph
+23:06:58.674482 [info ]: Finished building task graph [  0.00s]
+23:06:58.677550 [info ]: Started scheduling
+23:06:58.677582 [info ]: Finished scheduling [  0.00s]
+23:06:58.677902 [info ]: Cached model count updated: 0 models (accurate)
+23:07:00.221880 [info ]: Started loading project
+23:07:00.222430 [info ]: Loading profiles.yml
+23:07:00.227496 [info ]: Started parsing
+23:07:00.242898 [info ]: Finished loading project [  0.02s]
+23:07:00.245597 [info ]: Finished parsing [  0.02s]
+23:07:00.246568 [info ]: Cached model count updated: 0 models (estimate)
+23:07:00.246581 [info ]: Cached model count updated: 0 models (accurate)
+23:07:00.246591 [info ]: Started scheduling
+23:07:00.246609 [info ]: Finished scheduling [  0.00s]
+23:07:00.246619 [info ]: Started scheduling
+23:07:00.246623 [info ]: Finished scheduling [  0.00s]
+23:07:00.246627 [debug]: Compilation - 0 nodes selected: {}
+23:07:00.246634 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:07:00.346019 [info ]: Started building task graph
+23:07:00.346059 [info ]: Finished building task graph [  0.00s]
+23:07:00.349983 [info ]: Started scheduling
+23:07:00.350018 [info ]: Finished scheduling [  0.00s]
+23:07:00.351903 [info ]: Cached model count updated: 0 models (accurate)
