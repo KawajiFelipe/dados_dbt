@@ -15,7 +15,7 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  projeto_dbt:
+  dados_dbt:
     # Configura que, por padrão, tudo será criado como VIEW
     # Você pode mudar para 'table' em pastas específicas
     silver:
