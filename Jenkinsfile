@@ -30,6 +30,7 @@ pipeline {
         }
         success {
             echo "Pipeline executada com sucesso!!"
+            }
         }
     }
 }
