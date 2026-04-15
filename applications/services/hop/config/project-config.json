@@ -1,0 +1,13 @@
+{
+  "description" : "dados para portfolio dbt on premise",
+  "company" : "kawaji e italo",
+  "department" : "dados",
+  "metadataBaseFolder" : "${PROJECT_HOME}/metadata",
+  "unitTestsBasePath" : "${PROJECT_HOME}",
+  "dataSetsCsvFolder" : "${PROJECT_HOME}/datasets",
+  "enforcingExecutionInHome" : true,
+  "parentProjectName" : "default",
+  "config" : {
+    "variables" : [ ]
+  }
+}
