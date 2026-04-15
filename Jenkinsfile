@@ -6,6 +6,7 @@ pipeline {
         HOP_CONTAINER = 'hop-web'
         HOP_PROJECT   = 'projeto_dados_dbt'
         HOP_ENV       = 'DEV'
+        DBT_CONTAINER = "dbt-dbt-1"
     }
 
     stages {
@@ -23,6 +24,16 @@ pipeline {
                 sh "docker exec ${HOP_CONTAINER} /usr/local/tomcat/webapps/ROOT/hop-run.sh -j ${HOP_PROJECT} -e ${HOP_ENV} -f /files/projects/projeto_dados/workflows/stage_hr.hwf -r local"
             }
         }
+
+        stage('Rodar dbt tests') {
+            steps {
+                echo "Iniciando testes de qualidade de dados DBT"
+                // Adicionada a / antes de opt e corrigido o caminho do arquivo se necessário
+                sh "docker exec ${DBT_CONTAINER} dbt test"
+            }
+        }
+
+
     }
     post {
         failure {
