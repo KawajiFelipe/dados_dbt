@@ -28,8 +28,14 @@ pipeline {
         stage('Rodar dbt tests') {
             steps {
                 echo "Iniciando testes de qualidade de dados DBT"
-                // Adicionada a / antes de opt e corrigido o caminho do arquivo se necessário
                 sh "docker exec ${DBT_CONTAINER} dbt test"
+            }
+
+        }
+        stage('Rodar dbt run') {
+            steps {
+                echo "Iniciando execução dbt"
+                sh "docker exec ${DBT_CONTAINER} dbt run"
             }
         }
 
