@@ -8614,3 +8614,1609 @@
 03:58:36.282090 [info ]: Started scheduling
 03:58:36.282130 [info ]: Finished scheduling [  0.00s]
 03:58:36.282618 [info ]: Cached model count updated: 4 models (accurate)
+==================== 2026-04-15T18:22:18.045095Z | 3c36e858-b8a8-46c1-b80c-803c56a9f2ed ====================
+18:22:18.046480 [info ]: Starting dbt LSP server
+18:22:18.048873 [info ]: Connecting to LSP client on port 8000
+18:22:18.050944 [info ]: Successfully connected to LSP client
+18:22:18.050958 [info ]: Creating LSP service...
+18:22:18.149341 [info ]: Creating LSP server...
+18:22:18.149362 [info ]: Starting LSP server...
+18:22:18.234833 [info ]: Loading profiles.yml
+18:22:18.307428 [info ]: Waiting for lease on 'target' directory
+18:22:18.892447 [info ]: Started loading project
+18:22:18.893590 [info ]: Loading profiles.yml
+18:22:18.914353 [info ]:    Started resolving packages from packages.yml
+18:22:18.915208 [info ]:   Finished [  0.00s] resolving packages from packages.yml
+18:22:18.916949 [debug]:    Started loading packages
+18:22:18.921516 [debug]:     Loaded [  0.00s] packages
+18:22:18.929260 [info ]: Started parsing
+18:22:18.965717 [info ]: Finished loading project [  0.07s]
+18:22:18.985009 [debug]: Finished parsing models\silver\sources.yml [  0.01s]
+18:22:19.004137 [debug]: Finished parsing models\silver\employee_overview.sql [  0.02s]
+18:22:19.013096 [debug]: Finished parsing models\silver\employees.sql [  0.01s]
+18:22:19.017788 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+18:22:19.029745 [debug]: Finished parsing models\silver\shifts.sql [  0.01s]
+18:22:19.033569 [info ]: Finished parsing [  0.10s]
+18:22:19.034914 [info ]: Cached model count updated: 4 models (estimate)
+18:22:19.034928 [info ]: Cached model count updated: 4 models (accurate)
+18:22:19.036496 [info ]: Started scheduling
+18:22:19.038463 [info ]: Finished scheduling [  0.00s]
+18:22:19.038681 [debug]: Compilation - 0 nodes selected: {}
+18:22:19.038708 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+18:22:19.038961 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+18:22:19.039076 [info ]: Started scheduling
+18:22:19.039530 [info ]: Finished scheduling [  0.00s]
+18:22:19.042042 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dw_dbt", schema: "bronze", table: "employee_pay_history" }) and interval: None
+18:22:19.042107 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dw_dbt", schema: "bronze", table: "stg_shift" }) and interval: None
+18:22:19.042137 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dw_dbt", schema: "bronze", table: "stg_employee" }) and interval: None
+18:22:19.159152 [info ]: Started building task graph
+18:22:19.160227 [info ]: Finished building task graph [  0.00s]
+18:22:19.169645 [info ]: Started scheduling
+18:22:19.169695 [info ]: Finished scheduling [  0.00s]
+18:22:19.170399 [info ]: Cached model count updated: 4 models (accurate)
+18:22:19.189025 [info ]: Waiting for lease on 'target' directory
+18:22:19.437832 [info ]: Started loading project
+18:22:19.438397 [info ]: Loading profiles.yml
+18:22:19.449201 [info ]: Started parsing
+18:22:19.464309 [info ]: Finished loading project [  0.03s]
+18:22:19.467042 [info ]: Finished parsing [  0.02s]
+18:22:19.468852 [info ]: Cached model count updated: 4 models (estimate)
+18:22:19.468867 [info ]: Cached model count updated: 4 models (accurate)
+18:22:19.469011 [info ]: Started scheduling
+18:22:19.469654 [info ]: Finished scheduling [  0.00s]
+18:22:19.469879 [debug]: Compilation - 3 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history"}
+18:22:19.554771 [info ]: Started building task graph
+18:22:19.555932 [info ]: Finished building task graph [  0.00s]
+18:22:19.557736 [info ]: Started rendering (3 nodes)
+18:22:19.558489 [info ]: Started model silver.employee_overview
+18:22:19.559210 [debug]: Started rendering model silver.employee_overview
+18:22:19.559366 [info ]: Started model silver.pay_history
+18:22:19.559377 [debug]: Started rendering model silver.pay_history
+18:22:19.559511 [info ]: Started model silver.employees
+18:22:19.559526 [debug]: Started rendering model silver.employees
+18:22:19.565381 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+18:22:19.565381 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+18:22:19.565418 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+18:22:19.566530 [debug]: Finished rendering [  0.01s] model silver.employees [success]
+18:22:19.566580 [info ]: Started analyzing (3 nodes)
+18:22:19.566593 [debug]: Started analyzing model silver.employees
+18:22:19.566622 [debug]: Finished rendering [  0.01s] model silver.employee_overview [success]
+18:22:19.566639 [debug]: Started analyzing model silver.employee_overview
+18:22:19.566665 [debug]: Finished rendering [  0.01s] model silver.pay_history [success]
+18:22:19.566676 [info ]: Finished rendering [  0.01s] (3 nodes, 0 skipped, 0 errors)
+18:22:19.566689 [debug]: Started analyzing model silver.pay_history
+18:22:19.567515 [info ]:  Succeeded [  0.01s] model silver.employees (table)
+18:22:19.567545 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+18:22:19.567559 [info ]:  Succeeded [  0.01s] model silver.employee_overview (table)
+18:22:19.567571 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+18:22:19.567587 [info ]:  Succeeded [  0.01s] model silver.pay_history (table)
+18:22:19.567601 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+18:22:19.567605 [info ]: Finished analyzing [  0.00s] (3 nodes, 0 skipped, 0 errors)
+18:22:19.572117 [info ]: Started scheduling
+18:22:19.572181 [info ]: Finished scheduling [  0.00s]
+18:22:19.573108 [info ]: Cached model count updated: 4 models (accurate)
+18:22:21.133078 [info ]: Started loading project
+18:22:21.133950 [info ]: Loading profiles.yml
+18:22:21.141215 [info ]: Started parsing
+18:22:21.163190 [info ]: Finished loading project [  0.03s]
+18:22:21.166707 [info ]: Finished parsing [  0.03s]
+18:22:21.168673 [info ]: Cached model count updated: 4 models (estimate)
+18:22:21.168689 [info ]: Cached model count updated: 4 models (accurate)
+18:22:21.168734 [info ]: Started scheduling
+18:22:21.168807 [info ]: Finished scheduling [  0.00s]
+18:22:21.168824 [debug]: Compilation - 1 nodes selected: {"model.dados_dbt.employee_overview"}
+18:22:21.290957 [info ]: Started building task graph
+18:22:21.291015 [info ]: Finished building task graph [  0.00s]
+18:22:21.291127 [info ]: Started rendering (1 nodes)
+18:22:21.291147 [info ]: Started model silver.employee_overview
+18:22:21.291164 [debug]: Started rendering model silver.employee_overview
+18:22:21.292470 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+18:22:21.292540 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+18:22:21.292554 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+18:22:21.292568 [info ]: Started analyzing (1 nodes)
+18:22:21.292575 [debug]: Started analyzing model silver.employee_overview
+18:22:21.292613 [info ]:  Succeeded [  0.00s] model silver.employee_overview (table)
+18:22:21.292629 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+18:22:21.292635 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+18:22:21.295817 [info ]: Started scheduling
+18:22:21.295864 [info ]: Finished scheduling [  0.00s]
+18:22:21.299017 [info ]: Cached model count updated: 4 models (accurate)
+18:22:22.846898 [info ]: Started loading project
+18:22:22.847431 [info ]: Loading profiles.yml
+18:22:22.851519 [info ]: Started parsing
+18:22:22.865972 [info ]: Finished loading project [  0.02s]
+18:22:22.868268 [info ]: Finished parsing [  0.02s]
+18:22:22.869394 [info ]: Cached model count updated: 4 models (estimate)
+18:22:22.869411 [info ]: Cached model count updated: 4 models (accurate)
+18:22:22.869436 [info ]: Started scheduling
+18:22:22.869476 [info ]: Finished scheduling [  0.00s]
+18:22:22.869495 [info ]: Started scheduling
+18:22:22.869535 [info ]: Finished scheduling [  0.00s]
+18:22:22.869548 [debug]: Compilation - 1 nodes selected: {"model.dados_dbt.shifts"}
+18:22:22.960628 [info ]: Started building task graph
+18:22:22.960684 [info ]: Finished building task graph [  0.00s]
+18:22:22.960802 [info ]: Started rendering (1 nodes)
+18:22:22.960823 [info ]: Started model silver.shifts
+18:22:22.960839 [debug]: Started rendering model silver.shifts
+18:22:22.962224 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+18:22:22.962333 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+18:22:22.962349 [info ]: Finished rendering [  0.00s] (1 nodes, 0 skipped, 0 errors)
+18:22:22.962367 [info ]: Started analyzing (1 nodes)
+18:22:22.962377 [debug]: Started analyzing model silver.shifts
+18:22:22.962430 [info ]:  Succeeded [  0.00s] model silver.shifts (table)
+18:22:22.962451 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+18:22:22.962457 [info ]: Finished analyzing [  0.00s] (1 nodes, 0 skipped, 0 errors)
+18:22:22.966110 [info ]: Started scheduling
+18:22:22.966170 [info ]: Finished scheduling [  0.00s]
+18:22:22.969819 [info ]: Cached model count updated: 4 models (accurate)
+20:21:42.430362 [info ]: Started loading project
+20:21:42.431192 [info ]: Loading profiles.yml
+20:21:42.450743 [info ]: Started parsing
+20:21:42.467962 [info ]: Finished loading project [  0.04s]
+20:21:42.468724 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:21:42.472650 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:21:42.473169 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:21:42.475287 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:21:42.476368 [info ]: Finished parsing [  0.03s]
+20:21:42.477754 [info ]: Cached model count updated: 4 models (estimate)
+20:21:42.477768 [info ]: Cached model count updated: 4 models (accurate)
+20:21:42.477793 [info ]: Started scheduling
+20:21:42.478184 [info ]: Finished scheduling [  0.00s]
+20:21:42.478200 [debug]: Compilation - 0 nodes selected: {}
+20:21:42.478450 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.stg_employee' does not match any enabled nodes
+20:21:42.478461 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:21:42.567095 [info ]: Started building task graph
+20:21:42.567125 [info ]: Finished building task graph [  0.00s]
+20:21:42.570661 [info ]: Started scheduling
+20:21:42.570777 [info ]: Finished scheduling [  0.00s]
+20:21:42.572321 [info ]: Cached model count updated: 4 models (accurate)
+20:21:42.754476 [info ]: Waiting for lease on 'target' directory
+20:21:43.014870 [info ]: Started loading project
+20:21:43.015715 [info ]: Loading profiles.yml
+20:21:43.022252 [info ]: Started parsing
+20:21:43.041248 [info ]: Finished loading project [  0.03s]
+20:21:43.043961 [info ]: Finished parsing [  0.02s]
+20:21:43.045147 [info ]: Cached model count updated: 4 models (estimate)
+20:21:43.045162 [info ]: Cached model count updated: 4 models (accurate)
+20:21:43.045181 [info ]: Started scheduling
+20:21:43.045210 [info ]: Finished scheduling [  0.00s]
+20:21:43.045220 [debug]: Compilation - 0 nodes selected: {}
+20:21:43.045229 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:21:43.045235 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:21:43.136210 [info ]: Started building task graph
+20:21:43.136243 [info ]: Finished building task graph [  0.00s]
+20:21:43.138953 [info ]: Started scheduling
+20:21:43.138988 [info ]: Finished scheduling [  0.00s]
+20:21:43.141210 [info ]: Cached model count updated: 4 models (accurate)
+20:21:44.679658 [info ]: Started loading project
+20:21:44.680611 [info ]: Loading profiles.yml
+20:21:44.688857 [info ]: Started parsing
+20:21:44.714586 [info ]: Finished loading project [  0.03s]
+20:21:44.718677 [info ]: Finished parsing [  0.03s]
+20:21:44.720864 [info ]: Cached model count updated: 4 models (estimate)
+20:21:44.720882 [info ]: Cached model count updated: 4 models (accurate)
+20:21:44.720918 [info ]: Started scheduling
+20:21:44.720968 [info ]: Finished scheduling [  0.00s]
+20:21:44.720986 [info ]: Started scheduling
+20:21:44.721036 [info ]: Finished scheduling [  0.00s]
+20:21:44.721046 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:21:44.848538 [info ]: Started building task graph
+20:21:44.848621 [info ]: Finished building task graph [  0.00s]
+20:21:44.848776 [info ]: Started rendering (4 nodes)
+20:21:44.848800 [info ]: Started model silver.shifts
+20:21:44.848817 [debug]: Started rendering model silver.shifts
+20:21:44.848847 [info ]: Started model silver.employee_overview
+20:21:44.848858 [debug]: Started rendering model silver.employee_overview
+20:21:44.848877 [info ]: Started model silver.pay_history
+20:21:44.848892 [debug]: Started rendering model silver.pay_history
+20:21:44.848906 [info ]: Started model silver.employees
+20:21:44.848919 [debug]: Started rendering model silver.employees
+20:21:44.856397 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:21:44.856403 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:21:44.856396 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:21:44.856475 [debug]: Finished rendering [  0.01s] model silver.employees [success]
+20:21:44.856514 [info ]: Started analyzing (4 nodes)
+20:21:44.856529 [debug]: Started analyzing model silver.employees
+20:21:44.856550 [debug]: Finished rendering [  0.01s] model silver.shifts [success]
+20:21:44.856563 [debug]: Started analyzing model silver.shifts
+20:21:44.856579 [debug]: Finished rendering [  0.01s] model silver.pay_history [success]
+20:21:44.856591 [debug]: Started analyzing model silver.pay_history
+20:21:44.856614 [info ]:  Succeeded [  0.01s] model silver.employees (table)
+20:21:44.856631 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:21:44.856642 [info ]:  Succeeded [  0.01s] model silver.shifts (table)
+20:21:44.856652 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:21:44.856668 [info ]:  Succeeded [  0.01s] model silver.pay_history (table)
+20:21:44.856679 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:21:44.858279 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:21:44.858329 [debug]: Finished rendering [  0.01s] model silver.employee_overview [success]
+20:21:44.858345 [info ]: Finished rendering [  0.01s] (4 nodes, 0 skipped, 0 errors)
+20:21:44.858359 [debug]: Started analyzing model silver.employee_overview
+20:21:44.858398 [info ]:  Succeeded [  0.01s] model silver.employee_overview (table)
+20:21:44.858415 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:21:44.858421 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:21:44.861819 [info ]: Started scheduling
+20:21:44.861865 [info ]: Finished scheduling [  0.00s]
+20:21:44.864403 [info ]: Cached model count updated: 4 models (accurate)
+20:24:02.432546 [info ]: Started loading project
+20:24:02.433128 [info ]: Loading profiles.yml
+20:24:02.443873 [info ]: Started parsing
+20:24:02.457969 [info ]: Finished loading project [  0.03s]
+20:24:02.458571 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:24:02.461664 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:24:02.462142 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:24:02.464147 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:24:02.465336 [info ]: Finished parsing [  0.02s]
+20:24:02.466546 [info ]: Cached model count updated: 4 models (estimate)
+20:24:02.466560 [info ]: Cached model count updated: 4 models (accurate)
+20:24:02.466583 [info ]: Started scheduling
+20:24:02.466633 [info ]: Finished scheduling [  0.00s]
+20:24:02.466643 [debug]: Compilation - 0 nodes selected: {}
+20:24:02.466656 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.stg_department' does not match any enabled nodes
+20:24:02.466660 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:24:02.587576 [info ]: Started building task graph
+20:24:02.587607 [info ]: Finished building task graph [  0.00s]
+20:24:02.590434 [info ]: Started scheduling
+20:24:02.590553 [info ]: Finished scheduling [  0.00s]
+20:24:02.591133 [info ]: Cached model count updated: 4 models (accurate)
+20:24:02.766883 [info ]: Waiting for lease on 'target' directory
+20:24:03.017046 [info ]: Started loading project
+20:24:03.017625 [info ]: Loading profiles.yml
+20:24:03.022738 [info ]: Started parsing
+20:24:03.037463 [info ]: Finished loading project [  0.02s]
+20:24:03.039875 [info ]: Finished parsing [  0.02s]
+20:24:03.041089 [info ]: Cached model count updated: 4 models (estimate)
+20:24:03.041105 [info ]: Cached model count updated: 4 models (accurate)
+20:24:03.041129 [info ]: Started scheduling
+20:24:03.041162 [info ]: Finished scheduling [  0.00s]
+20:24:03.041174 [debug]: Compilation - 0 nodes selected: {}
+20:24:03.041184 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:24:03.041192 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:24:03.137475 [info ]: Started building task graph
+20:24:03.137506 [info ]: Finished building task graph [  0.00s]
+20:24:03.140194 [info ]: Started scheduling
+20:24:03.140232 [info ]: Finished scheduling [  0.00s]
+20:24:03.143174 [info ]: Cached model count updated: 4 models (accurate)
+20:24:04.694430 [info ]: Started loading project
+20:24:04.695116 [info ]: Loading profiles.yml
+20:24:04.701121 [info ]: Started parsing
+20:24:04.724137 [info ]: Finished loading project [  0.03s]
+20:24:04.728254 [info ]: Finished parsing [  0.03s]
+20:24:04.730103 [info ]: Cached model count updated: 4 models (estimate)
+20:24:04.730122 [info ]: Cached model count updated: 4 models (accurate)
+20:24:04.730166 [info ]: Started scheduling
+20:24:04.730219 [info ]: Finished scheduling [  0.00s]
+20:24:04.730240 [info ]: Started scheduling
+20:24:04.730298 [info ]: Finished scheduling [  0.00s]
+20:24:04.730314 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:24:04.840503 [info ]: Started building task graph
+20:24:04.840565 [info ]: Finished building task graph [  0.00s]
+20:24:04.840688 [info ]: Started rendering (4 nodes)
+20:24:04.840703 [info ]: Started model silver.shifts
+20:24:04.840714 [debug]: Started rendering model silver.shifts
+20:24:04.840732 [info ]: Started model silver.employee_overview
+20:24:04.840736 [debug]: Started rendering model silver.employee_overview
+20:24:04.840745 [info ]: Started model silver.pay_history
+20:24:04.840751 [debug]: Started rendering model silver.pay_history
+20:24:04.840757 [info ]: Started model silver.employees
+20:24:04.840765 [debug]: Started rendering model silver.employees
+20:24:04.841168 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:24:04.841235 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:24:04.841262 [info ]: Started analyzing (4 nodes)
+20:24:04.841271 [debug]: Started analyzing model silver.shifts
+20:24:04.841301 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:24:04.841308 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:24:04.841330 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:24:04.841353 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:24:04.841371 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:24:04.841390 [debug]: Started analyzing model silver.pay_history
+20:24:04.841404 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:24:04.841411 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:24:04.841414 [debug]: Started analyzing model silver.employee_overview
+20:24:04.841439 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:24:04.841449 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:24:04.841461 [debug]: Started analyzing model silver.employees
+20:24:04.841478 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:24:04.841490 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:24:04.841497 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:24:04.841505 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:24:04.841518 [info ]:  Succeeded [-------] model silver.employees (table)
+20:24:04.841525 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:24:04.841532 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:24:04.844412 [info ]: Started scheduling
+20:24:04.844453 [info ]: Finished scheduling [  0.00s]
+20:24:04.847111 [info ]: Cached model count updated: 4 models (accurate)
+20:28:02.310084 [info ]: Started loading project
+20:28:02.310709 [info ]: Loading profiles.yml
+20:28:02.316294 [info ]: Started parsing
+20:28:02.330193 [info ]: Finished loading project [  0.02s]
+20:28:02.330833 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:28:02.332982 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:28:02.333452 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:28:02.335535 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:28:02.336498 [info ]: Finished parsing [  0.02s]
+20:28:02.337677 [info ]: Cached model count updated: 4 models (estimate)
+20:28:02.337690 [info ]: Cached model count updated: 4 models (accurate)
+20:28:02.337714 [info ]: Started scheduling
+20:28:02.337766 [info ]: Finished scheduling [  0.00s]
+20:28:02.337777 [debug]: Compilation - 0 nodes selected: {}
+20:28:02.337789 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.employee_pay_history' does not match any enabled nodes
+20:28:02.337797 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:28:02.425254 [info ]: Started building task graph
+20:28:02.425285 [info ]: Finished building task graph [  0.00s]
+20:28:02.427978 [info ]: Started scheduling
+20:28:02.428067 [info ]: Finished scheduling [  0.00s]
+20:28:02.428632 [info ]: Cached model count updated: 4 models (accurate)
+20:28:02.640249 [info ]: Waiting for lease on 'target' directory
+20:28:02.889090 [info ]: Started loading project
+20:28:02.889642 [info ]: Loading profiles.yml
+20:28:02.894243 [info ]: Started parsing
+20:28:02.908360 [info ]: Finished loading project [  0.02s]
+20:28:02.911232 [info ]: Finished parsing [  0.02s]
+20:28:02.912455 [info ]: Cached model count updated: 4 models (estimate)
+20:28:02.912467 [info ]: Cached model count updated: 4 models (accurate)
+20:28:02.912486 [info ]: Started scheduling
+20:28:02.912513 [info ]: Finished scheduling [  0.00s]
+20:28:02.912523 [debug]: Compilation - 0 nodes selected: {}
+20:28:02.912531 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:28:02.912535 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:28:02.998482 [info ]: Started building task graph
+20:28:02.998514 [info ]: Finished building task graph [  0.00s]
+20:28:03.001089 [info ]: Started scheduling
+20:28:03.001123 [info ]: Finished scheduling [  0.00s]
+20:28:03.003464 [info ]: Cached model count updated: 4 models (accurate)
+20:28:04.559699 [info ]: Started loading project
+20:28:04.560357 [info ]: Loading profiles.yml
+20:28:04.567000 [info ]: Started parsing
+20:28:04.587028 [info ]: Finished loading project [  0.03s]
+20:28:04.590446 [info ]: Finished parsing [  0.02s]
+20:28:04.592070 [info ]: Cached model count updated: 4 models (estimate)
+20:28:04.592089 [info ]: Cached model count updated: 4 models (accurate)
+20:28:04.592138 [info ]: Started scheduling
+20:28:04.592184 [info ]: Finished scheduling [  0.00s]
+20:28:04.592201 [info ]: Started scheduling
+20:28:04.592254 [info ]: Finished scheduling [  0.00s]
+20:28:04.592268 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:28:04.702020 [info ]: Started building task graph
+20:28:04.702081 [info ]: Finished building task graph [  0.00s]
+20:28:04.702199 [info ]: Started rendering (4 nodes)
+20:28:04.702213 [info ]: Started model silver.shifts
+20:28:04.702225 [debug]: Started rendering model silver.shifts
+20:28:04.702242 [info ]: Started model silver.employee_overview
+20:28:04.702248 [debug]: Started rendering model silver.employee_overview
+20:28:04.702255 [info ]: Started model silver.pay_history
+20:28:04.702259 [debug]: Started rendering model silver.pay_history
+20:28:04.702265 [info ]: Started model silver.employees
+20:28:04.702270 [debug]: Started rendering model silver.employees
+20:28:04.702697 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:28:04.702753 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:28:04.702776 [info ]: Started analyzing (4 nodes)
+20:28:04.702779 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:28:04.702785 [debug]: Started analyzing model silver.shifts
+20:28:04.702813 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:28:04.702834 [debug]: Started analyzing model silver.employee_overview
+20:28:04.702848 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:28:04.702849 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:28:04.702860 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:28:04.702873 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:28:04.702879 [debug]: Started analyzing model silver.employees
+20:28:04.702891 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:28:04.702900 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:28:04.702920 [info ]:  Succeeded [-------] model silver.employees (table)
+20:28:04.702936 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:28:04.703352 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:28:04.703385 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:28:04.703394 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:28:04.703403 [debug]: Started analyzing model silver.pay_history
+20:28:04.703426 [info ]:  Succeeded [  0.00s] model silver.pay_history (table)
+20:28:04.703436 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:28:04.703440 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:28:04.706176 [info ]: Started scheduling
+20:28:04.706214 [info ]: Finished scheduling [  0.00s]
+20:28:04.708254 [info ]: Cached model count updated: 4 models (accurate)
+20:35:51.790266 [info ]: Started loading project
+20:35:51.790873 [info ]: Loading profiles.yml
+20:35:51.794927 [info ]: Started loading project
+20:35:51.795313 [info ]: Loading profiles.yml
+20:35:51.795349 [info ]: Finished loading project [  0.01s]
+20:35:51.806860 [info ]:    Started resolving packages from packages.yml
+20:35:51.806892 [info ]:   Finished [  0.00s] resolving packages from packages.yml
+20:35:51.806924 [debug]:    Started loading packages
+20:35:51.809071 [debug]:     Loaded [  0.00s] packages
+20:35:51.809648 [info ]: Started parsing
+20:35:51.828768 [info ]: Finished loading project [  0.03s]
+20:35:51.829877 [debug]: Finished parsing models\silver\silver_models.yml [  0.00s]
+20:35:51.830188 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:35:51.831589 [debug]: Finished parsing models\silver\employee_overview.sql [  0.00s]
+20:35:51.832053 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:35:51.832499 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:35:51.834464 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:35:51.835525 [info ]: Finished parsing [  0.03s]
+20:35:51.835935 [info ]: Cached model count updated: 4 models (estimate)
+20:35:51.835947 [info ]: Cached model count updated: 4 models (accurate)
+20:35:51.835967 [info ]: Started scheduling
+20:35:51.835999 [info ]: Finished scheduling [  0.00s]
+20:35:51.836008 [debug]: Compilation - 0 nodes selected: {}
+20:35:51.836017 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:35:51.836024 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:35:51.836028 [info ]: Started scheduling
+20:35:51.836063 [info ]: Finished scheduling [  0.00s]
+20:35:51.836117 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dw_dbt", schema: "bronze", table: "employee_pay_history" }) and interval: None
+20:35:51.836158 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dw_dbt", schema: "bronze", table: "stg_shift" }) and interval: None
+20:35:51.836189 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dw_dbt", schema: "bronze", table: "stg_employee" }) and interval: None
+20:35:51.924964 [info ]: Started building task graph
+20:35:51.924996 [info ]: Finished building task graph [  0.00s]
+20:35:51.927908 [info ]: Started scheduling
+20:35:51.927967 [info ]: Finished scheduling [  0.00s]
+20:35:51.932040 [info ]: Cached model count updated: 4 models (accurate)
+20:35:53.479863 [info ]: Started loading project
+20:35:53.480450 [info ]: Loading profiles.yml
+20:35:53.485756 [info ]: Started parsing
+20:35:53.500796 [info ]: Finished loading project [  0.02s]
+20:35:53.503189 [info ]: Finished parsing [  0.02s]
+20:35:53.504275 [info ]: Cached model count updated: 4 models (estimate)
+20:35:53.504290 [info ]: Cached model count updated: 4 models (accurate)
+20:35:53.504318 [info ]: Started scheduling
+20:35:53.504356 [info ]: Finished scheduling [  0.00s]
+20:35:53.504369 [info ]: Started scheduling
+20:35:53.504410 [info ]: Finished scheduling [  0.00s]
+20:35:53.504420 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:35:53.591462 [info ]: Started building task graph
+20:35:53.591540 [info ]: Finished building task graph [  0.00s]
+20:35:53.591661 [info ]: Started rendering (4 nodes)
+20:35:53.591681 [info ]: Started model silver.shifts
+20:35:53.591699 [debug]: Started rendering model silver.shifts
+20:35:53.591725 [info ]: Started model silver.employee_overview
+20:35:53.591736 [debug]: Started rendering model silver.employee_overview
+20:35:53.591747 [info ]: Started model silver.pay_history
+20:35:53.591757 [debug]: Started rendering model silver.pay_history
+20:35:53.591767 [info ]: Started model silver.employees
+20:35:53.591776 [debug]: Started rendering model silver.employees
+20:35:53.594377 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:35:53.594452 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:35:53.594464 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:35:53.594489 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:35:53.594497 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:35:53.594520 [info ]: Started analyzing (4 nodes)
+20:35:53.594528 [debug]: Started analyzing model silver.employees
+20:35:53.594565 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:35:53.594582 [debug]: Started analyzing model silver.shifts
+20:35:53.594603 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:35:53.594613 [debug]: Started analyzing model silver.pay_history
+20:35:53.594631 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:35:53.594638 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:35:53.594647 [debug]: Started analyzing model silver.employee_overview
+20:35:53.594661 [info ]:  Succeeded [  0.00s] model silver.employees (table)
+20:35:53.594675 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:35:53.594685 [info ]:  Succeeded [  0.00s] model silver.shifts (table)
+20:35:53.594694 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:35:53.594704 [info ]:  Succeeded [  0.00s] model silver.pay_history (table)
+20:35:53.594713 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:35:53.594735 [info ]:  Succeeded [  0.00s] model silver.employee_overview (table)
+20:35:53.594752 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:35:53.594758 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:35:53.599209 [info ]: Started scheduling
+20:35:53.599273 [info ]: Finished scheduling [  0.00s]
+20:35:53.601268 [info ]: Cached model count updated: 4 models (accurate)
+20:36:39.775585 [info ]: Started loading project
+20:36:39.776193 [info ]: Loading profiles.yml
+20:36:39.779623 [info ]: Started loading project
+20:36:39.779977 [info ]: Loading profiles.yml
+20:36:39.780013 [info ]: Finished loading project [  0.00s]
+20:36:39.791934 [info ]:    Started resolving packages from packages.yml
+20:36:39.791966 [info ]:   Finished [  0.00s] resolving packages from packages.yml
+20:36:39.791995 [debug]:    Started loading packages
+20:36:39.794253 [debug]:     Loaded [  0.00s] packages
+20:36:39.794849 [info ]: Started parsing
+20:36:39.818225 [info ]: Finished loading project [  0.04s]
+20:36:39.818888 [debug]: Finished parsing models\gold\gold_models.yml [  0.00s]
+20:36:39.819020 [debug]: Finished parsing models\silver\silver_models.yml [  0.00s]
+20:36:39.819440 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:36:39.821342 [debug]: Finished parsing models\silver\employee_overview.sql [  0.00s]
+20:36:39.822021 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:36:39.822581 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:36:39.825201 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:36:39.826659 [info ]: Finished parsing [  0.03s]
+20:36:39.827550 [info ]: Cached model count updated: 4 models (estimate)
+20:36:39.827568 [info ]: Cached model count updated: 4 models (accurate)
+20:36:39.827603 [info ]: Started scheduling
+20:36:39.827650 [info ]: Finished scheduling [  0.00s]
+20:36:39.827666 [debug]: Compilation - 0 nodes selected: {}
+20:36:39.827680 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:36:39.827690 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:36:39.827698 [info ]: Started scheduling
+20:36:39.827765 [info ]: Finished scheduling [  0.00s]
+20:36:39.827839 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dw_dbt", schema: "bronze", table: "stg_employee" }) and interval: None
+20:36:39.827899 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dw_dbt", schema: "bronze", table: "stg_shift" }) and interval: None
+20:36:39.827935 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "dw_dbt", schema: "bronze", table: "employee_pay_history" }) and interval: None
+20:36:39.943933 [info ]: Started building task graph
+20:36:39.943971 [info ]: Finished building task graph [  0.00s]
+20:36:39.948052 [info ]: Started scheduling
+20:36:39.948136 [info ]: Finished scheduling [  0.00s]
+20:36:39.953182 [info ]: Cached model count updated: 4 models (accurate)
+20:36:41.500958 [info ]: Started loading project
+20:36:41.501474 [info ]: Loading profiles.yml
+20:36:41.506432 [info ]: Started parsing
+20:36:41.520541 [info ]: Finished loading project [  0.02s]
+20:36:41.523081 [info ]: Finished parsing [  0.02s]
+20:36:41.524192 [info ]: Cached model count updated: 4 models (estimate)
+20:36:41.524205 [info ]: Cached model count updated: 4 models (accurate)
+20:36:41.524234 [info ]: Started scheduling
+20:36:41.524270 [info ]: Finished scheduling [  0.00s]
+20:36:41.524283 [info ]: Started scheduling
+20:36:41.524322 [info ]: Finished scheduling [  0.00s]
+20:36:41.524333 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:36:41.611815 [info ]: Started building task graph
+20:36:41.611892 [info ]: Finished building task graph [  0.00s]
+20:36:41.612005 [info ]: Started rendering (4 nodes)
+20:36:41.612025 [info ]: Started model silver.shifts
+20:36:41.612041 [debug]: Started rendering model silver.shifts
+20:36:41.612068 [info ]: Started model silver.employee_overview
+20:36:41.612078 [debug]: Started rendering model silver.employee_overview
+20:36:41.612090 [info ]: Started model silver.pay_history
+20:36:41.612097 [debug]: Started rendering model silver.pay_history
+20:36:41.612115 [info ]: Started model silver.employees
+20:36:41.612135 [debug]: Started rendering model silver.employees
+20:36:41.614411 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:36:41.614445 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:36:41.614470 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:36:41.614500 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:36:41.614657 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:36:41.614689 [info ]: Started analyzing (4 nodes)
+20:36:41.614705 [debug]: Started analyzing model silver.shifts
+20:36:41.614726 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:36:41.614746 [debug]: Started analyzing model silver.employee_overview
+20:36:41.614764 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:36:41.614782 [debug]: Started analyzing model silver.employees
+20:36:41.614799 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:36:41.614809 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:36:41.614818 [debug]: Started analyzing model silver.pay_history
+20:36:41.614832 [info ]:  Succeeded [  0.00s] model silver.shifts (table)
+20:36:41.614848 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:36:41.614857 [info ]:  Succeeded [  0.00s] model silver.employee_overview (table)
+20:36:41.614863 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:36:41.614870 [info ]:  Succeeded [  0.00s] model silver.employees (table)
+20:36:41.614876 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:36:41.614891 [info ]:  Succeeded [  0.00s] model silver.pay_history (table)
+20:36:41.614906 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:36:41.614911 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:36:41.617920 [info ]: Started scheduling
+20:36:41.617968 [info ]: Finished scheduling [  0.00s]
+20:36:41.619354 [info ]: Cached model count updated: 4 models (accurate)
+20:39:09.612568 [info ]: Started loading project
+20:39:09.613176 [info ]: Loading profiles.yml
+20:39:09.624970 [info ]: Started parsing
+20:39:09.639530 [info ]: Finished loading project [  0.03s]
+20:39:09.640214 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:39:09.641743 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:39:09.642106 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:39:09.643693 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:39:09.644381 [info ]: Finished parsing [  0.02s]
+20:39:09.645587 [info ]: Cached model count updated: 4 models (estimate)
+20:39:09.645601 [info ]: Cached model count updated: 4 models (accurate)
+20:39:09.645625 [info ]: Started scheduling
+20:39:09.645686 [info ]: Finished scheduling [  0.00s]
+20:39:09.645697 [debug]: Compilation - 0 nodes selected: {}
+20:39:09.645709 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.stg_employee_department_history' does not match any enabled nodes
+20:39:09.645717 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:39:09.732335 [info ]: Started building task graph
+20:39:09.732366 [info ]: Finished building task graph [  0.00s]
+20:39:09.735230 [info ]: Started scheduling
+20:39:09.735331 [info ]: Finished scheduling [  0.00s]
+20:39:09.735804 [info ]: Cached model count updated: 4 models (accurate)
+20:39:09.942310 [info ]: Waiting for lease on 'target' directory
+20:39:10.188761 [info ]: Started loading project
+20:39:10.189430 [info ]: Loading profiles.yml
+20:39:10.193691 [info ]: Started parsing
+20:39:10.209754 [info ]: Finished loading project [  0.02s]
+20:39:10.212308 [info ]: Finished parsing [  0.02s]
+20:39:10.213680 [info ]: Cached model count updated: 4 models (estimate)
+20:39:10.213693 [info ]: Cached model count updated: 4 models (accurate)
+20:39:10.213713 [info ]: Started scheduling
+20:39:10.213744 [info ]: Finished scheduling [  0.00s]
+20:39:10.213753 [debug]: Compilation - 0 nodes selected: {}
+20:39:10.213764 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:39:10.213770 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:39:10.304542 [info ]: Started building task graph
+20:39:10.304573 [info ]: Finished building task graph [  0.00s]
+20:39:10.307362 [info ]: Started scheduling
+20:39:10.307403 [info ]: Finished scheduling [  0.00s]
+20:39:10.309471 [info ]: Cached model count updated: 4 models (accurate)
+20:39:11.861624 [info ]: Started loading project
+20:39:11.862295 [info ]: Loading profiles.yml
+20:39:11.866943 [info ]: Started parsing
+20:39:11.881589 [info ]: Finished loading project [  0.02s]
+20:39:11.883904 [info ]: Finished parsing [  0.02s]
+20:39:11.885179 [info ]: Cached model count updated: 4 models (estimate)
+20:39:11.885194 [info ]: Cached model count updated: 4 models (accurate)
+20:39:11.885226 [info ]: Started scheduling
+20:39:11.885267 [info ]: Finished scheduling [  0.00s]
+20:39:11.885282 [info ]: Started scheduling
+20:39:11.885324 [info ]: Finished scheduling [  0.00s]
+20:39:11.885334 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:39:11.973285 [info ]: Started building task graph
+20:39:11.973370 [info ]: Finished building task graph [  0.00s]
+20:39:11.973518 [info ]: Started rendering (4 nodes)
+20:39:11.973541 [info ]: Started model silver.shifts
+20:39:11.973558 [debug]: Started rendering model silver.shifts
+20:39:11.973591 [info ]: Started model silver.employee_overview
+20:39:11.973603 [debug]: Started rendering model silver.employee_overview
+20:39:11.973616 [info ]: Started model silver.pay_history
+20:39:11.973626 [debug]: Started rendering model silver.pay_history
+20:39:11.973639 [info ]: Started model silver.employees
+20:39:11.973650 [debug]: Started rendering model silver.employees
+20:39:11.974042 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:39:11.974113 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:39:11.974132 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:39:11.974134 [info ]: Started analyzing (4 nodes)
+20:39:11.974144 [debug]: Started analyzing model silver.shifts
+20:39:11.974142 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:39:11.974158 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:39:11.974167 [debug]: Started analyzing model silver.pay_history
+20:39:11.974187 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:39:11.974197 [debug]: Started analyzing model silver.employee_overview
+20:39:11.974211 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:39:11.974214 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:39:11.974227 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:39:11.974234 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:39:11.974239 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:39:11.974246 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:39:11.974252 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:39:11.974257 [debug]: Started analyzing model silver.employees
+20:39:11.974272 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:39:11.974281 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:39:11.974303 [info ]:  Succeeded [-------] model silver.employees (table)
+20:39:11.974320 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:39:11.974327 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:39:11.977298 [info ]: Started scheduling
+20:39:11.977355 [info ]: Finished scheduling [  0.00s]
+20:39:11.979964 [info ]: Cached model count updated: 4 models (accurate)
+20:43:22.574931 [info ]: Started loading project
+20:43:22.575618 [info ]: Loading profiles.yml
+20:43:22.587055 [info ]: Started parsing
+20:43:22.601104 [info ]: Finished loading project [  0.03s]
+20:43:22.601861 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:43:22.606386 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:43:22.606761 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:43:22.608358 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:43:22.609221 [info ]: Finished parsing [  0.02s]
+20:43:22.610412 [info ]: Cached model count updated: 4 models (estimate)
+20:43:22.610426 [info ]: Cached model count updated: 4 models (accurate)
+20:43:22.610449 [info ]: Started scheduling
+20:43:22.610513 [info ]: Finished scheduling [  0.00s]
+20:43:22.610524 [debug]: Compilation - 0 nodes selected: {}
+20:43:22.610537 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.stg_employee_department_history' does not match any enabled nodes
+20:43:22.610543 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:43:22.701844 [info ]: Started building task graph
+20:43:22.701875 [info ]: Finished building task graph [  0.00s]
+20:43:22.704789 [info ]: Started scheduling
+20:43:22.704899 [info ]: Finished scheduling [  0.00s]
+20:43:22.705439 [info ]: Cached model count updated: 4 models (accurate)
+20:43:22.895904 [info ]: Waiting for lease on 'target' directory
+20:43:23.140972 [info ]: Started loading project
+20:43:23.141463 [info ]: Loading profiles.yml
+20:43:23.145777 [info ]: Started parsing
+20:43:23.159518 [info ]: Finished loading project [  0.02s]
+20:43:23.162675 [info ]: Finished parsing [  0.02s]
+20:43:23.164053 [info ]: Cached model count updated: 4 models (estimate)
+20:43:23.164067 [info ]: Cached model count updated: 4 models (accurate)
+20:43:23.164089 [info ]: Started scheduling
+20:43:23.164120 [info ]: Finished scheduling [  0.00s]
+20:43:23.164129 [debug]: Compilation - 0 nodes selected: {}
+20:43:23.164138 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:43:23.164142 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:43:23.247582 [info ]: Started building task graph
+20:43:23.247611 [info ]: Finished building task graph [  0.00s]
+20:43:23.250361 [info ]: Started scheduling
+20:43:23.250400 [info ]: Finished scheduling [  0.00s]
+20:43:23.254016 [info ]: Cached model count updated: 4 models (accurate)
+20:43:24.801242 [info ]: Started loading project
+20:43:24.801722 [info ]: Loading profiles.yml
+20:43:24.806316 [info ]: Started parsing
+20:43:24.820602 [info ]: Finished loading project [  0.02s]
+20:43:24.822965 [info ]: Finished parsing [  0.02s]
+20:43:24.824126 [info ]: Cached model count updated: 4 models (estimate)
+20:43:24.824141 [info ]: Cached model count updated: 4 models (accurate)
+20:43:24.824169 [info ]: Started scheduling
+20:43:24.824207 [info ]: Finished scheduling [  0.00s]
+20:43:24.824220 [info ]: Started scheduling
+20:43:24.824260 [info ]: Finished scheduling [  0.00s]
+20:43:24.824271 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:43:24.912505 [info ]: Started building task graph
+20:43:24.912581 [info ]: Finished building task graph [  0.00s]
+20:43:24.912701 [info ]: Started rendering (4 nodes)
+20:43:24.912721 [info ]: Started model silver.shifts
+20:43:24.912737 [debug]: Started rendering model silver.shifts
+20:43:24.912762 [info ]: Started model silver.employee_overview
+20:43:24.912772 [debug]: Started rendering model silver.employee_overview
+20:43:24.912783 [info ]: Started model silver.pay_history
+20:43:24.912789 [debug]: Started rendering model silver.pay_history
+20:43:24.912799 [info ]: Started model silver.employees
+20:43:24.912806 [debug]: Started rendering model silver.employees
+20:43:24.913261 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:43:24.913338 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:43:24.913369 [info ]: Started analyzing (4 nodes)
+20:43:24.913381 [debug]: Started analyzing model silver.shifts
+20:43:24.913402 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:43:24.913435 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:43:24.913436 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:43:24.913456 [debug]: Started analyzing model silver.employee_overview
+20:43:24.913464 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:43:24.913472 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:43:24.913486 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:43:24.913502 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:43:24.913512 [debug]: Started analyzing model silver.pay_history
+20:43:24.913532 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:43:24.913543 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:43:24.913552 [debug]: Started analyzing model silver.employees
+20:43:24.913563 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:43:24.913570 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:43:24.913577 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:43:24.913582 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:43:24.913598 [info ]:  Succeeded [-------] model silver.employees (table)
+20:43:24.913614 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:43:24.913620 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:43:24.916767 [info ]: Started scheduling
+20:43:24.916812 [info ]: Finished scheduling [  0.00s]
+20:43:24.919138 [info ]: Cached model count updated: 4 models (accurate)
+20:44:25.884425 [info ]: Started loading project
+20:44:25.885014 [info ]: Loading profiles.yml
+20:44:25.896448 [info ]: Started parsing
+20:44:25.910758 [info ]: Finished loading project [  0.03s]
+20:44:25.911922 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:44:25.913576 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:44:25.913940 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:44:25.915548 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:44:25.916405 [info ]: Finished parsing [  0.02s]
+20:44:25.917606 [info ]: Cached model count updated: 4 models (estimate)
+20:44:25.917620 [info ]: Cached model count updated: 4 models (accurate)
+20:44:25.917645 [info ]: Started scheduling
+20:44:25.917703 [info ]: Finished scheduling [  0.00s]
+20:44:25.917713 [debug]: Compilation - 0 nodes selected: {}
+20:44:25.917726 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.stg_employee_department_history +source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.stg_shift' does not match any enabled nodes
+20:44:25.917732 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:44:26.004782 [info ]: Started building task graph
+20:44:26.004823 [info ]: Finished building task graph [  0.00s]
+20:44:26.007780 [info ]: Started scheduling
+20:44:26.007873 [info ]: Finished scheduling [  0.00s]
+20:44:26.008320 [info ]: Cached model count updated: 4 models (accurate)
+20:44:26.206701 [info ]: Waiting for lease on 'target' directory
+20:44:26.452160 [info ]: Started loading project
+20:44:26.452647 [info ]: Loading profiles.yml
+20:44:26.456994 [info ]: Started parsing
+20:44:26.479417 [info ]: Finished loading project [  0.03s]
+20:44:26.482781 [info ]: Finished parsing [  0.03s]
+20:44:26.484183 [info ]: Cached model count updated: 4 models (estimate)
+20:44:26.484198 [info ]: Cached model count updated: 4 models (accurate)
+20:44:26.484223 [info ]: Started scheduling
+20:44:26.484257 [info ]: Finished scheduling [  0.00s]
+20:44:26.484268 [debug]: Compilation - 0 nodes selected: {}
+20:44:26.484279 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:44:26.484296 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:44:26.573254 [info ]: Started building task graph
+20:44:26.573285 [info ]: Finished building task graph [  0.00s]
+20:44:26.576152 [info ]: Started scheduling
+20:44:26.576186 [info ]: Finished scheduling [  0.00s]
+20:44:26.578144 [info ]: Cached model count updated: 4 models (accurate)
+20:44:28.128078 [info ]: Started loading project
+20:44:28.128808 [info ]: Loading profiles.yml
+20:44:28.134959 [info ]: Started parsing
+20:44:28.159381 [info ]: Finished loading project [  0.03s]
+20:44:28.163156 [info ]: Finished parsing [  0.03s]
+20:44:28.165587 [info ]: Cached model count updated: 4 models (estimate)
+20:44:28.165612 [info ]: Cached model count updated: 4 models (accurate)
+20:44:28.165651 [info ]: Started scheduling
+20:44:28.165719 [info ]: Finished scheduling [  0.00s]
+20:44:28.165746 [info ]: Started scheduling
+20:44:28.165808 [info ]: Finished scheduling [  0.00s]
+20:44:28.165830 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:44:28.268696 [info ]: Started building task graph
+20:44:28.268759 [info ]: Finished building task graph [  0.00s]
+20:44:28.268862 [info ]: Started rendering (4 nodes)
+20:44:28.268876 [info ]: Started model silver.shifts
+20:44:28.268889 [debug]: Started rendering model silver.shifts
+20:44:28.268906 [info ]: Started model silver.employee_overview
+20:44:28.268913 [debug]: Started rendering model silver.employee_overview
+20:44:28.268919 [info ]: Started model silver.pay_history
+20:44:28.268922 [debug]: Started rendering model silver.pay_history
+20:44:28.268928 [info ]: Started model silver.employees
+20:44:28.268932 [debug]: Started rendering model silver.employees
+20:44:28.269225 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:44:28.269294 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:44:28.269320 [info ]: Started analyzing (4 nodes)
+20:44:28.269329 [debug]: Started analyzing model silver.shifts
+20:44:28.269372 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:44:28.269388 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:44:28.269388 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:44:28.269411 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:44:28.269420 [debug]: Started analyzing model silver.pay_history
+20:44:28.269444 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:44:28.269453 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:44:28.269503 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:44:28.269514 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:44:28.269533 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:44:28.269559 [debug]: Started analyzing model silver.employee_overview
+20:44:28.269587 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:44:28.269597 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:44:28.269608 [debug]: Started analyzing model silver.employees
+20:44:28.269633 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:44:28.269645 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:44:28.269656 [info ]:  Succeeded [-------] model silver.employees (table)
+20:44:28.269669 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:44:28.269673 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:44:28.272436 [info ]: Started scheduling
+20:44:28.272475 [info ]: Finished scheduling [  0.00s]
+20:44:28.274771 [info ]: Cached model count updated: 4 models (accurate)
+20:44:42.686640 [info ]: Started loading project
+20:44:42.687229 [info ]: Loading profiles.yml
+20:44:42.692495 [info ]: Started parsing
+20:44:42.705441 [info ]: Finished loading project [  0.02s]
+20:44:42.706265 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:44:42.708019 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:44:42.708457 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:44:42.710390 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:44:42.711104 [info ]: Finished parsing [  0.02s]
+20:44:42.712292 [info ]: Cached model count updated: 4 models (estimate)
+20:44:42.712303 [info ]: Cached model count updated: 4 models (accurate)
+20:44:42.712325 [info ]: Started scheduling
+20:44:42.712377 [info ]: Finished scheduling [  0.00s]
+20:44:42.712386 [debug]: Compilation - 0 nodes selected: {}
+20:44:42.712398 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.stg_employee_department_history' does not match any enabled nodes
+20:44:42.712402 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:44:42.796532 [info ]: Started building task graph
+20:44:42.796564 [info ]: Finished building task graph [  0.00s]
+20:44:42.799198 [info ]: Started scheduling
+20:44:42.799285 [info ]: Finished scheduling [  0.00s]
+20:44:42.799729 [info ]: Cached model count updated: 4 models (accurate)
+20:44:42.849734 [info ]: Waiting for lease on 'target' directory
+20:44:43.311910 [info ]: Cached model count updated: 4 models (accurate)
+20:44:43.313566 [info ]: Waiting for lease on 'target' directory
+20:44:43.869678 [info ]: Cached model count updated: 4 models (accurate)
+20:44:43.871123 [info ]: Waiting for lease on 'target' directory
+20:44:44.427830 [info ]: Started loading project
+20:44:44.428404 [info ]: Loading profiles.yml
+20:44:44.434105 [info ]: Started parsing
+20:44:44.449026 [info ]: Finished loading project [  0.02s]
+20:44:44.450156 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:44:44.451983 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:44:44.452401 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:44:44.454011 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:44:44.454991 [info ]: Finished parsing [  0.02s]
+20:44:44.456194 [info ]: Cached model count updated: 4 models (estimate)
+20:44:44.456207 [info ]: Cached model count updated: 4 models (accurate)
+20:44:44.456233 [info ]: Started scheduling
+20:44:44.456260 [info ]: Finished scheduling [  0.00s]
+20:44:44.456269 [debug]: Compilation - 0 nodes selected: {}
+20:44:44.456277 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:44:44.456283 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:44:44.549994 [info ]: Started building task graph
+20:44:44.550030 [info ]: Finished building task graph [  0.00s]
+20:44:44.552815 [info ]: Started scheduling
+20:44:44.552907 [info ]: Finished scheduling [  0.00s]
+20:44:44.555645 [info ]: Cached model count updated: 4 models (accurate)
+20:44:46.099837 [info ]: Started loading project
+20:44:46.100545 [info ]: Loading profiles.yml
+20:44:46.107147 [info ]: Started parsing
+20:44:46.128682 [info ]: Finished loading project [  0.03s]
+20:44:46.131475 [info ]: Finished parsing [  0.02s]
+20:44:46.133280 [info ]: Cached model count updated: 4 models (estimate)
+20:44:46.133298 [info ]: Cached model count updated: 4 models (accurate)
+20:44:46.133331 [info ]: Started scheduling
+20:44:46.133389 [info ]: Finished scheduling [  0.00s]
+20:44:46.133407 [info ]: Started scheduling
+20:44:46.133471 [info ]: Finished scheduling [  0.00s]
+20:44:46.133489 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:44:46.250257 [info ]: Started building task graph
+20:44:46.250317 [info ]: Finished building task graph [  0.00s]
+20:44:46.250429 [info ]: Started rendering (4 nodes)
+20:44:46.250445 [info ]: Started model silver.shifts
+20:44:46.250454 [debug]: Started rendering model silver.shifts
+20:44:46.250472 [info ]: Started model silver.employee_overview
+20:44:46.250479 [debug]: Started rendering model silver.employee_overview
+20:44:46.250485 [info ]: Started model silver.pay_history
+20:44:46.250489 [debug]: Started rendering model silver.pay_history
+20:44:46.250495 [info ]: Started model silver.employees
+20:44:46.250500 [debug]: Started rendering model silver.employees
+20:44:46.250808 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:44:46.250863 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:44:46.250887 [info ]: Started analyzing (4 nodes)
+20:44:46.250898 [debug]: Started analyzing model silver.shifts
+20:44:46.250943 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:44:46.250962 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:44:46.251016 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:44:46.251029 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:44:46.251032 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:44:46.251050 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:44:46.251068 [debug]: Started analyzing model silver.pay_history
+20:44:46.251082 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:44:46.251091 [debug]: Started analyzing model silver.employees
+20:44:46.251102 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:44:46.251106 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:44:46.251112 [debug]: Started analyzing model silver.employee_overview
+20:44:46.251125 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:44:46.251135 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:44:46.251142 [info ]:  Succeeded [-------] model silver.employees (table)
+20:44:46.251147 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:44:46.251159 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:44:46.251169 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:44:46.251172 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:44:46.253842 [info ]: Started scheduling
+20:44:46.253875 [info ]: Finished scheduling [  0.00s]
+20:44:46.256187 [info ]: Cached model count updated: 4 models (accurate)
+20:46:41.025799 [info ]: Started loading project
+20:46:41.026352 [info ]: Loading profiles.yml
+20:46:41.031540 [info ]: Started parsing
+20:46:41.045659 [info ]: Finished loading project [  0.02s]
+20:46:41.046488 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:46:41.048004 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:46:41.048358 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:46:41.049928 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:46:41.050526 [info ]: Finished parsing [  0.02s]
+20:46:41.051532 [info ]: Cached model count updated: 4 models (estimate)
+20:46:41.051544 [info ]: Cached model count updated: 4 models (accurate)
+20:46:41.051566 [info ]: Started scheduling
+20:46:41.051619 [info ]: Finished scheduling [  0.00s]
+20:46:41.051627 [debug]: Compilation - 0 nodes selected: {}
+20:46:41.051639 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.stg_employee_department_history +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.employee_pay_history' does not match any enabled nodes
+20:46:41.051644 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:46:41.137084 [info ]: Started building task graph
+20:46:41.137112 [info ]: Finished building task graph [  0.00s]
+20:46:41.139845 [info ]: Started scheduling
+20:46:41.139934 [info ]: Finished scheduling [  0.00s]
+20:46:41.140393 [info ]: Cached model count updated: 4 models (accurate)
+20:46:41.350380 [info ]: Waiting for lease on 'target' directory
+20:46:41.599227 [info ]: Started loading project
+20:46:41.599824 [info ]: Loading profiles.yml
+20:46:41.603905 [info ]: Started parsing
+20:46:41.616742 [info ]: Finished loading project [  0.02s]
+20:46:41.618820 [info ]: Finished parsing [  0.01s]
+20:46:41.619815 [info ]: Cached model count updated: 4 models (estimate)
+20:46:41.619827 [info ]: Cached model count updated: 4 models (accurate)
+20:46:41.619847 [info ]: Started scheduling
+20:46:41.619874 [info ]: Finished scheduling [  0.00s]
+20:46:41.619883 [debug]: Compilation - 0 nodes selected: {}
+20:46:41.619892 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:46:41.619898 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:46:41.707545 [info ]: Started building task graph
+20:46:41.707576 [info ]: Finished building task graph [  0.00s]
+20:46:41.710315 [info ]: Started scheduling
+20:46:41.710359 [info ]: Finished scheduling [  0.00s]
+20:46:41.712834 [info ]: Cached model count updated: 4 models (accurate)
+20:46:43.248735 [info ]: Started loading project
+20:46:43.249406 [info ]: Loading profiles.yml
+20:46:43.255403 [info ]: Started parsing
+20:46:43.278274 [info ]: Finished loading project [  0.03s]
+20:46:43.281248 [info ]: Finished parsing [  0.03s]
+20:46:43.283053 [info ]: Cached model count updated: 4 models (estimate)
+20:46:43.283071 [info ]: Cached model count updated: 4 models (accurate)
+20:46:43.283103 [info ]: Started scheduling
+20:46:43.283147 [info ]: Finished scheduling [  0.00s]
+20:46:43.283161 [info ]: Started scheduling
+20:46:43.283212 [info ]: Finished scheduling [  0.00s]
+20:46:43.283221 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:46:43.396890 [info ]: Started building task graph
+20:46:43.396950 [info ]: Finished building task graph [  0.00s]
+20:46:43.397057 [info ]: Started rendering (4 nodes)
+20:46:43.397072 [info ]: Started model silver.shifts
+20:46:43.397082 [debug]: Started rendering model silver.shifts
+20:46:43.397100 [info ]: Started model silver.employee_overview
+20:46:43.397108 [debug]: Started rendering model silver.employee_overview
+20:46:43.397114 [info ]: Started model silver.pay_history
+20:46:43.397118 [debug]: Started rendering model silver.pay_history
+20:46:43.397124 [info ]: Started model silver.employees
+20:46:43.397134 [debug]: Started rendering model silver.employees
+20:46:43.397538 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:46:43.397603 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:46:43.397634 [info ]: Started analyzing (4 nodes)
+20:46:43.397645 [debug]: Started analyzing model silver.shifts
+20:46:43.397663 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:46:43.397710 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:46:43.397737 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:46:43.397752 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:46:43.397761 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:46:43.397766 [debug]: Started analyzing model silver.pay_history
+20:46:43.397797 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:46:43.397814 [debug]: Started analyzing model silver.employees
+20:46:43.397829 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:46:43.397841 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:46:43.397855 [info ]:  Succeeded [-------] model silver.employees (table)
+20:46:43.397869 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:46:43.397904 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:46:43.397937 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:46:43.397945 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:46:43.397953 [debug]: Started analyzing model silver.employee_overview
+20:46:43.397980 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:46:43.397991 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:46:43.397994 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:46:43.400739 [info ]: Started scheduling
+20:46:43.400778 [info ]: Finished scheduling [  0.00s]
+20:46:43.402814 [info ]: Cached model count updated: 4 models (accurate)
+20:48:58.926053 [info ]: Started loading project
+20:48:58.926608 [info ]: Loading profiles.yml
+20:48:58.938588 [info ]: Started parsing
+20:48:58.951768 [info ]: Finished loading project [  0.03s]
+20:48:58.952609 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:48:58.954602 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:48:58.955018 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:48:58.956924 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:48:58.957568 [info ]: Finished parsing [  0.02s]
+20:48:58.958579 [info ]: Cached model count updated: 4 models (estimate)
+20:48:58.958591 [info ]: Cached model count updated: 4 models (accurate)
+20:48:58.958613 [info ]: Started scheduling
+20:48:58.958663 [info ]: Finished scheduling [  0.00s]
+20:48:58.958673 [debug]: Compilation - 0 nodes selected: {}
+20:48:58.958685 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.stg_employee_department_history +source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.stg_department' does not match any enabled nodes
+20:48:58.958692 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:48:59.055882 [info ]: Started building task graph
+20:48:59.055918 [info ]: Finished building task graph [  0.00s]
+20:48:59.060704 [info ]: Started scheduling
+20:48:59.060854 [info ]: Finished scheduling [  0.00s]
+20:48:59.061609 [info ]: Cached model count updated: 4 models (accurate)
+20:48:59.261592 [info ]: Waiting for lease on 'target' directory
+20:48:59.507370 [info ]: Started loading project
+20:48:59.507864 [info ]: Loading profiles.yml
+20:48:59.511984 [info ]: Started parsing
+20:48:59.525394 [info ]: Finished loading project [  0.02s]
+20:48:59.528197 [info ]: Finished parsing [  0.02s]
+20:48:59.529447 [info ]: Cached model count updated: 4 models (estimate)
+20:48:59.529459 [info ]: Cached model count updated: 4 models (accurate)
+20:48:59.529479 [info ]: Started scheduling
+20:48:59.529508 [info ]: Finished scheduling [  0.00s]
+20:48:59.529516 [debug]: Compilation - 0 nodes selected: {}
+20:48:59.529526 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:48:59.529532 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:48:59.612768 [info ]: Started building task graph
+20:48:59.612798 [info ]: Finished building task graph [  0.00s]
+20:48:59.615346 [info ]: Started scheduling
+20:48:59.615384 [info ]: Finished scheduling [  0.00s]
+20:48:59.617621 [info ]: Cached model count updated: 4 models (accurate)
+20:49:01.154154 [info ]: Started loading project
+20:49:01.154858 [info ]: Loading profiles.yml
+20:49:01.161313 [info ]: Started parsing
+20:49:01.186179 [info ]: Finished loading project [  0.03s]
+20:49:01.188957 [info ]: Finished parsing [  0.03s]
+20:49:01.190213 [info ]: Cached model count updated: 4 models (estimate)
+20:49:01.190226 [info ]: Cached model count updated: 4 models (accurate)
+20:49:01.190249 [info ]: Started scheduling
+20:49:01.190280 [info ]: Finished scheduling [  0.00s]
+20:49:01.190291 [info ]: Started scheduling
+20:49:01.190328 [info ]: Finished scheduling [  0.00s]
+20:49:01.190337 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:49:01.328205 [info ]: Started building task graph
+20:49:01.328270 [info ]: Finished building task graph [  0.00s]
+20:49:01.328397 [info ]: Started rendering (4 nodes)
+20:49:01.328412 [info ]: Started model silver.shifts
+20:49:01.328424 [debug]: Started rendering model silver.shifts
+20:49:01.328442 [info ]: Started model silver.employee_overview
+20:49:01.328450 [debug]: Started rendering model silver.employee_overview
+20:49:01.328458 [info ]: Started model silver.pay_history
+20:49:01.328464 [debug]: Started rendering model silver.pay_history
+20:49:01.328477 [info ]: Started model silver.employees
+20:49:01.328488 [debug]: Started rendering model silver.employees
+20:49:01.328917 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:49:01.328960 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:49:01.328988 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:49:01.329014 [info ]: Started analyzing (4 nodes)
+20:49:01.329022 [debug]: Started analyzing model silver.shifts
+20:49:01.329037 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:49:01.329044 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:49:01.329047 [debug]: Started analyzing model silver.pay_history
+20:49:01.329073 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:49:01.329077 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:49:01.329098 [debug]: Started analyzing model silver.employee_overview
+20:49:01.329117 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:49:01.329136 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:49:01.329145 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:49:01.329155 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:49:01.329167 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:49:01.329174 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:49:01.329180 [debug]: Started analyzing model silver.employees
+20:49:01.329197 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:49:01.329232 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:49:01.329249 [info ]:  Succeeded [-------] model silver.employees (table)
+20:49:01.329260 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:49:01.329266 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:49:01.332278 [info ]: Started scheduling
+20:49:01.332320 [info ]: Finished scheduling [  0.00s]
+20:49:01.334640 [info ]: Cached model count updated: 4 models (accurate)
+20:50:55.221818 [info ]: Started loading project
+20:50:55.222477 [info ]: Loading profiles.yml
+20:50:55.234665 [info ]: Started parsing
+20:50:55.249262 [info ]: Finished loading project [  0.03s]
+20:50:55.250830 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:50:55.252885 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:50:55.253273 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:50:55.255180 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:50:55.256669 [info ]: Finished parsing [  0.02s]
+20:50:55.257896 [info ]: Cached model count updated: 4 models (estimate)
+20:50:55.257909 [info ]: Cached model count updated: 4 models (accurate)
+20:50:55.257945 [info ]: Started scheduling
+20:50:55.258218 [info ]: Finished scheduling [  0.00s]
+20:50:55.258232 [debug]: Compilation - 0 nodes selected: {}
+20:50:55.258249 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.organizationnode +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.gender +source:dados_dbt.bronze_hr.birthdate +source:dados_dbt.bronze_hr.jobtitle +source:dados_dbt.bronze_hr.loginid +source:dados_dbt.bronze_hr.nationalidnumber +source:dados_dbt.bronze_hr.hiredate +source:dados_dbt.bronze_hr.vacationhours +source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.rowguid +source:dados_dbt.bronze_hr.sickleavehours +source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.modifieddate +source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.maritalstatus +source:dados_dbt.bronze_hr.stg_employee_department_history' does not match any enabled nodes
+20:50:55.258257 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:50:55.344945 [info ]: Started building task graph
+20:50:55.344976 [info ]: Finished building task graph [  0.00s]
+20:50:55.347502 [info ]: Started scheduling
+20:50:55.347681 [info ]: Finished scheduling [  0.00s]
+20:50:55.348159 [info ]: Cached model count updated: 4 models (accurate)
+20:50:55.546761 [info ]: Waiting for lease on 'target' directory
+20:50:55.792400 [info ]: Started loading project
+20:50:55.792977 [info ]: Loading profiles.yml
+20:50:55.797013 [info ]: Started parsing
+20:50:55.811195 [info ]: Finished loading project [  0.02s]
+20:50:55.813564 [info ]: Finished parsing [  0.02s]
+20:50:55.814719 [info ]: Cached model count updated: 4 models (estimate)
+20:50:55.814735 [info ]: Cached model count updated: 4 models (accurate)
+20:50:55.814776 [info ]: Started scheduling
+20:50:55.814820 [info ]: Finished scheduling [  0.00s]
+20:50:55.814835 [debug]: Compilation - 0 nodes selected: {}
+20:50:55.814849 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:50:55.814855 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:50:55.901371 [info ]: Started building task graph
+20:50:55.901403 [info ]: Finished building task graph [  0.00s]
+20:50:55.903853 [info ]: Started scheduling
+20:50:55.903901 [info ]: Finished scheduling [  0.00s]
+20:50:55.905888 [info ]: Cached model count updated: 4 models (accurate)
+20:50:57.462066 [info ]: Started loading project
+20:50:57.462508 [info ]: Loading profiles.yml
+20:50:57.466619 [info ]: Started parsing
+20:50:57.478434 [info ]: Finished loading project [  0.02s]
+20:50:57.480857 [info ]: Finished parsing [  0.01s]
+20:50:57.482102 [info ]: Cached model count updated: 4 models (estimate)
+20:50:57.482115 [info ]: Cached model count updated: 4 models (accurate)
+20:50:57.482146 [info ]: Started scheduling
+20:50:57.482179 [info ]: Finished scheduling [  0.00s]
+20:50:57.482189 [info ]: Started scheduling
+20:50:57.482230 [info ]: Finished scheduling [  0.00s]
+20:50:57.482237 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:50:57.565812 [info ]: Started building task graph
+20:50:57.565873 [info ]: Finished building task graph [  0.00s]
+20:50:57.565975 [info ]: Started rendering (4 nodes)
+20:50:57.565989 [info ]: Started model silver.shifts
+20:50:57.565999 [debug]: Started rendering model silver.shifts
+20:50:57.566015 [info ]: Started model silver.employee_overview
+20:50:57.566022 [debug]: Started rendering model silver.employee_overview
+20:50:57.566028 [info ]: Started model silver.pay_history
+20:50:57.566031 [debug]: Started rendering model silver.pay_history
+20:50:57.566037 [info ]: Started model silver.employees
+20:50:57.566042 [debug]: Started rendering model silver.employees
+20:50:57.566409 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:50:57.566482 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:50:57.566506 [info ]: Started analyzing (4 nodes)
+20:50:57.566515 [debug]: Started analyzing model silver.shifts
+20:50:57.566543 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:50:57.566563 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:50:57.566572 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:50:57.566582 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:50:57.566592 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:50:57.566603 [debug]: Started analyzing model silver.employees
+20:50:57.566625 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:50:57.566637 [debug]: Started analyzing model silver.pay_history
+20:50:57.566656 [info ]:  Succeeded [-------] model silver.employees (table)
+20:50:57.566670 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:50:57.566680 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:50:57.566689 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:50:57.566698 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:50:57.566741 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:50:57.566754 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:50:57.566766 [debug]: Started analyzing model silver.employee_overview
+20:50:57.566796 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:50:57.566810 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:50:57.566815 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:50:57.569767 [info ]: Started scheduling
+20:50:57.569812 [info ]: Finished scheduling [  0.00s]
+20:50:57.572066 [info ]: Cached model count updated: 4 models (accurate)
+20:51:23.950227 [info ]: Started loading project
+20:51:23.950812 [info ]: Loading profiles.yml
+20:51:23.962889 [info ]: Started parsing
+20:51:23.978521 [info ]: Finished loading project [  0.03s]
+20:51:23.979973 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:51:23.984608 [info ]: Finished parsing [  0.02s]
+20:51:23.986147 [info ]: Cached model count updated: 4 models (accurate)
+20:51:24.156861 [info ]: Waiting for lease on 'target' directory
+20:51:24.509121 [info ]: Cached model count updated: 4 models (accurate)
+20:51:24.510944 [info ]: Waiting for lease on 'target' directory
+20:51:25.063295 [info ]: Cached model count updated: 4 models (accurate)
+20:51:25.065189 [info ]: Waiting for lease on 'target' directory
+20:51:25.622038 [info ]: Started loading project
+20:51:25.622621 [info ]: Loading profiles.yml
+20:51:25.628538 [info ]: Started parsing
+20:51:25.641100 [info ]: Finished loading project [  0.02s]
+20:51:25.641984 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:51:25.644200 [info ]: Finished parsing [  0.02s]
+20:51:25.645133 [info ]: Cached model count updated: 4 models (accurate)
+20:51:27.191178 [info ]: Started loading project
+20:51:27.191646 [info ]: Loading profiles.yml
+20:51:27.196829 [info ]: Started parsing
+20:51:27.216079 [info ]: Finished loading project [  0.02s]
+20:51:27.217354 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:51:27.222282 [info ]: Finished parsing [  0.03s]
+20:51:27.223350 [info ]: Cached model count updated: 4 models (accurate)
+20:51:47.822838 [info ]: Started loading project
+20:51:47.823463 [info ]: Loading profiles.yml
+20:51:47.837066 [info ]: Started parsing
+20:51:47.850526 [info ]: Finished loading project [  0.03s]
+20:51:47.851405 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:51:47.853111 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:51:47.853571 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:51:47.855411 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:51:47.856264 [info ]: Finished parsing [  0.02s]
+20:51:47.857536 [info ]: Cached model count updated: 4 models (estimate)
+20:51:47.857551 [info ]: Cached model count updated: 4 models (accurate)
+20:51:47.857576 [info ]: Started scheduling
+20:51:47.857634 [info ]: Finished scheduling [  0.00s]
+20:51:47.857645 [debug]: Compilation - 0 nodes selected: {}
+20:51:47.857658 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.stg_employee_department_history' does not match any enabled nodes
+20:51:47.857666 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:51:47.957526 [info ]: Started building task graph
+20:51:47.957560 [info ]: Finished building task graph [  0.00s]
+20:51:47.961041 [info ]: Started scheduling
+20:51:47.961133 [info ]: Finished scheduling [  0.00s]
+20:51:47.961364 [info ]: Cached model count updated: 4 models (accurate)
+20:51:48.153558 [info ]: Waiting for lease on 'target' directory
+20:51:48.399752 [info ]: Started loading project
+20:51:48.400334 [info ]: Loading profiles.yml
+20:51:48.404483 [info ]: Started parsing
+20:51:48.416719 [info ]: Finished loading project [  0.02s]
+20:51:48.419138 [info ]: Finished parsing [  0.01s]
+20:51:48.420473 [info ]: Cached model count updated: 4 models (estimate)
+20:51:48.420486 [info ]: Cached model count updated: 4 models (accurate)
+20:51:48.420506 [info ]: Started scheduling
+20:51:48.420537 [info ]: Finished scheduling [  0.00s]
+20:51:48.420545 [debug]: Compilation - 0 nodes selected: {}
+20:51:48.420554 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:51:48.420562 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:51:48.505778 [info ]: Started building task graph
+20:51:48.505809 [info ]: Finished building task graph [  0.00s]
+20:51:48.508046 [info ]: Started scheduling
+20:51:48.508081 [info ]: Finished scheduling [  0.00s]
+20:51:48.509836 [info ]: Cached model count updated: 4 models (accurate)
+20:51:50.046152 [info ]: Started loading project
+20:51:50.046790 [info ]: Loading profiles.yml
+20:51:50.052961 [info ]: Started parsing
+20:51:50.071860 [info ]: Finished loading project [  0.03s]
+20:51:50.074374 [info ]: Finished parsing [  0.02s]
+20:51:50.076018 [info ]: Cached model count updated: 4 models (estimate)
+20:51:50.076050 [info ]: Cached model count updated: 4 models (accurate)
+20:51:50.076097 [info ]: Started scheduling
+20:51:50.076141 [info ]: Finished scheduling [  0.00s]
+20:51:50.076161 [info ]: Started scheduling
+20:51:50.076213 [info ]: Finished scheduling [  0.00s]
+20:51:50.076226 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:51:50.188894 [info ]: Started building task graph
+20:51:50.188956 [info ]: Finished building task graph [  0.00s]
+20:51:50.189062 [info ]: Started rendering (4 nodes)
+20:51:50.189075 [info ]: Started model silver.shifts
+20:51:50.189091 [debug]: Started rendering model silver.shifts
+20:51:50.189111 [info ]: Started model silver.employee_overview
+20:51:50.189117 [debug]: Started rendering model silver.employee_overview
+20:51:50.189125 [info ]: Started model silver.pay_history
+20:51:50.189129 [debug]: Started rendering model silver.pay_history
+20:51:50.189143 [info ]: Started model silver.employees
+20:51:50.189147 [debug]: Started rendering model silver.employees
+20:51:50.189479 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:51:50.189551 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:51:50.189582 [info ]: Started analyzing (4 nodes)
+20:51:50.189594 [debug]: Started analyzing model silver.shifts
+20:51:50.189648 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:51:50.189669 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:51:50.189674 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:51:50.189684 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:51:50.189715 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:51:50.189738 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:51:50.189740 [debug]: Started analyzing model silver.employee_overview
+20:51:50.189758 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:51:50.189774 [debug]: Started analyzing model silver.employees
+20:51:50.189789 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:51:50.189796 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:51:50.189803 [debug]: Started analyzing model silver.pay_history
+20:51:50.189816 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:51:50.189827 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:51:50.189834 [info ]:  Succeeded [-------] model silver.employees (table)
+20:51:50.189840 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:51:50.189853 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:51:50.189864 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:51:50.189867 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:51:50.192736 [info ]: Started scheduling
+20:51:50.192772 [info ]: Finished scheduling [  0.00s]
+20:51:50.194328 [info ]: Cached model count updated: 4 models (accurate)
+20:51:54.985754 [info ]: Started loading project
+20:51:54.986319 [info ]: Loading profiles.yml
+20:51:54.991486 [info ]: Started parsing
+20:51:55.004305 [info ]: Finished loading project [  0.02s]
+20:51:55.005231 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:51:55.007044 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:51:55.007487 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:51:55.009356 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:51:55.010096 [info ]: Finished parsing [  0.02s]
+20:51:55.011156 [info ]: Cached model count updated: 4 models (estimate)
+20:51:55.011167 [info ]: Cached model count updated: 4 models (accurate)
+20:51:55.011189 [info ]: Started scheduling
+20:51:55.011240 [info ]: Finished scheduling [  0.00s]
+20:51:55.011249 [debug]: Compilation - 0 nodes selected: {}
+20:51:55.011260 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.stg_employee_department_history +source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.stg_shift' does not match any enabled nodes
+20:51:55.011266 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:51:55.098016 [info ]: Started building task graph
+20:51:55.098048 [info ]: Finished building task graph [  0.00s]
+20:51:55.100427 [info ]: Started scheduling
+20:51:55.100571 [info ]: Finished scheduling [  0.00s]
+20:51:55.100829 [info ]: Cached model count updated: 4 models (accurate)
+20:51:55.303487 [info ]: Waiting for lease on 'target' directory
+20:51:55.561056 [info ]: Started loading project
+20:51:55.561631 [info ]: Loading profiles.yml
+20:51:55.565944 [info ]: Started parsing
+20:51:55.581115 [info ]: Finished loading project [  0.02s]
+20:51:55.584154 [info ]: Finished parsing [  0.02s]
+20:51:55.585614 [info ]: Cached model count updated: 4 models (estimate)
+20:51:55.585628 [info ]: Cached model count updated: 4 models (accurate)
+20:51:55.585651 [info ]: Started scheduling
+20:51:55.585681 [info ]: Finished scheduling [  0.00s]
+20:51:55.585691 [debug]: Compilation - 0 nodes selected: {}
+20:51:55.585701 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:51:55.585707 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:51:55.682536 [info ]: Started building task graph
+20:51:55.682577 [info ]: Finished building task graph [  0.00s]
+20:51:55.685728 [info ]: Started scheduling
+20:51:55.685768 [info ]: Finished scheduling [  0.00s]
+20:51:55.687598 [info ]: Cached model count updated: 4 models (accurate)
+20:51:57.234497 [info ]: Started loading project
+20:51:57.234940 [info ]: Loading profiles.yml
+20:51:57.239207 [info ]: Started parsing
+20:51:57.251896 [info ]: Finished loading project [  0.02s]
+20:51:57.253839 [info ]: Finished parsing [  0.01s]
+20:51:57.254825 [info ]: Cached model count updated: 4 models (estimate)
+20:51:57.254837 [info ]: Cached model count updated: 4 models (accurate)
+20:51:57.254857 [info ]: Started scheduling
+20:51:57.254884 [info ]: Finished scheduling [  0.00s]
+20:51:57.254894 [info ]: Started scheduling
+20:51:57.254926 [info ]: Finished scheduling [  0.00s]
+20:51:57.254933 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:51:57.336870 [info ]: Started building task graph
+20:51:57.336931 [info ]: Finished building task graph [  0.00s]
+20:51:57.337039 [info ]: Started rendering (4 nodes)
+20:51:57.337053 [info ]: Started model silver.shifts
+20:51:57.337064 [debug]: Started rendering model silver.shifts
+20:51:57.337081 [info ]: Started model silver.employee_overview
+20:51:57.337088 [debug]: Started rendering model silver.employee_overview
+20:51:57.337094 [info ]: Started model silver.pay_history
+20:51:57.337098 [debug]: Started rendering model silver.pay_history
+20:51:57.337105 [info ]: Started model silver.employees
+20:51:57.337111 [debug]: Started rendering model silver.employees
+20:51:57.337438 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:51:57.337440 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:51:57.337448 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:51:57.337450 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:51:57.337495 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:51:57.337517 [info ]: Started analyzing (4 nodes)
+20:51:57.337528 [debug]: Started analyzing model silver.shifts
+20:51:57.337543 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:51:57.337554 [debug]: Started analyzing model silver.employees
+20:51:57.337566 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:51:57.337572 [debug]: Started analyzing model silver.pay_history
+20:51:57.337586 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:51:57.337593 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:51:57.337599 [debug]: Started analyzing model silver.employee_overview
+20:51:57.337611 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:51:57.337620 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:51:57.337628 [info ]:  Succeeded [-------] model silver.employees (table)
+20:51:57.337633 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:51:57.337640 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:51:57.337645 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:51:57.337657 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:51:57.337667 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:51:57.337671 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:51:57.340167 [info ]: Started scheduling
+20:51:57.340206 [info ]: Finished scheduling [  0.00s]
+20:51:57.341961 [info ]: Cached model count updated: 4 models (accurate)
+20:52:11.822810 [info ]: Started loading project
+20:52:11.823387 [info ]: Loading profiles.yml
+20:52:11.829597 [info ]: Started parsing
+20:52:11.842667 [info ]: Finished loading project [  0.02s]
+20:52:11.843616 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:52:11.845365 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:52:11.845776 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:52:11.847466 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:52:11.848360 [info ]: Finished parsing [  0.02s]
+20:52:11.849711 [info ]: Cached model count updated: 4 models (estimate)
+20:52:11.849723 [info ]: Cached model count updated: 4 models (accurate)
+20:52:11.849747 [info ]: Started scheduling
+20:52:11.849802 [info ]: Finished scheduling [  0.00s]
+20:52:11.849812 [debug]: Compilation - 0 nodes selected: {}
+20:52:11.849824 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.stg_employee +source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.stg_employee_department_history' does not match any enabled nodes
+20:52:11.849831 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:52:11.939019 [info ]: Started building task graph
+20:52:11.939050 [info ]: Finished building task graph [  0.00s]
+20:52:11.942473 [info ]: Started scheduling
+20:52:11.942587 [info ]: Finished scheduling [  0.00s]
+20:52:11.942853 [info ]: Cached model count updated: 4 models (accurate)
+20:52:12.161293 [info ]: Waiting for lease on 'target' directory
+20:52:12.406221 [info ]: Started loading project
+20:52:12.406804 [info ]: Loading profiles.yml
+20:52:12.410860 [info ]: Started parsing
+20:52:12.423794 [info ]: Finished loading project [  0.02s]
+20:52:12.426477 [info ]: Finished parsing [  0.02s]
+20:52:12.427560 [info ]: Cached model count updated: 4 models (estimate)
+20:52:12.427572 [info ]: Cached model count updated: 4 models (accurate)
+20:52:12.427591 [info ]: Started scheduling
+20:52:12.427619 [info ]: Finished scheduling [  0.00s]
+20:52:12.427625 [debug]: Compilation - 0 nodes selected: {}
+20:52:12.427635 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:52:12.427639 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:52:12.515687 [info ]: Started building task graph
+20:52:12.515720 [info ]: Finished building task graph [  0.00s]
+20:52:12.517886 [info ]: Started scheduling
+20:52:12.517922 [info ]: Finished scheduling [  0.00s]
+20:52:12.519801 [info ]: Cached model count updated: 4 models (accurate)
+20:52:14.065591 [info ]: Started loading project
+20:52:14.066227 [info ]: Loading profiles.yml
+20:52:14.073065 [info ]: Started parsing
+20:52:14.092553 [info ]: Finished loading project [  0.03s]
+20:52:14.095762 [info ]: Finished parsing [  0.02s]
+20:52:14.097356 [info ]: Cached model count updated: 4 models (estimate)
+20:52:14.097373 [info ]: Cached model count updated: 4 models (accurate)
+20:52:14.097397 [info ]: Started scheduling
+20:52:14.097432 [info ]: Finished scheduling [  0.00s]
+20:52:14.097445 [info ]: Started scheduling
+20:52:14.097499 [info ]: Finished scheduling [  0.00s]
+20:52:14.097543 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:52:14.218590 [info ]: Started building task graph
+20:52:14.218664 [info ]: Finished building task graph [  0.00s]
+20:52:14.218796 [info ]: Started rendering (4 nodes)
+20:52:14.218814 [info ]: Started model silver.shifts
+20:52:14.218825 [debug]: Started rendering model silver.shifts
+20:52:14.218846 [info ]: Started model silver.employee_overview
+20:52:14.218858 [debug]: Started rendering model silver.employee_overview
+20:52:14.218866 [info ]: Started model silver.pay_history
+20:52:14.218871 [debug]: Started rendering model silver.pay_history
+20:52:14.218879 [info ]: Started model silver.employees
+20:52:14.218885 [debug]: Started rendering model silver.employees
+20:52:14.219300 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:52:14.219381 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:52:14.219398 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:52:14.219407 [info ]: Started analyzing (4 nodes)
+20:52:14.219415 [debug]: Started analyzing model silver.shifts
+20:52:14.219436 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:52:14.219449 [debug]: Started analyzing model silver.pay_history
+20:52:14.219472 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:52:14.219479 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:52:14.219496 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:52:14.219497 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:52:14.219516 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:52:14.219523 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:52:14.219532 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:52:14.219544 [debug]: Started analyzing model silver.employee_overview
+20:52:14.219568 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:52:14.219577 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:52:14.219585 [debug]: Started analyzing model silver.employees
+20:52:14.219607 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:52:14.219620 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:52:14.219630 [info ]:  Succeeded [-------] model silver.employees (table)
+20:52:14.219642 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:52:14.219646 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:52:14.222915 [info ]: Started scheduling
+20:52:14.222963 [info ]: Finished scheduling [  0.00s]
+20:52:14.224898 [info ]: Cached model count updated: 4 models (accurate)
+20:53:17.787514 [info ]: Started loading project
+20:53:17.788137 [info ]: Loading profiles.yml
+20:53:17.793451 [info ]: Started parsing
+20:53:17.806199 [info ]: Finished loading project [  0.02s]
+20:53:17.807129 [debug]: Finished parsing models\silver\sources.yml [  0.00s]
+20:53:17.808877 [debug]: Finished parsing models\silver\employees.sql [  0.00s]
+20:53:17.809332 [debug]: Finished parsing models\silver\pay_history.sql [  0.00s]
+20:53:17.811165 [debug]: Finished parsing models\silver\shifts.sql [  0.00s]
+20:53:17.811891 [info ]: Finished parsing [  0.02s]
+20:53:17.812977 [info ]: Cached model count updated: 4 models (estimate)
+20:53:17.812989 [info ]: Cached model count updated: 4 models (accurate)
+20:53:17.813011 [info ]: Started scheduling
+20:53:17.813063 [info ]: Finished scheduling [  0.00s]
+20:53:17.813072 [debug]: Compilation - 0 nodes selected: {}
+20:53:17.813083 [warn ]: dbt1600: The selection criterion '+source:dados_dbt.bronze_hr.stg_department +source:dados_dbt.bronze_hr.stg_shift +source:dados_dbt.bronze_hr.employee_pay_history +source:dados_dbt.bronze_hr.stg_employee_department_history +source:dados_dbt.bronze_hr.stg_employee' does not match any enabled nodes
+20:53:17.813089 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:53:17.897699 [info ]: Started building task graph
+20:53:17.897731 [info ]: Finished building task graph [  0.00s]
+20:53:17.899891 [info ]: Started scheduling
+20:53:17.899982 [info ]: Finished scheduling [  0.00s]
+20:53:17.900202 [info ]: Cached model count updated: 4 models (accurate)
+20:53:18.096681 [info ]: Waiting for lease on 'target' directory
+20:53:18.343388 [info ]: Started loading project
+20:53:18.344376 [info ]: Loading profiles.yml
+20:53:18.348311 [info ]: Started parsing
+20:53:18.361151 [info ]: Finished loading project [  0.02s]
+20:53:18.363396 [info ]: Finished parsing [  0.02s]
+20:53:18.364524 [info ]: Cached model count updated: 4 models (estimate)
+20:53:18.364535 [info ]: Cached model count updated: 4 models (accurate)
+20:53:18.364555 [info ]: Started scheduling
+20:53:18.364584 [info ]: Finished scheduling [  0.00s]
+20:53:18.364593 [debug]: Compilation - 0 nodes selected: {}
+20:53:18.364604 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+20:53:18.364609 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+20:53:18.451194 [info ]: Started building task graph
+20:53:18.451225 [info ]: Finished building task graph [  0.00s]
+20:53:18.453811 [info ]: Started scheduling
+20:53:18.453853 [info ]: Finished scheduling [  0.00s]
+20:53:18.455900 [info ]: Cached model count updated: 4 models (accurate)
+20:53:19.994026 [info ]: Started loading project
+20:53:19.994675 [info ]: Loading profiles.yml
+20:53:20.001487 [info ]: Started parsing
+20:53:20.026112 [info ]: Finished loading project [  0.03s]
+20:53:20.029517 [info ]: Finished parsing [  0.03s]
+20:53:20.030899 [info ]: Cached model count updated: 4 models (estimate)
+20:53:20.030916 [info ]: Cached model count updated: 4 models (accurate)
+20:53:20.030945 [info ]: Started scheduling
+20:53:20.030978 [info ]: Finished scheduling [  0.00s]
+20:53:20.030992 [info ]: Started scheduling
+20:53:20.031039 [info ]: Finished scheduling [  0.00s]
+20:53:20.031049 [debug]: Compilation - 4 nodes selected: {"model.dados_dbt.employee_overview", "model.dados_dbt.employees", "model.dados_dbt.pay_history", "model.dados_dbt.shifts"}
+20:53:20.154691 [info ]: Started building task graph
+20:53:20.154757 [info ]: Finished building task graph [  0.00s]
+20:53:20.154864 [info ]: Started rendering (4 nodes)
+20:53:20.154878 [info ]: Started model silver.shifts
+20:53:20.154888 [debug]: Started rendering model silver.shifts
+20:53:20.154905 [info ]: Started model silver.employee_overview
+20:53:20.154909 [debug]: Started rendering model silver.employee_overview
+20:53:20.154915 [info ]: Started model silver.pay_history
+20:53:20.154919 [debug]: Started rendering model silver.pay_history
+20:53:20.154926 [info ]: Started model silver.employees
+20:53:20.154930 [debug]: Started rendering model silver.employees
+20:53:20.155254 [debug]: Compiled SQL for node model.dados_dbt.shifts at target\.lsp\compiled\models\silver\shifts.sql
+20:53:20.155310 [debug]: Finished rendering [  0.00s] model silver.shifts [success]
+20:53:20.155334 [info ]: Started analyzing (4 nodes)
+20:53:20.155343 [debug]: Started analyzing model silver.shifts
+20:53:20.155388 [info ]:  Succeeded [-------] model silver.shifts (table)
+20:53:20.155407 [debug]: Finished analyzing [  0.00s] model silver.shifts [success]
+20:53:20.155476 [debug]: Compiled SQL for node model.dados_dbt.pay_history at target\.lsp\compiled\models\silver\pay_history.sql
+20:53:20.155505 [debug]: Finished rendering [  0.00s] model silver.pay_history [success]
+20:53:20.155523 [debug]: Started analyzing model silver.pay_history
+20:53:20.155539 [debug]: Compiled SQL for node model.dados_dbt.employees at target\.lsp\compiled\models\silver\employees.sql
+20:53:20.155551 [info ]:  Succeeded [-------] model silver.pay_history (table)
+20:53:20.155566 [debug]: Finished analyzing [  0.00s] model silver.pay_history [success]
+20:53:20.155575 [debug]: Finished rendering [  0.00s] model silver.employees [success]
+20:53:20.155584 [debug]: Started analyzing model silver.employees
+20:53:20.155581 [debug]: Compiled SQL for node model.dados_dbt.employee_overview at target\.lsp\compiled\models\silver\employee_overview.sql
+20:53:20.155607 [info ]:  Succeeded [-------] model silver.employees (table)
+20:53:20.155619 [debug]: Finished analyzing [  0.00s] model silver.employees [success]
+20:53:20.155628 [debug]: Finished rendering [  0.00s] model silver.employee_overview [success]
+20:53:20.155632 [info ]: Finished rendering [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:53:20.155637 [debug]: Started analyzing model silver.employee_overview
+20:53:20.155657 [info ]:  Succeeded [-------] model silver.employee_overview (table)
+20:53:20.155666 [debug]: Finished analyzing [  0.00s] model silver.employee_overview [success]
+20:53:20.155669 [info ]: Finished analyzing [  0.00s] (4 nodes, 0 skipped, 0 errors)
+20:53:20.157739 [info ]: Started scheduling
+20:53:20.157777 [info ]: Finished scheduling [  0.00s]
+20:53:20.159573 [info ]: Cached model count updated: 4 models (accurate)
+21:13:19.358620 [info ]: Started loading project
+21:13:19.359120 [info ]: Loading profiles.yml
+21:13:19.363492 [info ]: Started parsing
+21:13:19.379547 [info ]: Finished loading project [  0.02s]
+21:13:19.379942 [debug]: Finished parsing models\silver\silver_models.yml [  0.00s]
+21:13:19.382279 [info ]: Finished parsing [  0.02s]
+21:13:19.383626 [info ]: Cached model count updated: 4 models (estimate)
+21:13:19.383639 [info ]: Cached model count updated: 4 models (accurate)
+21:13:19.383671 [info ]: Started scheduling
+21:13:19.383716 [info ]: Finished scheduling [  0.00s]
+21:13:19.383728 [debug]: Compilation - 0 nodes selected: {}
+21:13:19.383740 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+21:13:19.383744 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+21:13:19.473876 [info ]: Started building task graph
+21:13:19.473907 [info ]: Finished building task graph [  0.00s]
+21:13:19.476727 [info ]: Started scheduling
+21:13:19.476776 [info ]: Finished scheduling [  0.00s]
+21:13:19.477040 [info ]: Cached model count updated: 4 models (accurate)
+21:13:19.683651 [info ]: Waiting for lease on 'target' directory
+21:13:19.930010 [info ]: Started loading project
+21:13:19.930573 [info ]: Loading profiles.yml
+21:13:19.935044 [info ]: Started parsing
+21:13:19.949007 [info ]: Finished loading project [  0.02s]
+21:13:19.951657 [info ]: Finished parsing [  0.02s]
+21:13:19.952776 [info ]: Cached model count updated: 4 models (estimate)
+21:13:19.952787 [info ]: Cached model count updated: 4 models (accurate)
+21:13:19.952806 [info ]: Started scheduling
+21:13:19.952833 [info ]: Finished scheduling [  0.00s]
+21:13:19.952839 [debug]: Compilation - 0 nodes selected: {}
+21:13:19.952848 [warn ]: dbt1600: The selection criterion '' does not match any enabled nodes
+21:13:19.952852 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+21:13:20.039386 [info ]: Started building task graph
+21:13:20.039417 [info ]: Finished building task graph [  0.00s]
+21:13:20.041879 [info ]: Started scheduling
+21:13:20.041921 [info ]: Finished scheduling [  0.00s]
+21:13:20.043901 [info ]: Cached model count updated: 4 models (accurate)
