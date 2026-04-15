@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo "Iniciando Extração de Dados - Projeto: ${HOP_PROJECT}"
                 // Adicionada a / antes de opt e corrigido o caminho do arquivo se necessário
-                sh "docker exec ${HOP_CONTAINER} /opt/hop/hop-run.sh -p ${HOP_PROJECT} -e ${HOP_ENV} -j /files/projects/bronze_carga.hwf -r local"
+                sh "docker exec ${HOP_CONTAINER} /usr/local/tomcat/webapps/ROOT/hop-run.sh -j ${HOP_PROJECT} -e ${HOP_ENV} -f /files/projects/projeto_dados/workflows/stage_hr.hwf -r local"
             }
         }
 
