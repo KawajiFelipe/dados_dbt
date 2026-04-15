@@ -50,7 +50,7 @@ FROM humanresources.shift
     <variables_active>N</variables_active>
     <attributes/>
     <GUI>
-      <xloc>96</xloc>
+      <xloc>80</xloc>
       <yloc>80</yloc>
     </GUI>
   </transform>
