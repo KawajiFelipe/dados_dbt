@@ -29,7 +29,7 @@ pipeline {
             echo "A pipeline falhou. Verifique os logs do Hop ou dbt."
         }
         success {
-            echo "Pipeline executada com sucesso!"
+            echo "Pipeline executada com sucesso!!"
         }
     }
 }
