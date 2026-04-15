@@ -43,8 +43,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>/files/projects/projeto_dados/pipelines/stage_hr/stg_shift.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -60,34 +58,6 @@
       <attributes_hac/>
     </action>
     <action>
-      <name>stg_job_candidate.hpl</name>
-      <description/>
-      <type>PIPELINE</type>
-      <attributes/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <clear_files>N</clear_files>
-      <clear_rows>N</clear_rows>
-      <create_parent_folder>N</create_parent_folder>
-      <exec_per_row>N</exec_per_row>
-      <filename>/files/projects/projeto_dados/pipelines/stage_hr/stg_job_candidate.hpl</filename>
-      <logext/>
-      <logfile/>
-      <loglevel>Basic</loglevel>
-      <parameters>
-        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>
-      <params_from_previous>N</params_from_previous>
-      <run_configuration>local</run_configuration>
-      <set_append_logfile>N</set_append_logfile>
-      <set_logfile>N</set_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <parallel>N</parallel>
-      <xloc>256</xloc>
-      <yloc>176</yloc>
-      <attributes_hac/>
-    </action>
-    <action>
       <name>stg_employee_pay_history.hpl</name>
       <description/>
       <type>PIPELINE</type>
@@ -99,8 +69,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>/files/projects/projeto_dados/pipelines/stage_hr/stg_employee_pay_history.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -127,8 +95,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>/files/projects/projeto_dados/pipelines/stage_hr/stg_employee_department_history.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -155,8 +121,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>/files/projects/projeto_dados/pipelines/stage_hr/stg_employee.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -183,8 +147,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>/files/projects/projeto_dados/pipelines/stage_hr/stg_department.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -219,20 +181,6 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>stg_shift.hpl</from>
-      <to>stg_job_candidate.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>stg_job_candidate.hpl</from>
-      <to>stg_employee_pay_history.hpl</to>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>stg_employee_pay_history.hpl</from>
       <to>stg_employee_department_history.hpl</to>
       <enabled>Y</enabled>
@@ -256,6 +204,13 @@
     <hop>
       <from>stg_department.hpl</from>
       <to>Success</to>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>stg_shift.hpl</from>
+      <to>stg_employee_pay_history.hpl</to>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>

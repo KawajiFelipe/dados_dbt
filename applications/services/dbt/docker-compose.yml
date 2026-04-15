@@ -5,6 +5,8 @@ services:
     command: tail -f /dev/null # Mantém o container vivo
     volumes:
       - .:/usr/app # Mapeia a pasta local para o contêiner
+    ports:
+      - "8082:8080"
     tty: true
     stdin_open: true
     working_dir: /usr/app
