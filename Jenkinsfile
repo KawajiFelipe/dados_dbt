@@ -23,14 +23,13 @@ pipeline {
                 sh "docker exec ${HOP_CONTAINER} /usr/local/tomcat/webapps/ROOT/hop-run.sh -j ${HOP_PROJECT} -e ${HOP_ENV} -f /files/projects/projeto_dados/workflows/stage_hr.hwf -r local"
             }
         }
-
+    }
     post {
         failure {
             echo "A pipeline falhou. Verifique os logs do Hop ou dbt."
         }
         success {
             echo "Pipeline executada com sucesso!!"
-            }
         }
     }
 }
