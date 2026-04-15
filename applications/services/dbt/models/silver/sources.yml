@@ -4,6 +4,146 @@ sources:
     schema: bronze # ou o schema onde o Hop salvou
     tables:
       - name: stg_employee
+        columns:
+          - name: businessentityid
+            description: "Chave primária que identifica o funcionário."
+            tests:
+              - unique
+              - not_null
+          - name: nationalidnumber
+            description: "Número de identificação nacional (documento oficial)."
+            tests:
+              - unique
+              - not_null
+          - name: loginid
+            description: "Login de rede do funcionário."
+            tests:
+              - not_null
+          - name: jobtitle
+            description: "Cargo atual do funcionário."
+            tests:
+              - not_null
+          - name: birthdate
+            description: "Data de nascimento."
+            tests:
+              - not_null
+          - name: maritalstatus
+            description: "Estado civil (S/M)."
+            tests:
+              - accepted_values:
+                  values: ['S', 'M']
+          - name: gender
+            description: "Gênero (M/F)."
+            tests:
+              - accepted_values:
+                  values: ['M', 'F']
+          - name: hiredate
+            description: "Data de contratação."
+            tests:
+              - not_null
+          - name: vacationhours
+            description: "Saldo atual de horas de férias disponíveis."
+          - name: sickleavehours
+            description: "Saldo de horas de licença médica acumuladas."
+          - name: organizationnode
+            description: "Representação hierárquica do funcionário na estrutura organizacional."
+          - name: rowguid
+            description: "Identificador único global do registro (usado para sincronização)."
+          - name: modifieddate
+            description: "Data da última atualização no sistema de origem."
+            tests:
+              - not_null
+
       - name: stg_department
+        columns:
+          - name: departmentid
+            description: "Chave primária que identifica o departamento. Utilizada para relacionamentos com tabelas de funcionários e histórico de cargos."
+            tests:
+              - unique
+              - not_null
+          - name: modifieddate
+            description: "Data e hora da última atualização dos dados deste departamento no sistema de origem."
+            tests:
+              - not_null
+
       - name: stg_shift
+        columns:
+          - name: shiftid
+            description: "Chave primária do turno."
+            tests:
+              - unique
+              - not_null
+          - name: starttime
+            description: "Horário de início do turno."
+            tests:
+              - not_null
+          - name: endtime
+            description: "Horário de término do turno."
+            tests:
+              - not_null
+          - name: modifieddate
+            description: "Data da última modificação do registro de turno."
+            tests:
+              - not_null
+
       - name: employee_pay_history
+        columns:
+          - name: businessentityid
+            description: "ID do funcionário. Faz parte da chave primária composta (junto com ratechangedate)."
+            tests:
+              - not_null
+              - relationships:
+                  to: ref('stg_employees')
+                  field: businessentityid
+          - name: ratechangedate
+            description: "Data em que a nova taxa salarial entrou em vigor."
+            tests:
+              - not_null
+          - name: rate
+            description: "Valor do salário por hora do funcionário."
+            tests:
+              - not_null
+          - name: payfrequency
+            description: "Frequência do pagamento (1 = Mensal, 2 = Quinzenal/Bi-semanal)."
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [1, 2]
+          - name: modifieddate
+            description: "Data da última atualização do registro salarial no sistema."
+            tests:
+              - not_null
+
+      - name: stg_employee_department_history
+        columns:
+          - name: businessentityid
+            description: "ID do funcionário. Parte da chave composta da tabela."
+            tests:
+              - not_null
+              - relationships:
+                  to: ref('stg_employees')
+                  field: businessentityid
+          - name: departmentid
+            description: "ID do departamento ao qual o funcionário foi alocado."
+            tests:
+              - not_null
+              - relationships:
+                  to: ref('stg_department')
+                  field: departmentid
+          - name: shiftid
+            description: "ID do turno de trabalho do funcionário naquele período."
+            tests:
+              - not_null
+              - relationships:
+                  to: ref('stg_shift')
+                  field: shiftid
+          - name: startdate
+            description: "Data em que o funcionário iniciou as atividades neste departamento/turno."
+            tests:
+              - not_null
+          - name: enddate
+            description: "Data em que o funcionário encerrou as atividades neste departamento/turno. Se nulo, o funcionário ainda está alocado aqui."
+          - name: modifieddate
+            description: "Data da última atualização do registro no sistema de origem."
+            tests:
+              - not_null
