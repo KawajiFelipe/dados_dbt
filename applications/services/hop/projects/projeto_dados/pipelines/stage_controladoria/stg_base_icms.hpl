@@ -22,6 +22,11 @@
   <order>
     <hop>
       <from>Microsoft Excel input - pasta_planilhas</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
       <to>Table output - stg_base_icms</to>
       <enabled>Y</enabled>
     </hop>
@@ -56,7 +61,7 @@
         <format/>
         <group/>
         <length>-1</length>
-        <name>ID_Chave</name>
+        <name>Empresa</name>
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>both</trim_type>
@@ -68,7 +73,31 @@
         <format/>
         <group/>
         <length>-1</length>
-        <name>Data_Emissao</name>
+        <name>Nº documento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Nº item do documento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Data de lançamento</name>
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>both</trim_type>
@@ -80,7 +109,7 @@
         <format/>
         <group/>
         <length>-1</length>
-        <name>UF_Origem</name>
+        <name>Direção do movimento</name>
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>both</trim_type>
@@ -92,11 +121,863 @@
         <format/>
         <group/>
         <length>-1</length>
-        <name>UF_Destino</name>
+        <name>Número de nota fiscal eletrônica</name>
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>both</trim_type>
         <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Nº NF</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Ctg.nota fiscal</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Modelo nota fiscal</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Cód.sit.doc.</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Emit.doc.fiscal</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Data documento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Date</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>ID parceiro</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Nome Parceiro</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Região</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Domicilio Fiscal</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Cidade</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>CNPJ</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Nº CPF</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Nº documento_1</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Criado manualmente</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Imprimida</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>ID consumidor final</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Dest.</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Estornado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Data de estorno</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Nº doc.original</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Nº da fatura</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Ctg.CFOP cliente</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo parceiro</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Contribuinte ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Status do documento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Modificado por</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Modificado em</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Data de criação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Date</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Criado por</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Cód.Regime Tribut.</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Presença consumidor final</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Inscrição na SUFRAMA</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Séries</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>NºID fiscal regional</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Número NFS-e</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de documento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Moeda do documento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Condições pgto.</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Exercício</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Local de negócios</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>CNAE fiscal</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>CódDomFis.PtoPartida</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Código dom.fiscal dest.</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Chave do país/região</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Val.total incl.imp.</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Chave de acesso</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de Emissão</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Documento de Importação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor de desconto do item</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Data do desembaraço aduaneiro</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Documento de Estorno</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Ref.doc.origem</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Documento de Origem</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Número NFe Origem</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Séries_1</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Série NF origem</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Código da cidade</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tamanho da empresa</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo principal de setor industrial</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo SubFiscal</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Doc.faturamento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Ordem Investimento</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Nº soc.parceira</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Material</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Texto breve material</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Centro</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Quantidade</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Unidade de medida</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Preço líq.</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor líquido</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
       </field>
       <field>
         <currency/>
@@ -108,7 +989,7 @@
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>both</trim_type>
-        <type>Number</type>
+        <type>String</type>
       </field>
       <field>
         <currency/>
@@ -116,7 +997,43 @@
         <format/>
         <group/>
         <length>-1</length>
-        <name>CST_CSOSN</name>
+        <name>Origem do material</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Utiliz.material</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Produção interna</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Preço líquido</name>
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>both</trim_type>
@@ -128,7 +1045,7 @@
         <format/>
         <group/>
         <length>-1</length>
-        <name>Valor_PROD</name>
+        <name>Valor</name>
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>both</trim_type>
@@ -140,7 +1057,7 @@
         <format/>
         <group/>
         <length>-1</length>
-        <name>Base_ICMS</name>
+        <name>Redução</name>
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>both</trim_type>
@@ -152,7 +1069,7 @@
         <format/>
         <group/>
         <length>-1</length>
-        <name>Aliquota_ICMS</name>
+        <name>Frete</name>
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>both</trim_type>
@@ -164,7 +1081,2503 @@
         <format/>
         <group/>
         <length>-1</length>
-        <name>Valor_ICMS</name>
+        <name>Seguros</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Despesas</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Total</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa imposto ad rem ICMS retido</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Código benefício fiscal estado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>CEAN tributário</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Código Enquad.Legal</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>LC 116 código de tipo de serviço</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>NCM/SH</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Nº FCI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Ref.doc.origem_1</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Item ref.a doc.orig.</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Sit.tributária ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Sit.tributária IPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>CST PIS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante base ST ICMS retido já debitado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante ST retido de FCP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor ICMS Desonerado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor diferido ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor ST ICMS de destino UF</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Descrição de produto ou serviço</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Pedido</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>CódCtaAnalítCont.D/C</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Item referência NF</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Item do pedido</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Nº doc.original_1</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Lei ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Lei IPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Lei ISS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Lei COFINS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>SituaçãoFisc.COFINS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Lei tributária PIS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Situação fiscal PIS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo referência</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-IPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-IPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-IPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-IPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor IPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-IPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-IPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1IPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1ICMS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-ISSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-ISSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-ISSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-ISSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor ISS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-ISSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-ISSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1ISSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-PIS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-PIS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-PIS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-PIS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor PIS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-PIS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-PIS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1PIS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-COFI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-COFI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-COFI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-COFI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor COFINS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-COFI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-COFI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1COFI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-INSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-INSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-INSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-INSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor fiscal-INSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-INSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-INSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1INSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-II</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-II</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-II</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-II</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor fiscal-II</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-II</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-II</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1II</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-WHIR</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-WHIR</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-WHIR</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-WHIR</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor fiscal-WHIR</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-WHIR</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-WHIR</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1WHIR</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-WHPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-WHPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-WHPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-WHPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor fiscal-WHPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-WHPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-WHPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1WHPI</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-WHCS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-WHCS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-WHCS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-WHCS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor fiscal-WHCS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-WHCS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-WHCS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1WHCS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-WHCO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-WHCO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-WHCO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-WHCO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor fiscal-WHCO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-WHCO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-WHCO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1WHCO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-ICOP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-ICOP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-ICOP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-ICOP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor DIFAL Entradas</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-ICOP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-ICOP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1ICOP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-ICAP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-ICAP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-ICAP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-ICAP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor DIFA EC 87/2015</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-ICAP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-ICAP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1ICAP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-ICSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-ICSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-ICSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-ICSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor FCP EC 87/2015</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-ICSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-ICSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1ICSP</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-ICST</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-ICST</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-ICST</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-ICST</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor FCP ST</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-ICST</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-ICST</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1ICST</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-ICS2</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-ICS2</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-ICS2</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-ICS2</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor fiscal-ICS2</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-ICS2</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-ICS2</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1ICS2</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-ICS3</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-ICS3</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-ICS3</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-ICS3</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor ICMS ST</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-ICS3</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-ICS3</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1ICS3</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>MVA-ICMS-ST</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Redução MVA</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-ISSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-ISSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-ISSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-ISSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor fiscal-ISSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-ISSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-ISSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1ISSS</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grupo de imposto-WACO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de imposto-WACO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Montante básico-WACO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Taxa de imposto-WACO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor fiscal-WACO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Outro mont.básico-WACO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Mont.base excluído-WACO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Base do imposto-RED1WACO</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>Number</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Cód.imposto</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Grp.merc.externo</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Tipo de material</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Documento de vendas</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Categoria do item</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Centro de lucro</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Centro custo</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>IVA para Entrada</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>DCRE</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Núm Portaria</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Crédito Presumido</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Classe imobilizado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Imobilizado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Subnº</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Depreciação</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Parcelado</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Sem Credito Pis Cof</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Documento de vendas_1</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Doc.FM Saida Material</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Classe Pedido</name>
+        <precision>-1</precision>
+        <repeat>N</repeat>
+        <trim_type>both</trim_type>
+        <type>String</type>
+      </field>
+      <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
+        <length>-1</length>
+        <name>Valor total item impostos</name>
         <precision>-1</precision>
         <repeat>N</repeat>
         <trim_type>both</trim_type>
@@ -195,7 +3608,7 @@
     <sheetrownumfield/>
     <sheets>
       <sheet>
-        <name>controle_icms_100k</name>
+        <name>Data</name>
         <startcol>0</startcol>
         <startrow>0</startrow>
       </sheet>
@@ -232,44 +3645,112 @@
     <drop_columns>N</drop_columns>
     <fields>
       <field>
-        <column_name>ID_Chave</column_name>
-        <stream_name>ID_Chave</stream_name>
+        <column_name>Centro</column_name>
+        <stream_name>Centro</stream_name>
       </field>
       <field>
-        <column_name>Data_Emissao</column_name>
-        <stream_name>Data_Emissao</stream_name>
+        <column_name>Centro custo</column_name>
+        <stream_name>Centro custo</stream_name>
       </field>
       <field>
-        <column_name>UF_Origem</column_name>
-        <stream_name>UF_Origem</stream_name>
-      </field>
-      <field>
-        <column_name>UF_Destino</column_name>
-        <stream_name>UF_Destino</stream_name>
+        <column_name>Centro de lucro</column_name>
+        <stream_name>Centro de lucro</stream_name>
       </field>
       <field>
         <column_name>CFOP</column_name>
         <stream_name>CFOP</stream_name>
       </field>
       <field>
-        <column_name>CST_CSOSN</column_name>
-        <stream_name>CST_CSOSN</stream_name>
+        <column_name>Chave de acesso</column_name>
+        <stream_name>Chave de acesso</stream_name>
       </field>
       <field>
-        <column_name>Valor_PROD</column_name>
-        <stream_name>Valor_PROD</stream_name>
+        <column_name>CNPJ</column_name>
+        <stream_name>CNPJ</stream_name>
       </field>
       <field>
-        <column_name>Base_ICMS</column_name>
-        <stream_name>Base_ICMS</stream_name>
+        <column_name>CódCtaAnalítCont.D/C</column_name>
+        <stream_name>CódCtaAnalítCont.D/C</stream_name>
       </field>
       <field>
-        <column_name>Aliquota_ICMS</column_name>
-        <stream_name>Aliquota_ICMS</stream_name>
+        <column_name>Data de lançamento</column_name>
+        <stream_name>Data de lançamento</stream_name>
       </field>
       <field>
-        <column_name>Valor_ICMS</column_name>
-        <stream_name>Valor_ICMS</stream_name>
+        <column_name>Data documento</column_name>
+        <stream_name>Data documento</stream_name>
+      </field>
+      <field>
+        <column_name>DCRE</column_name>
+        <stream_name>DCRE</stream_name>
+      </field>
+      <field>
+        <column_name>Direção do movimento</column_name>
+        <stream_name>Direção do movimento</stream_name>
+      </field>
+      <field>
+        <column_name>Grp.merc.externo</column_name>
+        <stream_name>Grp.merc.externo</stream_name>
+      </field>
+      <field>
+        <column_name>Grupo de imposto-ICMS</column_name>
+        <stream_name>Grupo de imposto-ICMS</stream_name>
+      </field>
+      <field>
+        <column_name>ID parceiro</column_name>
+        <stream_name>ID parceiro</stream_name>
+      </field>
+      <field>
+        <column_name>Material</column_name>
+        <stream_name>Material</stream_name>
+      </field>
+      <field>
+        <column_name>Nº documento</column_name>
+        <stream_name>Nº documento</stream_name>
+      </field>
+      <field>
+        <column_name>Nº item do documento</column_name>
+        <stream_name>Nº item do documento</stream_name>
+      </field>
+      <field>
+        <column_name>Nome Parceiro</column_name>
+        <stream_name>Nome Parceiro</stream_name>
+      </field>
+      <field>
+        <column_name>Número de nota fiscal eletrônica</column_name>
+        <stream_name>Número de nota fiscal eletrônica</stream_name>
+      </field>
+      <field>
+        <column_name>Séries</column_name>
+        <stream_name>Séries</stream_name>
+      </field>
+      <field>
+        <column_name>Status do documento</column_name>
+        <stream_name>Status do documento</stream_name>
+      </field>
+      <field>
+        <column_name>Texto breve material</column_name>
+        <stream_name>Texto breve material</stream_name>
+      </field>
+      <field>
+        <column_name>Tipo de imposto-ICMS</column_name>
+        <stream_name>Tipo de imposto-ICMS</stream_name>
+      </field>
+      <field>
+        <column_name>Valor</column_name>
+        <stream_name>Valor</stream_name>
+      </field>
+      <field>
+        <column_name>Valor ICMS</column_name>
+        <stream_name>Valor ICMS</stream_name>
+      </field>
+      <field>
+        <column_name>Valor líquido</column_name>
+        <stream_name>Valor líquido</stream_name>
+      </field>
+      <field>
+        <column_name>Total</column_name>
+        <stream_name>Total</stream_name>
       </field>
     </fields>
     <ignore_errors>N</ignore_errors>
@@ -290,7 +3771,189 @@
     <use_batch>Y</use_batch>
     <attributes/>
     <GUI>
-      <xloc>432</xloc>
+      <xloc>672</xloc>
+      <yloc>80</yloc>
+    </GUI>
+  </transform>
+  <transform>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <length>-2</length>
+        <name>Centro</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Centro custo</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Centro de lucro</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>CFOP</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Chave de acesso</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>CNPJ</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>CódCtaAnalítCont.D/C</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Data de lançamento</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Data documento</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>DCRE</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Direção do movimento</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Grp.merc.externo</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Grupo de imposto-ICMS</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>ID parceiro</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Material</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Nº documento</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Nº item do documento</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Nome Parceiro</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Número de nota fiscal eletrônica</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Séries</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Status do documento</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Texto breve material</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Tipo de imposto-ICMS</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Valor</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Valor ICMS</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Valor líquido</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <field>
+        <length>-2</length>
+        <name>Total</name>
+        <precision>-2</precision>
+        <rename/>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>384</xloc>
       <yloc>80</yloc>
     </GUI>
   </transform>
