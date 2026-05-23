@@ -1,0 +1,1 @@
+select * from {{ source('bronze_hr', 'stg_base_icms') }}
