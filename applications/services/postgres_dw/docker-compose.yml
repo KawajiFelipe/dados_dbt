@@ -1,0 +1,23 @@
+services:
+  postgres_db:
+    image: postgres:15
+    container_name: postgres_dados_dbt
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres_dw
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_dados_dbt:/var/lib/postgresql/data
+    networks:
+      - dados_dbt_net
+
+networks:
+  dados_dbt_net:
+    external: true
+    name: dados_dbt
+
+volumes:
+  pg_dados_dbt:
