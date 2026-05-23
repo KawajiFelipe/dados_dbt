@@ -43,8 +43,6 @@
       <create_parent_folder>N</create_parent_folder>
       <exec_per_row>N</exec_per_row>
       <filename>/files/projects/projeto_dados/pipelines/stage_controladoria/stg_base_icms.hpl</filename>
-      <logext/>
-      <logfile/>
       <loglevel>Basic</loglevel>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
@@ -55,7 +53,7 @@
       <set_logfile>N</set_logfile>
       <wait_until_finished>Y</wait_until_finished>
       <parallel>N</parallel>
-      <xloc>272</xloc>
+      <xloc>240</xloc>
       <yloc>48</yloc>
       <attributes_hac/>
     </action>
