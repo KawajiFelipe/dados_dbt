@@ -16370,3 +16370,1735 @@ having count(*) > 1
 [0m23:25:44.263890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd995454470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd9939e5880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd9939e5cd0>]}
 [0m23:25:44.264625 [debug] [MainThread]: Flushing usage events
 [0m23:25:45.134742 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:28:03.871448 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fde2c7800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fdcab0a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fdcba0c50>]}
+
+
+============================== 23:28:03.874701 | 6a38bec2-d476-413b-9301-dc66bef2432b ==============================
+[0m23:28:03.874701 [info ] [MainThread]: Running with dbt=1.9.0
+[0m23:28:03.875694 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt test', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:28:04.024837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6a38bec2-d476-413b-9301-dc66bef2432b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fdcb406e0>]}
+[0m23:28:04.090171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6a38bec2-d476-413b-9301-dc66bef2432b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fdc07f980>]}
+[0m23:28:04.091653 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m23:28:04.185507 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m23:28:04.421770 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:28:04.422686 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:28:04.427979 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dados_dbt.gold
+[0m23:28:04.466857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6a38bec2-d476-413b-9301-dc66bef2432b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fda7e8b00>]}
+[0m23:28:04.583212 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m23:28:04.592603 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m23:28:04.625997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6a38bec2-d476-413b-9301-dc66bef2432b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fd9f80fe0>]}
+[0m23:28:04.626948 [info ] [MainThread]: Found 4 models, 30 data tests, 5 sources, 430 macros
+[0m23:28:04.627760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6a38bec2-d476-413b-9301-dc66bef2432b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fda10e150>]}
+[0m23:28:04.631434 [info ] [MainThread]: 
+[0m23:28:04.632380 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:28:04.633242 [info ] [MainThread]: 
+[0m23:28:04.634486 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:28:04.638793 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dw_dbt_silver'
+[0m23:28:04.676361 [debug] [ThreadPool]: Using postgres connection "list_dw_dbt_silver"
+[0m23:28:04.677390 [debug] [ThreadPool]: On list_dw_dbt_silver: BEGIN
+[0m23:28:04.678172 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:28:04.687973 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m23:28:04.688904 [debug] [ThreadPool]: Using postgres connection "list_dw_dbt_silver"
+[0m23:28:04.689601 [debug] [ThreadPool]: On list_dw_dbt_silver: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "connection_name": "list_dw_dbt_silver"} */
+select
+      'dw_dbt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'silver'
+    union all
+    select
+      'dw_dbt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'silver'
+    union all
+    select
+      'dw_dbt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'silver'
+  
+[0m23:28:04.695139 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.005 seconds
+[0m23:28:04.696965 [debug] [ThreadPool]: On list_dw_dbt_silver: ROLLBACK
+[0m23:28:04.697925 [debug] [ThreadPool]: On list_dw_dbt_silver: Close
+[0m23:28:04.703363 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:04.704399 [debug] [MainThread]: On master: BEGIN
+[0m23:28:04.705057 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:28:04.711805 [debug] [MainThread]: SQL status: BEGIN in 0.007 seconds
+[0m23:28:04.712543 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:04.713300 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m23:28:04.717298 [debug] [MainThread]: SQL status: SELECT 0 in 0.003 seconds
+[0m23:28:04.718892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6a38bec2-d476-413b-9301-dc66bef2432b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fda718470>]}
+[0m23:28:04.719724 [debug] [MainThread]: On master: ROLLBACK
+[0m23:28:04.720672 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:04.721332 [debug] [MainThread]: On master: BEGIN
+[0m23:28:04.722462 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m23:28:04.723254 [debug] [MainThread]: On master: COMMIT
+[0m23:28:04.723922 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:04.724619 [debug] [MainThread]: On master: COMMIT
+[0m23:28:04.725550 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m23:28:04.726219 [debug] [MainThread]: On master: Close
+[0m23:28:04.729031 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa
+[0m23:28:04.729744 [info ] [Thread-1 (]: 1 of 30 START test source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2  [RUN]
+[0m23:28:04.730830 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dw_dbt_silver, now test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa)
+[0m23:28:04.731553 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa
+[0m23:28:04.743081 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa"
+[0m23:28:04.750324 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa
+[0m23:28:04.763256 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa"
+[0m23:28:04.770901 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa"
+[0m23:28:04.771613 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa: BEGIN
+[0m23:28:04.772327 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:04.778650 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:04.779414 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa"
+[0m23:28:04.780140 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        payfrequency as value_field,
+        count(*) as n_records
+
+    from "dw_dbt"."bronze"."employee_pay_history"
+    group by payfrequency
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '1','2'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:04.782475 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m23:28:04.786142 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa: ROLLBACK
+[0m23:28:04.787024 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa: Close
+[0m23:28:04.788019 [info ] [Thread-1 (]: 1 of 30 PASS source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2  [[32mPASS[0m in 0.06s]
+[0m23:28:04.789195 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa
+[0m23:28:04.790115 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a
+[0m23:28:04.790959 [info ] [Thread-1 (]: 2 of 30 START test source_accepted_values_bronze_hr_stg_employee_gender__M__F .. [RUN]
+[0m23:28:04.791957 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_accepted_values_bronze_hr_employee_pay_history_payfrequency__1__2.984515f4fa, now test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a)
+[0m23:28:04.792725 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a
+[0m23:28:04.797532 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a"
+[0m23:28:04.805222 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a
+[0m23:28:04.807120 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a"
+[0m23:28:04.815154 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a"
+[0m23:28:04.815950 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a: BEGIN
+[0m23:28:04.816700 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:04.822944 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:04.823761 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a"
+[0m23:28:04.824528 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        gender as value_field,
+        count(*) as n_records
+
+    from "dw_dbt"."bronze"."stg_employee"
+    group by gender
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'M','F'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:04.827752 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m23:28:04.829452 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a: ROLLBACK
+[0m23:28:04.830294 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a: Close
+[0m23:28:04.831386 [info ] [Thread-1 (]: 2 of 30 PASS source_accepted_values_bronze_hr_stg_employee_gender__M__F ........ [[32mPASS[0m in 0.04s]
+[0m23:28:04.832489 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a
+[0m23:28:04.833376 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70
+[0m23:28:04.834165 [info ] [Thread-1 (]: 3 of 30 START test source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M  [RUN]
+[0m23:28:04.835009 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_gender__M__F.bf083b7b8a, now test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70)
+[0m23:28:04.835827 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70
+[0m23:28:04.840357 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70"
+[0m23:28:04.847216 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70
+[0m23:28:04.849017 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70"
+[0m23:28:04.856093 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70"
+[0m23:28:04.856939 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70: BEGIN
+[0m23:28:04.857812 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:04.863877 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:04.864640 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70"
+[0m23:28:04.865426 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        maritalstatus as value_field,
+        count(*) as n_records
+
+    from "dw_dbt"."bronze"."stg_employee"
+    group by maritalstatus
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'S','M'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:04.867767 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m23:28:04.869433 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70: ROLLBACK
+[0m23:28:04.870276 [debug] [Thread-1 (]: On test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70: Close
+[0m23:28:04.871326 [info ] [Thread-1 (]: 3 of 30 PASS source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M . [[32mPASS[0m in 0.04s]
+[0m23:28:04.872352 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70
+[0m23:28:04.873271 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038
+[0m23:28:04.874017 [info ] [Thread-1 (]: 4 of 30 START test source_not_null_bronze_hr_employee_pay_history_businessentityid  [RUN]
+[0m23:28:04.874915 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_accepted_values_bronze_hr_stg_employee_maritalstatus__S__M.010c44cc70, now test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038)
+[0m23:28:04.875698 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038
+[0m23:28:04.880881 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038"
+[0m23:28:04.888132 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038
+[0m23:28:04.889909 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038"
+[0m23:28:04.897025 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038"
+[0m23:28:04.897723 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038: BEGIN
+[0m23:28:04.898423 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:04.905160 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m23:28:04.906106 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038"
+[0m23:28:04.906999 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select businessentityid
+from "dw_dbt"."bronze"."employee_pay_history"
+where businessentityid is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:04.910514 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:04.912992 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038: ROLLBACK
+[0m23:28:04.914136 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038: Close
+[0m23:28:04.915852 [info ] [Thread-1 (]: 4 of 30 PASS source_not_null_bronze_hr_employee_pay_history_businessentityid ... [[32mPASS[0m in 0.04s]
+[0m23:28:04.919333 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038
+[0m23:28:04.920333 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce
+[0m23:28:04.921157 [info ] [Thread-1 (]: 5 of 30 START test source_not_null_bronze_hr_employee_pay_history_modifieddate . [RUN]
+[0m23:28:04.922179 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_businessentityid.d33081c038, now test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce)
+[0m23:28:04.922985 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce
+[0m23:28:04.926920 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce"
+[0m23:28:04.935180 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce
+[0m23:28:04.937494 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce"
+[0m23:28:04.945583 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce"
+[0m23:28:04.946497 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce: BEGIN
+[0m23:28:04.947309 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:04.953825 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:04.954758 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce"
+[0m23:28:04.956010 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select modifieddate
+from "dw_dbt"."bronze"."employee_pay_history"
+where modifieddate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:04.958183 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:04.959905 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce: ROLLBACK
+[0m23:28:04.960747 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce: Close
+[0m23:28:04.961709 [info ] [Thread-1 (]: 5 of 30 PASS source_not_null_bronze_hr_employee_pay_history_modifieddate ....... [[32mPASS[0m in 0.04s]
+[0m23:28:04.963088 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce
+[0m23:28:04.963952 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513
+[0m23:28:04.964793 [info ] [Thread-1 (]: 6 of 30 START test source_not_null_bronze_hr_employee_pay_history_payfrequency . [RUN]
+[0m23:28:04.965802 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_modifieddate.d6ccea85ce, now test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513)
+[0m23:28:04.966649 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513
+[0m23:28:04.970127 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513"
+[0m23:28:04.977368 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513
+[0m23:28:04.979553 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513"
+[0m23:28:04.986987 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513"
+[0m23:28:04.987744 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513: BEGIN
+[0m23:28:04.988433 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:04.995354 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m23:28:04.996217 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513"
+[0m23:28:04.996939 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select payfrequency
+from "dw_dbt"."bronze"."employee_pay_history"
+where payfrequency is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:04.998725 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.000619 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513: ROLLBACK
+[0m23:28:05.001532 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513: Close
+[0m23:28:05.002454 [info ] [Thread-1 (]: 6 of 30 PASS source_not_null_bronze_hr_employee_pay_history_payfrequency ....... [[32mPASS[0m in 0.04s]
+[0m23:28:05.003460 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513
+[0m23:28:05.004280 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597
+[0m23:28:05.005166 [info ] [Thread-1 (]: 7 of 30 START test source_not_null_bronze_hr_employee_pay_history_rate ......... [RUN]
+[0m23:28:05.005978 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_payfrequency.e1c8396513, now test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597)
+[0m23:28:05.006682 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597
+[0m23:28:05.009917 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597"
+[0m23:28:05.017274 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597
+[0m23:28:05.019341 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597"
+[0m23:28:05.026488 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597"
+[0m23:28:05.027245 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597: BEGIN
+[0m23:28:05.027962 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.034817 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m23:28:05.035644 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597"
+[0m23:28:05.036553 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select rate
+from "dw_dbt"."bronze"."employee_pay_history"
+where rate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.038205 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.040041 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597: ROLLBACK
+[0m23:28:05.040836 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597: Close
+[0m23:28:05.041892 [info ] [Thread-1 (]: 7 of 30 PASS source_not_null_bronze_hr_employee_pay_history_rate ............... [[32mPASS[0m in 0.04s]
+[0m23:28:05.043044 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597
+[0m23:28:05.044097 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97
+[0m23:28:05.044983 [info ] [Thread-1 (]: 8 of 30 START test source_not_null_bronze_hr_employee_pay_history_ratechangedate  [RUN]
+[0m23:28:05.046026 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_rate.dd73900597, now test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97)
+[0m23:28:05.047360 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97
+[0m23:28:05.052391 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97"
+[0m23:28:05.059601 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97
+[0m23:28:05.061312 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97"
+[0m23:28:05.068184 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97"
+[0m23:28:05.068842 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97: BEGIN
+[0m23:28:05.069487 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.076264 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m23:28:05.077094 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97"
+[0m23:28:05.077771 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ratechangedate
+from "dw_dbt"."bronze"."employee_pay_history"
+where ratechangedate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.080211 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.081831 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97: ROLLBACK
+[0m23:28:05.082727 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97: Close
+[0m23:28:05.083730 [info ] [Thread-1 (]: 8 of 30 PASS source_not_null_bronze_hr_employee_pay_history_ratechangedate ..... [[32mPASS[0m in 0.04s]
+[0m23:28:05.084791 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97
+[0m23:28:05.085571 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5
+[0m23:28:05.086336 [info ] [Thread-1 (]: 9 of 30 START test source_not_null_bronze_hr_stg_department_departmentid ....... [RUN]
+[0m23:28:05.087184 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_employee_pay_history_ratechangedate.3436fe9e97, now test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5)
+[0m23:28:05.088007 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5
+[0m23:28:05.091876 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5"
+[0m23:28:05.099748 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5
+[0m23:28:05.101821 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5"
+[0m23:28:05.109503 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5"
+[0m23:28:05.110347 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5: BEGIN
+[0m23:28:05.111098 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.117571 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.118399 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5"
+[0m23:28:05.119202 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select departmentid
+from "dw_dbt"."bronze"."stg_department"
+where departmentid is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.120894 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.122560 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5: ROLLBACK
+[0m23:28:05.123459 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5: Close
+[0m23:28:05.124487 [info ] [Thread-1 (]: 9 of 30 PASS source_not_null_bronze_hr_stg_department_departmentid ............. [[32mPASS[0m in 0.04s]
+[0m23:28:05.125541 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5
+[0m23:28:05.126568 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973
+[0m23:28:05.127409 [info ] [Thread-1 (]: 10 of 30 START test source_not_null_bronze_hr_stg_department_modifieddate ...... [RUN]
+[0m23:28:05.128247 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_department_departmentid.67353d38c5, now test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973)
+[0m23:28:05.128970 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973
+[0m23:28:05.132519 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973"
+[0m23:28:05.140117 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973
+[0m23:28:05.142020 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973"
+[0m23:28:05.149528 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973"
+[0m23:28:05.150267 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973: BEGIN
+[0m23:28:05.151048 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.157474 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.158406 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973"
+[0m23:28:05.159133 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select modifieddate
+from "dw_dbt"."bronze"."stg_department"
+where modifieddate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.160613 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.162416 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973: ROLLBACK
+[0m23:28:05.163482 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973: Close
+[0m23:28:05.164554 [info ] [Thread-1 (]: 10 of 30 PASS source_not_null_bronze_hr_stg_department_modifieddate ............ [[32mPASS[0m in 0.04s]
+[0m23:28:05.165613 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973
+[0m23:28:05.166647 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063
+[0m23:28:05.167559 [info ] [Thread-1 (]: 11 of 30 START test source_not_null_bronze_hr_stg_employee_birthdate ........... [RUN]
+[0m23:28:05.168819 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_department_modifieddate.2b7006e973, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063)
+[0m23:28:05.169615 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063
+[0m23:28:05.173312 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063"
+[0m23:28:05.181259 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063
+[0m23:28:05.183253 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063"
+[0m23:28:05.190952 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063"
+[0m23:28:05.191674 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063: BEGIN
+[0m23:28:05.192336 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.198788 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.199783 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063"
+[0m23:28:05.200546 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select birthdate
+from "dw_dbt"."bronze"."stg_employee"
+where birthdate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.202290 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.204073 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063: ROLLBACK
+[0m23:28:05.205190 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063: Close
+[0m23:28:05.206313 [info ] [Thread-1 (]: 11 of 30 PASS source_not_null_bronze_hr_stg_employee_birthdate ................. [[32mPASS[0m in 0.04s]
+[0m23:28:05.207270 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063
+[0m23:28:05.208085 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b
+[0m23:28:05.208874 [info ] [Thread-1 (]: 12 of 30 START test source_not_null_bronze_hr_stg_employee_businessentityid .... [RUN]
+[0m23:28:05.209673 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_birthdate.c37458c063, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b)
+[0m23:28:05.214346 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b
+[0m23:28:05.218100 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b"
+[0m23:28:05.225713 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b
+[0m23:28:05.227955 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b"
+[0m23:28:05.235462 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b"
+[0m23:28:05.236177 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b: BEGIN
+[0m23:28:05.236930 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.243449 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.244233 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b"
+[0m23:28:05.244952 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select businessentityid
+from "dw_dbt"."bronze"."stg_employee"
+where businessentityid is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.246519 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.248528 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b: ROLLBACK
+[0m23:28:05.249501 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b: Close
+[0m23:28:05.250687 [info ] [Thread-1 (]: 12 of 30 PASS source_not_null_bronze_hr_stg_employee_businessentityid .......... [[32mPASS[0m in 0.04s]
+[0m23:28:05.251807 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b
+[0m23:28:05.252755 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff
+[0m23:28:05.253466 [info ] [Thread-1 (]: 13 of 30 START test source_not_null_bronze_hr_stg_employee_department_history_businessentityid  [RUN]
+[0m23:28:05.254285 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_businessentityid.007c36a56b, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff)
+[0m23:28:05.255035 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff
+[0m23:28:05.258727 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff"
+[0m23:28:05.266110 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff
+[0m23:28:05.268244 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff"
+[0m23:28:05.275443 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff"
+[0m23:28:05.276135 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff: BEGIN
+[0m23:28:05.276821 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.283414 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m23:28:05.284654 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff"
+[0m23:28:05.285436 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select businessentityid
+from "dw_dbt"."bronze"."stg_employee_department_history"
+where businessentityid is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.287246 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.289010 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff: ROLLBACK
+[0m23:28:05.289981 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff: Close
+[0m23:28:05.291104 [info ] [Thread-1 (]: 13 of 30 PASS source_not_null_bronze_hr_stg_employee_department_history_businessentityid  [[32mPASS[0m in 0.04s]
+[0m23:28:05.292126 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff
+[0m23:28:05.293033 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3
+[0m23:28:05.293771 [info ] [Thread-1 (]: 14 of 30 START test source_not_null_bronze_hr_stg_employee_department_history_departmentid  [RUN]
+[0m23:28:05.294902 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_businessentityid.07aff606ff, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3)
+[0m23:28:05.295664 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3
+[0m23:28:05.300447 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3"
+[0m23:28:05.307471 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3
+[0m23:28:05.309422 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3"
+[0m23:28:05.316754 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3"
+[0m23:28:05.317429 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3: BEGIN
+[0m23:28:05.318109 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.324416 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.325311 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3"
+[0m23:28:05.325994 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select departmentid
+from "dw_dbt"."bronze"."stg_employee_department_history"
+where departmentid is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.327612 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.329251 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3: ROLLBACK
+[0m23:28:05.330072 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3: Close
+[0m23:28:05.331074 [info ] [Thread-1 (]: 14 of 30 PASS source_not_null_bronze_hr_stg_employee_department_history_departmentid  [[32mPASS[0m in 0.04s]
+[0m23:28:05.332207 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3
+[0m23:28:05.333063 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6
+[0m23:28:05.333824 [info ] [Thread-1 (]: 15 of 30 START test source_not_null_bronze_hr_stg_employee_department_history_modifieddate  [RUN]
+[0m23:28:05.334794 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_departmentid.e13b0533d3, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6)
+[0m23:28:05.335544 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6
+[0m23:28:05.339267 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6"
+[0m23:28:05.346377 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6
+[0m23:28:05.348158 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6"
+[0m23:28:05.355321 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6"
+[0m23:28:05.355987 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6: BEGIN
+[0m23:28:05.356664 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.362705 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.363488 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6"
+[0m23:28:05.364155 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select modifieddate
+from "dw_dbt"."bronze"."stg_employee_department_history"
+where modifieddate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.365625 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.367296 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6: ROLLBACK
+[0m23:28:05.368132 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6: Close
+[0m23:28:05.369203 [info ] [Thread-1 (]: 15 of 30 PASS source_not_null_bronze_hr_stg_employee_department_history_modifieddate  [[32mPASS[0m in 0.03s]
+[0m23:28:05.370233 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6
+[0m23:28:05.371038 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b
+[0m23:28:05.371764 [info ] [Thread-1 (]: 16 of 30 START test source_not_null_bronze_hr_stg_employee_department_history_shiftid  [RUN]
+[0m23:28:05.372528 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_modifieddate.959cdac8b6, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b)
+[0m23:28:05.373230 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b
+[0m23:28:05.376604 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b"
+[0m23:28:05.383992 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b
+[0m23:28:05.385922 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b"
+[0m23:28:05.392904 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b"
+[0m23:28:05.393577 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b: BEGIN
+[0m23:28:05.394251 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.401024 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m23:28:05.401987 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b"
+[0m23:28:05.402798 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select shiftid
+from "dw_dbt"."bronze"."stg_employee_department_history"
+where shiftid is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.404538 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.406204 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b: ROLLBACK
+[0m23:28:05.407038 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b: Close
+[0m23:28:05.407993 [info ] [Thread-1 (]: 16 of 30 PASS source_not_null_bronze_hr_stg_employee_department_history_shiftid  [[32mPASS[0m in 0.04s]
+[0m23:28:05.409024 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b
+[0m23:28:05.409974 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4
+[0m23:28:05.411026 [info ] [Thread-1 (]: 17 of 30 START test source_not_null_bronze_hr_stg_employee_department_history_startdate  [RUN]
+[0m23:28:05.412053 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_shiftid.1cfb03076b, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4)
+[0m23:28:05.412845 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4
+[0m23:28:05.416734 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4"
+[0m23:28:05.424601 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4
+[0m23:28:05.426648 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4"
+[0m23:28:05.434165 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4"
+[0m23:28:05.434902 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4: BEGIN
+[0m23:28:05.435606 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.441993 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.442960 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4"
+[0m23:28:05.443683 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select startdate
+from "dw_dbt"."bronze"."stg_employee_department_history"
+where startdate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.445463 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.447302 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4: ROLLBACK
+[0m23:28:05.448340 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4: Close
+[0m23:28:05.449357 [info ] [Thread-1 (]: 17 of 30 PASS source_not_null_bronze_hr_stg_employee_department_history_startdate  [[32mPASS[0m in 0.04s]
+[0m23:28:05.450476 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4
+[0m23:28:05.451370 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53
+[0m23:28:05.452128 [info ] [Thread-1 (]: 18 of 30 START test source_not_null_bronze_hr_stg_employee_hiredate ............ [RUN]
+[0m23:28:05.453197 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_department_history_startdate.82a719ade4, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53)
+[0m23:28:05.454027 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53
+[0m23:28:05.457409 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53"
+[0m23:28:05.464883 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53
+[0m23:28:05.466804 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53"
+[0m23:28:05.474492 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53"
+[0m23:28:05.475243 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53: BEGIN
+[0m23:28:05.475945 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.482443 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.483301 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53"
+[0m23:28:05.484040 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select hiredate
+from "dw_dbt"."bronze"."stg_employee"
+where hiredate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.486002 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.487712 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53: ROLLBACK
+[0m23:28:05.488564 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53: Close
+[0m23:28:05.489595 [info ] [Thread-1 (]: 18 of 30 PASS source_not_null_bronze_hr_stg_employee_hiredate .................. [[32mPASS[0m in 0.04s]
+[0m23:28:05.490866 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53
+[0m23:28:05.491756 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39
+[0m23:28:05.492516 [info ] [Thread-1 (]: 19 of 30 START test source_not_null_bronze_hr_stg_employee_jobtitle ............ [RUN]
+[0m23:28:05.493356 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_hiredate.42073b6e53, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39)
+[0m23:28:05.494092 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39
+[0m23:28:05.497663 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39"
+[0m23:28:05.505735 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39
+[0m23:28:05.507808 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39"
+[0m23:28:05.516043 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39"
+[0m23:28:05.516955 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39: BEGIN
+[0m23:28:05.517673 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.524119 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.524887 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39"
+[0m23:28:05.525615 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select jobtitle
+from "dw_dbt"."bronze"."stg_employee"
+where jobtitle is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.527509 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.529118 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39: ROLLBACK
+[0m23:28:05.530036 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39: Close
+[0m23:28:05.531073 [info ] [Thread-1 (]: 19 of 30 PASS source_not_null_bronze_hr_stg_employee_jobtitle .................. [[32mPASS[0m in 0.04s]
+[0m23:28:05.532317 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39
+[0m23:28:05.533148 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899
+[0m23:28:05.533935 [info ] [Thread-1 (]: 20 of 30 START test source_not_null_bronze_hr_stg_employee_loginid ............. [RUN]
+[0m23:28:05.534799 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_jobtitle.b9eb7b2a39, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899)
+[0m23:28:05.535534 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899
+[0m23:28:05.540690 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899"
+[0m23:28:05.548655 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899
+[0m23:28:05.551091 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899"
+[0m23:28:05.559615 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899"
+[0m23:28:05.560427 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899: BEGIN
+[0m23:28:05.561221 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.568786 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m23:28:05.570002 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899"
+[0m23:28:05.570799 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select loginid
+from "dw_dbt"."bronze"."stg_employee"
+where loginid is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.572541 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.574217 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899: ROLLBACK
+[0m23:28:05.575072 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899: Close
+[0m23:28:05.576008 [info ] [Thread-1 (]: 20 of 30 PASS source_not_null_bronze_hr_stg_employee_loginid ................... [[32mPASS[0m in 0.04s]
+[0m23:28:05.577026 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899
+[0m23:28:05.577872 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235
+[0m23:28:05.578567 [info ] [Thread-1 (]: 21 of 30 START test source_not_null_bronze_hr_stg_employee_modifieddate ........ [RUN]
+[0m23:28:05.579526 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_loginid.bcc8ccf899, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235)
+[0m23:28:05.580242 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235
+[0m23:28:05.583457 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235"
+[0m23:28:05.590633 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235
+[0m23:28:05.592430 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235"
+[0m23:28:05.599404 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235"
+[0m23:28:05.600054 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235: BEGIN
+[0m23:28:05.600835 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.606955 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.607741 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235"
+[0m23:28:05.608453 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select modifieddate
+from "dw_dbt"."bronze"."stg_employee"
+where modifieddate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.610032 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.611944 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235: ROLLBACK
+[0m23:28:05.612851 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235: Close
+[0m23:28:05.613817 [info ] [Thread-1 (]: 21 of 30 PASS source_not_null_bronze_hr_stg_employee_modifieddate .............. [[32mPASS[0m in 0.03s]
+[0m23:28:05.614898 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235
+[0m23:28:05.615804 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8
+[0m23:28:05.616720 [info ] [Thread-1 (]: 22 of 30 START test source_not_null_bronze_hr_stg_employee_nationalidnumber .... [RUN]
+[0m23:28:05.617544 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_modifieddate.880e7b1235, now test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8)
+[0m23:28:05.618308 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8
+[0m23:28:05.621536 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8"
+[0m23:28:05.628948 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8
+[0m23:28:05.631140 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8"
+[0m23:28:05.639049 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8"
+[0m23:28:05.639761 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8: BEGIN
+[0m23:28:05.640414 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.646900 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.647780 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8"
+[0m23:28:05.648528 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select nationalidnumber
+from "dw_dbt"."bronze"."stg_employee"
+where nationalidnumber is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.650299 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.652005 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8: ROLLBACK
+[0m23:28:05.652841 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8: Close
+[0m23:28:05.653859 [info ] [Thread-1 (]: 22 of 30 PASS source_not_null_bronze_hr_stg_employee_nationalidnumber .......... [[32mPASS[0m in 0.04s]
+[0m23:28:05.654858 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8
+[0m23:28:05.655641 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387
+[0m23:28:05.656392 [info ] [Thread-1 (]: 23 of 30 START test source_not_null_bronze_hr_stg_shift_endtime ................ [RUN]
+[0m23:28:05.657274 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_employee_nationalidnumber.12751bfdf8, now test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387)
+[0m23:28:05.658002 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387
+[0m23:28:05.661405 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387"
+[0m23:28:05.668884 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387
+[0m23:28:05.670986 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387"
+[0m23:28:05.678503 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387"
+[0m23:28:05.679450 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387: BEGIN
+[0m23:28:05.680284 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.686448 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.687230 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387"
+[0m23:28:05.687943 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select endtime
+from "dw_dbt"."bronze"."stg_shift"
+where endtime is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.689556 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.691344 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387: ROLLBACK
+[0m23:28:05.692160 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387: Close
+[0m23:28:05.693116 [info ] [Thread-1 (]: 23 of 30 PASS source_not_null_bronze_hr_stg_shift_endtime ...................... [[32mPASS[0m in 0.04s]
+[0m23:28:05.694102 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387
+[0m23:28:05.695013 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36
+[0m23:28:05.696234 [info ] [Thread-1 (]: 24 of 30 START test source_not_null_bronze_hr_stg_shift_modifieddate ........... [RUN]
+[0m23:28:05.697160 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_shift_endtime.ba91f3a387, now test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36)
+[0m23:28:05.697915 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36
+[0m23:28:05.701121 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36"
+[0m23:28:05.707998 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36
+[0m23:28:05.709841 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36"
+[0m23:28:05.716921 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36"
+[0m23:28:05.717575 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36: BEGIN
+[0m23:28:05.718296 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.724542 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.725316 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36"
+[0m23:28:05.725991 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select modifieddate
+from "dw_dbt"."bronze"."stg_shift"
+where modifieddate is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.727553 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.729132 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36: ROLLBACK
+[0m23:28:05.729946 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36: Close
+[0m23:28:05.730965 [info ] [Thread-1 (]: 24 of 30 PASS source_not_null_bronze_hr_stg_shift_modifieddate ................. [[32mPASS[0m in 0.03s]
+[0m23:28:05.731975 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36
+[0m23:28:05.732902 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4
+[0m23:28:05.733630 [info ] [Thread-1 (]: 25 of 30 START test source_not_null_bronze_hr_stg_shift_shiftid ................ [RUN]
+[0m23:28:05.734416 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_shift_modifieddate.7dd0ea2e36, now test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4)
+[0m23:28:05.735165 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4
+[0m23:28:05.738740 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4"
+[0m23:28:05.745711 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4
+[0m23:28:05.747463 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4"
+[0m23:28:05.755293 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4"
+[0m23:28:05.756031 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4: BEGIN
+[0m23:28:05.756669 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.762970 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.763831 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4"
+[0m23:28:05.764654 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select shiftid
+from "dw_dbt"."bronze"."stg_shift"
+where shiftid is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.766050 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.767693 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4: ROLLBACK
+[0m23:28:05.768498 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4: Close
+[0m23:28:05.769678 [info ] [Thread-1 (]: 25 of 30 PASS source_not_null_bronze_hr_stg_shift_shiftid ...................... [[32mPASS[0m in 0.04s]
+[0m23:28:05.770685 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4
+[0m23:28:05.771499 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3
+[0m23:28:05.772326 [info ] [Thread-1 (]: 26 of 30 START test source_not_null_bronze_hr_stg_shift_starttime .............. [RUN]
+[0m23:28:05.773235 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_shift_shiftid.dc93fc1ab4, now test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3)
+[0m23:28:05.773977 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3
+[0m23:28:05.779393 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3"
+[0m23:28:05.786734 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3
+[0m23:28:05.788432 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3"
+[0m23:28:05.795665 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3"
+[0m23:28:05.796544 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3: BEGIN
+[0m23:28:05.797363 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.804857 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m23:28:05.805754 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3"
+[0m23:28:05.806568 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select starttime
+from "dw_dbt"."bronze"."stg_shift"
+where starttime is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.808457 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.810179 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3: ROLLBACK
+[0m23:28:05.811111 [debug] [Thread-1 (]: On test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3: Close
+[0m23:28:05.812328 [info ] [Thread-1 (]: 26 of 30 PASS source_not_null_bronze_hr_stg_shift_starttime .................... [[32mPASS[0m in 0.04s]
+[0m23:28:05.813315 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3
+[0m23:28:05.814143 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c
+[0m23:28:05.814963 [info ] [Thread-1 (]: 27 of 30 START test source_unique_bronze_hr_stg_department_departmentid ........ [RUN]
+[0m23:28:05.815915 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_not_null_bronze_hr_stg_shift_starttime.dd421613d3, now test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c)
+[0m23:28:05.816741 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c
+[0m23:28:05.822123 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c"
+[0m23:28:05.829949 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c
+[0m23:28:05.831873 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c"
+[0m23:28:05.839474 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c"
+[0m23:28:05.840195 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c: BEGIN
+[0m23:28:05.840880 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.847123 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.847900 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c"
+[0m23:28:05.848736 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    departmentid as unique_field,
+    count(*) as n_records
+
+from "dw_dbt"."bronze"."stg_department"
+where departmentid is not null
+group by departmentid
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.850655 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.852313 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c: ROLLBACK
+[0m23:28:05.853201 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c: Close
+[0m23:28:05.854241 [info ] [Thread-1 (]: 27 of 30 PASS source_unique_bronze_hr_stg_department_departmentid .............. [[32mPASS[0m in 0.04s]
+[0m23:28:05.855356 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c
+[0m23:28:05.856197 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba
+[0m23:28:05.856967 [info ] [Thread-1 (]: 28 of 30 START test source_unique_bronze_hr_stg_employee_businessentityid ...... [RUN]
+[0m23:28:05.857846 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_unique_bronze_hr_stg_department_departmentid.242f4a028c, now test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba)
+[0m23:28:05.858739 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba
+[0m23:28:05.861965 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba"
+[0m23:28:05.869968 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba
+[0m23:28:05.872215 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba"
+[0m23:28:05.880088 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba"
+[0m23:28:05.880879 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba: BEGIN
+[0m23:28:05.881612 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.887813 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.888604 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba"
+[0m23:28:05.889334 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    businessentityid as unique_field,
+    count(*) as n_records
+
+from "dw_dbt"."bronze"."stg_employee"
+where businessentityid is not null
+group by businessentityid
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.891485 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.893159 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba: ROLLBACK
+[0m23:28:05.894055 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba: Close
+[0m23:28:05.895180 [info ] [Thread-1 (]: 28 of 30 PASS source_unique_bronze_hr_stg_employee_businessentityid ............ [[32mPASS[0m in 0.04s]
+[0m23:28:05.896483 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba
+[0m23:28:05.897290 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31
+[0m23:28:05.898025 [info ] [Thread-1 (]: 29 of 30 START test source_unique_bronze_hr_stg_employee_nationalidnumber ...... [RUN]
+[0m23:28:05.898869 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_unique_bronze_hr_stg_employee_businessentityid.a6afcba3ba, now test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31)
+[0m23:28:05.899580 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31
+[0m23:28:05.902932 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31"
+[0m23:28:05.910481 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31
+[0m23:28:05.912603 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31"
+[0m23:28:05.920285 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31"
+[0m23:28:05.920998 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31: BEGIN
+[0m23:28:05.921726 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.927985 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.928753 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31"
+[0m23:28:05.929480 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    nationalidnumber as unique_field,
+    count(*) as n_records
+
+from "dw_dbt"."bronze"."stg_employee"
+where nationalidnumber is not null
+group by nationalidnumber
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.931641 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.933585 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31: ROLLBACK
+[0m23:28:05.934430 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31: Close
+[0m23:28:05.935499 [info ] [Thread-1 (]: 29 of 30 PASS source_unique_bronze_hr_stg_employee_nationalidnumber ............ [[32mPASS[0m in 0.04s]
+[0m23:28:05.936548 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31
+[0m23:28:05.937429 [debug] [Thread-1 (]: Began running node test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181
+[0m23:28:05.938208 [info ] [Thread-1 (]: 30 of 30 START test source_unique_bronze_hr_stg_shift_shiftid .................. [RUN]
+[0m23:28:05.939100 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dados_dbt.source_unique_bronze_hr_stg_employee_nationalidnumber.1180f6ee31, now test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181)
+[0m23:28:05.939821 [debug] [Thread-1 (]: Began compiling node test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181
+[0m23:28:05.943125 [debug] [Thread-1 (]: Writing injected SQL for node "test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181"
+[0m23:28:05.951243 [debug] [Thread-1 (]: Began executing node test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181
+[0m23:28:05.953266 [debug] [Thread-1 (]: Writing runtime sql for node "test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181"
+[0m23:28:05.960520 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181"
+[0m23:28:05.961232 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181: BEGIN
+[0m23:28:05.961993 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:05.968239 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.968989 [debug] [Thread-1 (]: Using postgres connection "test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181"
+[0m23:28:05.969878 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    shiftid as unique_field,
+    count(*) as n_records
+
+from "dw_dbt"."bronze"."stg_shift"
+where shiftid is not null
+group by shiftid
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:28:05.971713 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:28:05.973455 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181: ROLLBACK
+[0m23:28:05.974325 [debug] [Thread-1 (]: On test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181: Close
+[0m23:28:05.975432 [info ] [Thread-1 (]: 30 of 30 PASS source_unique_bronze_hr_stg_shift_shiftid ........................ [[32mPASS[0m in 0.04s]
+[0m23:28:05.976413 [debug] [Thread-1 (]: Finished running node test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181
+[0m23:28:05.978370 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:05.979034 [debug] [MainThread]: On master: BEGIN
+[0m23:28:05.979670 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:28:05.985678 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:05.986550 [debug] [MainThread]: On master: COMMIT
+[0m23:28:05.987236 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:05.987962 [debug] [MainThread]: On master: COMMIT
+[0m23:28:05.988884 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m23:28:05.989551 [debug] [MainThread]: On master: Close
+[0m23:28:05.990461 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:28:05.991369 [debug] [MainThread]: Connection 'test.dados_dbt.source_unique_bronze_hr_stg_shift_shiftid.c6386ad181' was properly closed.
+[0m23:28:05.992090 [info ] [MainThread]: 
+[0m23:28:05.992933 [info ] [MainThread]: Finished running 30 data tests in 0 hours 0 minutes and 1.36 seconds (1.36s).
+[0m23:28:05.997489 [debug] [MainThread]: Command end result
+[0m23:28:06.068887 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m23:28:06.073301 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m23:28:06.083162 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m23:28:06.083979 [info ] [MainThread]: 
+[0m23:28:06.084904 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:28:06.086009 [info ] [MainThread]: 
+[0m23:28:06.086988 [info ] [MainThread]: Done. PASS=30 WARN=0 ERROR=0 SKIP=0 TOTAL=30
+[0m23:28:06.088560 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.2997863, "process_in_blocks": "0", "process_kernel_time": 0.40909, "process_mem_max_rss": "109356", "process_out_blocks": "0", "process_user_time": 2.234603}
+[0m23:28:06.089460 [debug] [MainThread]: Command `dbt test` succeeded at 23:28:06.089345 after 2.30 seconds
+[0m23:28:06.090255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fdca67920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fdda1fef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x753fd8410b00>]}
+[0m23:28:06.091300 [debug] [MainThread]: Flushing usage events
+[0m23:28:07.111649 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:28:08.860056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c067e79b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c06e39d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c067e7890>]}
+
+
+============================== 23:28:08.863217 | b37d0f9e-7969-4dca-b847-9a643baaa769 ==============================
+[0m23:28:08.863217 [info ] [MainThread]: Running with dbt=1.9.0
+[0m23:28:08.864469 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/usr/app/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:28:09.007335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b37d0f9e-7969-4dca-b847-9a643baaa769', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c08473290>]}
+[0m23:28:09.058915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b37d0f9e-7969-4dca-b847-9a643baaa769', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c07586120>]}
+[0m23:28:09.060164 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m23:28:09.138892 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m23:28:09.363887 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:28:09.364808 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:28:09.369760 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dados_dbt.gold
+[0m23:28:09.408104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b37d0f9e-7969-4dca-b847-9a643baaa769', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c04ddd250>]}
+[0m23:28:09.496982 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m23:28:09.502472 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m23:28:09.522348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b37d0f9e-7969-4dca-b847-9a643baaa769', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c04a56840>]}
+[0m23:28:09.523327 [info ] [MainThread]: Found 4 models, 30 data tests, 5 sources, 430 macros
+[0m23:28:09.524211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b37d0f9e-7969-4dca-b847-9a643baaa769', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c06abda60>]}
+[0m23:28:09.527082 [info ] [MainThread]: 
+[0m23:28:09.528161 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:28:09.529008 [info ] [MainThread]: 
+[0m23:28:09.529974 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:28:09.534079 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dw_dbt'
+[0m23:28:09.565706 [debug] [ThreadPool]: Using postgres connection "list_dw_dbt"
+[0m23:28:09.566540 [debug] [ThreadPool]: On list_dw_dbt: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "connection_name": "list_dw_dbt"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:28:09.567258 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:28:09.575766 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.008 seconds
+[0m23:28:09.577407 [debug] [ThreadPool]: On list_dw_dbt: Close
+[0m23:28:09.579263 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dw_dbt, now list_dw_dbt_silver)
+[0m23:28:09.584619 [debug] [ThreadPool]: Using postgres connection "list_dw_dbt_silver"
+[0m23:28:09.585435 [debug] [ThreadPool]: On list_dw_dbt_silver: BEGIN
+[0m23:28:09.586155 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:28:09.592077 [debug] [ThreadPool]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:09.592722 [debug] [ThreadPool]: Using postgres connection "list_dw_dbt_silver"
+[0m23:28:09.593388 [debug] [ThreadPool]: On list_dw_dbt_silver: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "connection_name": "list_dw_dbt_silver"} */
+select
+      'dw_dbt' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'silver'
+    union all
+    select
+      'dw_dbt' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'silver'
+    union all
+    select
+      'dw_dbt' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'silver'
+  
+[0m23:28:09.596488 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.002 seconds
+[0m23:28:09.598034 [debug] [ThreadPool]: On list_dw_dbt_silver: ROLLBACK
+[0m23:28:09.598869 [debug] [ThreadPool]: On list_dw_dbt_silver: Close
+[0m23:28:09.603816 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:09.604518 [debug] [MainThread]: On master: BEGIN
+[0m23:28:09.605208 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:28:09.611469 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:09.612294 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:09.612987 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m23:28:09.616458 [debug] [MainThread]: SQL status: SELECT 0 in 0.003 seconds
+[0m23:28:09.618087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b37d0f9e-7969-4dca-b847-9a643baaa769', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c04a60050>]}
+[0m23:28:09.618923 [debug] [MainThread]: On master: ROLLBACK
+[0m23:28:09.619773 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:09.620517 [debug] [MainThread]: On master: BEGIN
+[0m23:28:09.621519 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m23:28:09.622474 [debug] [MainThread]: On master: COMMIT
+[0m23:28:09.623208 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:09.623916 [debug] [MainThread]: On master: COMMIT
+[0m23:28:09.624713 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m23:28:09.625341 [debug] [MainThread]: On master: Close
+[0m23:28:09.627756 [debug] [Thread-1 (]: Began running node model.dados_dbt.employees
+[0m23:28:09.628610 [info ] [Thread-1 (]: 1 of 4 START sql table model silver.employees .................................. [RUN]
+[0m23:28:09.629443 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dw_dbt_silver, now model.dados_dbt.employees)
+[0m23:28:09.630204 [debug] [Thread-1 (]: Began compiling node model.dados_dbt.employees
+[0m23:28:09.636214 [debug] [Thread-1 (]: Writing injected SQL for node "model.dados_dbt.employees"
+[0m23:28:09.643313 [debug] [Thread-1 (]: Began executing node model.dados_dbt.employees
+[0m23:28:09.671768 [debug] [Thread-1 (]: Writing runtime sql for node "model.dados_dbt.employees"
+[0m23:28:09.678548 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employees"
+[0m23:28:09.679268 [debug] [Thread-1 (]: On model.dados_dbt.employees: BEGIN
+[0m23:28:09.680200 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:09.687014 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m23:28:09.687913 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employees"
+[0m23:28:09.688686 [debug] [Thread-1 (]: On model.dados_dbt.employees: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.employees"} */
+
+  
+    
+
+  create  table "dw_dbt"."silver"."employees__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH source AS (
+    SELECT * FROM "dw_dbt"."bronze"."stg_employee"
+)
+SELECT
+    CAST(businessentityid AS INT) AS employee_id,
+    nationalidnumber AS national_id,
+    loginid AS login_user,
+    jobtitle AS job_title,
+    CAST(birthdate AS DATE) AS birth_date,
+    maritalstatus AS marital_status,
+    gender,
+    CAST(hiredate AS DATE) AS hire_date,
+    vacationhours AS vacation_hours,
+    sickleavehours AS sick_leave_hours,
+    CAST(modifieddate AS TIMESTAMP) AS updated_at
+FROM source
+  );
+  
+[0m23:28:09.695437 [debug] [Thread-1 (]: SQL status: SELECT 290 in 0.006 seconds
+[0m23:28:09.700756 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employees"
+[0m23:28:09.701551 [debug] [Thread-1 (]: On model.dados_dbt.employees: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.employees"} */
+alter table "dw_dbt"."silver"."employees" rename to "employees__dbt_backup"
+[0m23:28:09.702759 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:28:09.704978 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employees"
+[0m23:28:09.705702 [debug] [Thread-1 (]: On model.dados_dbt.employees: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.employees"} */
+alter table "dw_dbt"."silver"."employees__dbt_tmp" rename to "employees"
+[0m23:28:09.706928 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:28:09.721847 [debug] [Thread-1 (]: On model.dados_dbt.employees: COMMIT
+[0m23:28:09.722691 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employees"
+[0m23:28:09.723381 [debug] [Thread-1 (]: On model.dados_dbt.employees: COMMIT
+[0m23:28:09.725284 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m23:28:09.730282 [debug] [Thread-1 (]: Applying DROP to: "dw_dbt"."silver"."employees__dbt_backup"
+[0m23:28:09.735521 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employees"
+[0m23:28:09.736262 [debug] [Thread-1 (]: On model.dados_dbt.employees: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.employees"} */
+drop table if exists "dw_dbt"."silver"."employees__dbt_backup" cascade
+[0m23:28:09.739951 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m23:28:09.742230 [debug] [Thread-1 (]: On model.dados_dbt.employees: Close
+[0m23:28:09.744344 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b37d0f9e-7969-4dca-b847-9a643baaa769', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c08472480>]}
+[0m23:28:09.745276 [info ] [Thread-1 (]: 1 of 4 OK created sql table model silver.employees ............................. [[32mSELECT 290[0m in 0.11s]
+[0m23:28:09.746304 [debug] [Thread-1 (]: Finished running node model.dados_dbt.employees
+[0m23:28:09.747122 [debug] [Thread-1 (]: Began running node model.dados_dbt.pay_history
+[0m23:28:09.747957 [info ] [Thread-1 (]: 2 of 4 START sql table model silver.pay_history ................................ [RUN]
+[0m23:28:09.748956 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dados_dbt.employees, now model.dados_dbt.pay_history)
+[0m23:28:09.749736 [debug] [Thread-1 (]: Began compiling node model.dados_dbt.pay_history
+[0m23:28:09.753132 [debug] [Thread-1 (]: Writing injected SQL for node "model.dados_dbt.pay_history"
+[0m23:28:09.760136 [debug] [Thread-1 (]: Began executing node model.dados_dbt.pay_history
+[0m23:28:09.762669 [debug] [Thread-1 (]: Writing runtime sql for node "model.dados_dbt.pay_history"
+[0m23:28:09.769257 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.pay_history"
+[0m23:28:09.770052 [debug] [Thread-1 (]: On model.dados_dbt.pay_history: BEGIN
+[0m23:28:09.770800 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:09.776597 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:09.777400 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.pay_history"
+[0m23:28:09.778082 [debug] [Thread-1 (]: On model.dados_dbt.pay_history: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.pay_history"} */
+
+  
+    
+
+  create  table "dw_dbt"."silver"."pay_history__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH source AS (
+    SELECT * FROM "dw_dbt"."bronze"."employee_pay_history"
+)
+SELECT
+    CAST(businessentityid AS INT) AS employee_id,
+    CAST(ratechangedate AS TIMESTAMP) AS rate_change_at,
+    CAST(rate AS DECIMAL(18,4)) AS salary_rate,
+    payfrequency AS pay_frequency_type,
+    CAST(modifieddate AS TIMESTAMP) AS updated_at
+FROM source
+  );
+  
+[0m23:28:09.781438 [debug] [Thread-1 (]: SQL status: SELECT 316 in 0.003 seconds
+[0m23:28:09.784063 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.pay_history"
+[0m23:28:09.784766 [debug] [Thread-1 (]: On model.dados_dbt.pay_history: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.pay_history"} */
+alter table "dw_dbt"."silver"."pay_history" rename to "pay_history__dbt_backup"
+[0m23:28:09.785869 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:28:09.788274 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.pay_history"
+[0m23:28:09.788992 [debug] [Thread-1 (]: On model.dados_dbt.pay_history: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.pay_history"} */
+alter table "dw_dbt"."silver"."pay_history__dbt_tmp" rename to "pay_history"
+[0m23:28:09.789885 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:28:09.791633 [debug] [Thread-1 (]: On model.dados_dbt.pay_history: COMMIT
+[0m23:28:09.792332 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.pay_history"
+[0m23:28:09.793040 [debug] [Thread-1 (]: On model.dados_dbt.pay_history: COMMIT
+[0m23:28:09.795003 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m23:28:09.796946 [debug] [Thread-1 (]: Applying DROP to: "dw_dbt"."silver"."pay_history__dbt_backup"
+[0m23:28:09.797788 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.pay_history"
+[0m23:28:09.798541 [debug] [Thread-1 (]: On model.dados_dbt.pay_history: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.pay_history"} */
+drop table if exists "dw_dbt"."silver"."pay_history__dbt_backup" cascade
+[0m23:28:09.800885 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m23:28:09.802446 [debug] [Thread-1 (]: On model.dados_dbt.pay_history: Close
+[0m23:28:09.803543 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b37d0f9e-7969-4dca-b847-9a643baaa769', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779bffc92000>]}
+[0m23:28:09.804459 [info ] [Thread-1 (]: 2 of 4 OK created sql table model silver.pay_history ........................... [[32mSELECT 316[0m in 0.05s]
+[0m23:28:09.805619 [debug] [Thread-1 (]: Finished running node model.dados_dbt.pay_history
+[0m23:28:09.806738 [debug] [Thread-1 (]: Began running node model.dados_dbt.shifts
+[0m23:28:09.807726 [info ] [Thread-1 (]: 3 of 4 START sql table model silver.shifts ..................................... [RUN]
+[0m23:28:09.808611 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dados_dbt.pay_history, now model.dados_dbt.shifts)
+[0m23:28:09.809356 [debug] [Thread-1 (]: Began compiling node model.dados_dbt.shifts
+[0m23:28:09.812171 [debug] [Thread-1 (]: Writing injected SQL for node "model.dados_dbt.shifts"
+[0m23:28:09.818501 [debug] [Thread-1 (]: Began executing node model.dados_dbt.shifts
+[0m23:28:09.821084 [debug] [Thread-1 (]: Writing runtime sql for node "model.dados_dbt.shifts"
+[0m23:28:09.827682 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.shifts"
+[0m23:28:09.828367 [debug] [Thread-1 (]: On model.dados_dbt.shifts: BEGIN
+[0m23:28:09.829017 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:09.839186 [debug] [Thread-1 (]: SQL status: BEGIN in 0.010 seconds
+[0m23:28:09.840071 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.shifts"
+[0m23:28:09.840824 [debug] [Thread-1 (]: On model.dados_dbt.shifts: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.shifts"} */
+
+  
+    
+
+  create  table "dw_dbt"."silver"."shifts__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with source as (select * from "dw_dbt"."bronze"."stg_shift")
+
+select
+    CAST(shiftid AS INT) AS shift_id,
+    CAST(starttime AS TIME) AS start_time,
+    CAST(endtime AS TIME) AS end_time,
+    CAST(modifieddate AS TIMESTAMP) AS updated_at
+FROM source
+  );
+  
+[0m23:28:09.843175 [debug] [Thread-1 (]: SQL status: SELECT 3 in 0.002 seconds
+[0m23:28:09.845788 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.shifts"
+[0m23:28:09.846568 [debug] [Thread-1 (]: On model.dados_dbt.shifts: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.shifts"} */
+alter table "dw_dbt"."silver"."shifts" rename to "shifts__dbt_backup"
+[0m23:28:09.847580 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:28:09.850225 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.shifts"
+[0m23:28:09.851000 [debug] [Thread-1 (]: On model.dados_dbt.shifts: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.shifts"} */
+alter table "dw_dbt"."silver"."shifts__dbt_tmp" rename to "shifts"
+[0m23:28:09.851917 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:28:09.853530 [debug] [Thread-1 (]: On model.dados_dbt.shifts: COMMIT
+[0m23:28:09.854284 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.shifts"
+[0m23:28:09.855064 [debug] [Thread-1 (]: On model.dados_dbt.shifts: COMMIT
+[0m23:28:09.857000 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m23:28:09.859003 [debug] [Thread-1 (]: Applying DROP to: "dw_dbt"."silver"."shifts__dbt_backup"
+[0m23:28:09.859964 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.shifts"
+[0m23:28:09.860668 [debug] [Thread-1 (]: On model.dados_dbt.shifts: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.shifts"} */
+drop table if exists "dw_dbt"."silver"."shifts__dbt_backup" cascade
+[0m23:28:09.863315 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m23:28:09.864824 [debug] [Thread-1 (]: On model.dados_dbt.shifts: Close
+[0m23:28:09.865755 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b37d0f9e-7969-4dca-b847-9a643baaa769', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779bffc3af90>]}
+[0m23:28:09.866748 [info ] [Thread-1 (]: 3 of 4 OK created sql table model silver.shifts ................................ [[32mSELECT 3[0m in 0.06s]
+[0m23:28:09.867765 [debug] [Thread-1 (]: Finished running node model.dados_dbt.shifts
+[0m23:28:09.868578 [debug] [Thread-1 (]: Began running node model.dados_dbt.employee_overview
+[0m23:28:09.869337 [info ] [Thread-1 (]: 4 of 4 START sql table model silver.employee_overview .......................... [RUN]
+[0m23:28:09.870364 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dados_dbt.shifts, now model.dados_dbt.employee_overview)
+[0m23:28:09.871102 [debug] [Thread-1 (]: Began compiling node model.dados_dbt.employee_overview
+[0m23:28:09.873627 [debug] [Thread-1 (]: Writing injected SQL for node "model.dados_dbt.employee_overview"
+[0m23:28:09.880375 [debug] [Thread-1 (]: Began executing node model.dados_dbt.employee_overview
+[0m23:28:09.884021 [debug] [Thread-1 (]: Writing runtime sql for node "model.dados_dbt.employee_overview"
+[0m23:28:09.890768 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employee_overview"
+[0m23:28:09.891436 [debug] [Thread-1 (]: On model.dados_dbt.employee_overview: BEGIN
+[0m23:28:09.892135 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:09.898315 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:09.899136 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employee_overview"
+[0m23:28:09.899807 [debug] [Thread-1 (]: On model.dados_dbt.employee_overview: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.employee_overview"} */
+
+  
+    
+
+  create  table "dw_dbt"."silver"."employee_overview__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with emp as (select * from "dw_dbt"."silver"."employees"),
+
+pay as (select distinct on (employee_id) * from "dw_dbt"."silver"."pay_history"
+        order by employee_id, rate_change_at DESC
+        )
+
+select
+    e.*,
+    p.salary_rate,
+    p.pay_frequency_type
+from emp e
+left join pay p on e.employee_id = p.employee_id
+  );
+  
+[0m23:28:09.903435 [debug] [Thread-1 (]: SQL status: SELECT 290 in 0.003 seconds
+[0m23:28:09.906108 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employee_overview"
+[0m23:28:09.907022 [debug] [Thread-1 (]: On model.dados_dbt.employee_overview: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.employee_overview"} */
+alter table "dw_dbt"."silver"."employee_overview" rename to "employee_overview__dbt_backup"
+[0m23:28:09.908066 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:28:09.910921 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employee_overview"
+[0m23:28:09.911878 [debug] [Thread-1 (]: On model.dados_dbt.employee_overview: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.employee_overview"} */
+alter table "dw_dbt"."silver"."employee_overview__dbt_tmp" rename to "employee_overview"
+[0m23:28:09.912930 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m23:28:09.914719 [debug] [Thread-1 (]: On model.dados_dbt.employee_overview: COMMIT
+[0m23:28:09.915511 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employee_overview"
+[0m23:28:09.916241 [debug] [Thread-1 (]: On model.dados_dbt.employee_overview: COMMIT
+[0m23:28:09.918298 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m23:28:09.920352 [debug] [Thread-1 (]: Applying DROP to: "dw_dbt"."silver"."employee_overview__dbt_backup"
+[0m23:28:09.921229 [debug] [Thread-1 (]: Using postgres connection "model.dados_dbt.employee_overview"
+[0m23:28:09.922088 [debug] [Thread-1 (]: On model.dados_dbt.employee_overview: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "projeto_dbt", "target_name": "dev", "node_id": "model.dados_dbt.employee_overview"} */
+drop table if exists "dw_dbt"."silver"."employee_overview__dbt_backup" cascade
+[0m23:28:09.924679 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m23:28:09.926229 [debug] [Thread-1 (]: On model.dados_dbt.employee_overview: Close
+[0m23:28:09.927150 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b37d0f9e-7969-4dca-b847-9a643baaa769', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779bffc3af90>]}
+[0m23:28:09.928205 [info ] [Thread-1 (]: 4 of 4 OK created sql table model silver.employee_overview ..................... [[32mSELECT 290[0m in 0.06s]
+[0m23:28:09.929226 [debug] [Thread-1 (]: Finished running node model.dados_dbt.employee_overview
+[0m23:28:09.931200 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:09.931876 [debug] [MainThread]: On master: BEGIN
+[0m23:28:09.932677 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:28:09.938644 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m23:28:09.939378 [debug] [MainThread]: On master: COMMIT
+[0m23:28:09.940082 [debug] [MainThread]: Using postgres connection "master"
+[0m23:28:09.940801 [debug] [MainThread]: On master: COMMIT
+[0m23:28:09.941603 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m23:28:09.942293 [debug] [MainThread]: On master: Close
+[0m23:28:09.943354 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:28:09.944003 [debug] [MainThread]: Connection 'model.dados_dbt.employee_overview' was properly closed.
+[0m23:28:09.944733 [info ] [MainThread]: 
+[0m23:28:09.945644 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 0.41 seconds (0.41s).
+[0m23:28:09.947226 [debug] [MainThread]: Command end result
+[0m23:28:09.986522 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m23:28:09.991336 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m23:28:09.999233 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m23:28:09.999885 [info ] [MainThread]: 
+[0m23:28:10.000700 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:28:10.001680 [info ] [MainThread]: 
+[0m23:28:10.002675 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m23:28:10.004265 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.224869, "process_in_blocks": "8", "process_kernel_time": 0.307443, "process_mem_max_rss": "107096", "process_out_blocks": "0", "process_user_time": 1.708018}
+[0m23:28:10.005123 [debug] [MainThread]: Command `dbt run` succeeded at 23:28:10.005028 after 1.23 seconds
+[0m23:28:10.005843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c07083f20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779c069e7560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x779bffc43e90>]}
+[0m23:28:10.006756 [debug] [MainThread]: Flushing usage events
+[0m23:28:10.756950 [debug] [MainThread]: An error was encountered while trying to flush usage events
