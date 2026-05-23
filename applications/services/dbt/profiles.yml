@@ -3,10 +3,10 @@ projeto_dbt: # Nome que você usou no dbt_project.yml
   outputs:
     dev:
       type: postgres
-      host: db # O NOME DO SERVIÇO no outro docker-compose
+      host: postgres_dados_dbt # O NOME DO SERVIÇO no outro docker-compose
       user: postgres                    # O mesmo do seu outro docker-compose
       password: postgres
       port: 5432
-      dbname: dw_dbt
+      dbname: postgres_dw
       schema: silver                # Onde o dbt vai criar as tabelas
       threads: 1
